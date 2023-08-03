@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "f307c852-5e37-4b9e-9e52-aade13772928",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "text_connection",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "PROD_",
+  "qIsScriptCreated": true
+}

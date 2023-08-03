@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "QzmVz",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "SOLVIT - Indicator 6 within 70 days",
+    "qDef": "[Indicator 6 solvit] / ((100 - [Indicator 6 solvit]) + [Indicator 6 solvit])",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'within 70 days'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#87aa7d",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "SOLVIT - Indicator 6 within 70 days",
+    "description": "SOLVIT - Indicator 6",
+    "tags": []
+  }
+}

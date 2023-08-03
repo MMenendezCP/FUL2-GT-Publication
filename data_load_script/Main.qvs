@@ -1,0 +1,158 @@
+///$tab Main
+SET ThousandSep=',';
+SET DecimalSep='.';
+SET MoneyThousandSep=',';
+SET MoneyDecimalSep='.';
+SET MoneyFormat='$#,##0.00;-$#,##0.00';
+SET TimeFormat='h:mm:ss TT';
+SET DateFormat='M/D/YYYY';
+SET TimestampFormat='M/D/YYYY h:mm:ss[.fff] TT';
+SET FirstWeekDay=6;
+SET BrokenWeeks=1;
+SET ReferenceDay=0;
+SET FirstMonthOfYear=1;
+SET CollationLocale='en-US';
+SET CreateSearchIndexOnReload=1;
+SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec';
+SET LongMonthNames='January;February;March;April;May;June;July;August;September;October;November;December';
+SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun';
+SET LongDayNames='Monday;Tuesday;Wednesday;Thursday;Friday;Saturday;Sunday';
+SET NumericalAbbreviation='3:k;6:M;9:G;12:T;15:P;18:E;21:Z;24:Y;-3:m;-6:μ;-9:n;-12:p;-15:f;-18:a;-21:z;-24:y';
+
+
+SysActualYear	=	Date(now(),'YYYY');
+SysLastYear		=	Date(AddYears(SysActualYear,-1),'YYYY');
+SysTwoYearsAgo	=	Date(AddYears(SysActualYear,-2),'YYYY');
+SysTreeYearsAgo	=	Date(AddYears(SysActualYear,-3),'YYYY');
+SysFourYearsAgo	=	Date(AddYears(SysActualYear,-4),'YYYY');
+
+
+
+
+text_connection = If(SubStringCount(DocumentTitle(), 'Full') >= 1, 'NEWEDIT_', 'PROD_');
+
+// text_connection = If(SubStringCount(DocumentTitle(), 'NEWEDIT') >= 1, 'NEWEDIT_', If(SubStringCount(DocumentTitle(), 'NEWEDIT_GT') >= 1, 'NEWEDIT_GT', 'PROD_'));
+
+
+Countries_dim:
+LOAD
+	[x1val] 							AS [Transposition],
+    1 									AS [EU_Flag]						
+
+where [x1val]<> 'Edition' and [x1val]<> 'UK';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRA_IND_1.csv';
+
+SQL SELECT 
+	"x1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+Concatenate
+LOAD * Inline [
+Transposition, EU_Flag
+'EU', 1
+'EU AVG', 1
+'-', 1
+'Avg', 1
+'TR', 1
+];
+
+
+[EE_EFTA_Countries_dim]:
+LOAD
+	[x1val] 							AS [Transposition],
+    0 									AS [EU_Flag]
+    
+where [x1val] <> 'Date' and [x1val] <> '' ;
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRA_TRA_DEF_EFT.csv';
+
+SQL SELECT 
+	"x1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+MAPPINGCOUNTRIES:
+Mapping
+LOAD * Inline [
+FROM,TO
+AT,Austria
+BE,Belgium
+BG,Bulgaria
+CY,Cyprus
+CZ,Czechia
+DK,Denmark
+DE,Germany
+EE,Estonia
+EL,Greece
+ES,Spain
+FI,Finland
+FR,France
+HR,Croatia
+HU,Hungary
+IE,Ireland
+IS,Iceland
+IT,Italy
+LT,Lithuania
+LI,Liechtenstein
+LU,Luxembourg
+LV,Latvia
+MT,Malta
+NL,Netherlands
+NO,Norway
+PL,Poland
+PT,Portugal
+RO,Romania
+SE,Sweden
+SI,Slovenia
+SK,Slovakia
+];
+
+
+ 
+    
+Country_DIM:
+LOAD 
+	Country_ID,
+    ISO_code,
+    [EU_Flag],
+    Country_Flag,
+    RealName_aux,
+    if (not isnull(Country_Flag), 'https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux]) AS Real_name;
+LOAD
+    AutoNumber([Transposition])			AS Country_ID,
+    [Transposition] 					AS [ISO_code],
+    [EU_Flag],
+    if (ApplyMap('MAPPINGCOUNTRIES', [Transposition], 'XX') <> 'XX', 'https://web.qap.dataplatform.tech.ec.europa.eu/Content/flags/' & [Transposition] & '.png') AS Country_Flag,
+    ApplyMap('MAPPINGCOUNTRIES', [Transposition]) 												AS RealName_aux
+Resident [Countries_dim];
+
+Drop Table Countries_dim;
+    
+ 
+
+
+
+
+Indicators_DIM:
+LOAD * Inline [
+Indicator_ID, 		indicator, 					indicator_print, transposition_flag, infringements_flag, imi_flag, General_flag
+1, 				'Indicator 1trans', 			'Indicator 1', 			1, 					0, 				0,			0
+2, 				'Indicator 2trans', 			'Indicator 2', 			1, 					0, 				0,			0
+3, 				'Indicator 3trans', 			'Indicator 3', 			1, 					0, 				0,			0
+4, 				'Indicator 4trans', 			'Indicator 4', 			1, 					0, 				0,			0
+5, 				'Indicator 5trans', 			'Indicator 5', 			1, 					0, 				0,			0
+6, 				'Indicator 1infg', 				'Indicator 1', 			0, 					1, 				0,			0
+7, 				'Indicator 2infg', 				'Indicator 2', 			0, 					1, 				0,			0
+8, 				'Indicator 3infg', 				'Indicator 3', 			0, 					1, 				0,			0
+9, 				'Indicator 4infg', 				'Indicator 4', 			0, 					1, 				0,			0
+10, 			'Indicator 1imi', 				'Indicator 1', 			0, 					0, 				1,			0
+11, 			'Indicator 2imi', 				'Indicator 2', 			0, 					0, 				1,			0
+12, 			'Indicator 3imi', 				'Indicator 3', 			0, 					0, 				1,			0
+13, 			'Indicator 4imi', 				'Indicator 4', 			0, 					0, 				1,			0
+14, 			'Indicator 5imi', 				'Indicator 5', 			0, 					0, 				1,			0
+15,				'Transposition gen data',		'Transposition',		0,					0,				0,			1			
+16,				'Infringements gen data',		'Infringements',		0,					0,				0,			1		
+17,				'IMI gen data',					'IMI',					0,					0,				0,			1
+18,				'SOLVIT gen data',				'SOLVIT (staffing)',	0,					0,				0,			1		
+
+];

@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "MCNujvC",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "IMI - Request per quarter Posting of workers",
+    "qDef": "[Posting of workers]\r\n\n/*\n\nSum(if([GT_IMI_REQ_QUA-1.GT_IMI_REQ_QUA_Label] =  'Power of Workers', [IMI Requests]))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'Posting of workers'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#,##0",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#F57900",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "IMI - Request per quarter Posting of workers",
+    "description": "IMI - Request per quarter",
+    "tags": []
+  }
+}

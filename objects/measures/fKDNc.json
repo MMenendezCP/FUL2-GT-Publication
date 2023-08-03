@@ -1,0 +1,31 @@
+{
+  "qInfo": {
+    "qId": "fKDNc",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "SOLVIT - Indicator 7 Unresolved",
+    "qDef": "(100 - [Indicator 7 solvit]) / ((100 - [Indicator 7 solvit]) + [Indicator 7 solvit])",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'Unresolved'",
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#b95545",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "SOLVIT - Indicator 7 Unresolved",
+    "description": "SOLVIT - Indicator 7",
+    "tags": []
+  }
+}

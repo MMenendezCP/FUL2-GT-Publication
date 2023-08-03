@@ -1,0 +1,31 @@
+{
+  "qInfo": {
+    "qId": "RPVvJW",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "SOLVIT Cases Receibed 1",
+    "qDef": "[Solvit_Cases_received_2018]",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "=SysTreeYearsAgo",
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#20603F",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "SOLVIT Cases Receibed 1",
+    "description": "",
+    "tags": []
+  }
+}

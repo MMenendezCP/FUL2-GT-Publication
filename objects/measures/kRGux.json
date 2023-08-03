@@ -1,0 +1,30 @@
+{
+  "qInfo": {
+    "qId": "kRGux",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Caseload as lead centre",
+    "qDef": "[Distribution LEA]",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#FF9900",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "Caseload as lead centre",
+    "description": "",
+    "tags": []
+  }
+}

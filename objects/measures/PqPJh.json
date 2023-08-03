@@ -1,0 +1,31 @@
+{
+  "qInfo": {
+    "qId": "PqPJh",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "SOLVIT Business cases 3",
+    "qDef": "[Solvit_Cases_ByCountry_2020]",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "=SysLastYear/*=Date(AddYears(SysLastYear,1),'YYYY')",
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#b95545",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "SOLVIT Business cases 3",
+    "description": "",
+    "tags": []
+  }
+}

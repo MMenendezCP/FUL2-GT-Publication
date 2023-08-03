@@ -1,0 +1,367 @@
+///$tab 5.- TRIS
+[Drafts notified]:
+LOAD
+	[x1val] 										AS [TRIS],
+    [y1val] 										AS [Number of drafts]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRI_NOT.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+[Drafts notified by sector]:
+LOAD
+	[x1val] 										AS [GT_TRI_NOT_SEC_Edition],
+	[y1val] 										AS [Number of drafts by sector]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRI_BY_SEC.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[Number of reactions sent 1]:
+LOAD
+	[x1val] 										AS [TRIS],
+    [y1val] 										AS [Number of reactions sent 1]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRI_REA_REC_EC_1.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+[Number of reactions sent 2]:
+LOAD
+	[x1val] 										AS [TRIS],
+	[y1val] 										AS [Number of reactions sent 2]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRI_REA_REC_EC_12.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+[Number of reactions sent 3]:
+LOAD
+	[x1val] 										AS [TRIS],
+	[y1val] 										AS [Number of reactions sent 3]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRI_REA_REC_EC_2.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[GT_TRI_REA_SEN_BY_MS_1]:
+LOAD
+	[x1val] 										AS [TRIS],
+	[y1val] 										AS [Draft technical regulation 1]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRI_REA_SEN_BY_MS_1.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[GT_TRI_REA_SEN_BY_MS_2]:
+LOAD
+	[x1val] 										AS [TRIS],
+    [y1val] 										AS [Draft technical regulation 2]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRI_REA_SEN_BY_MS_2.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[Number of reactions received by Member 1]: 
+LOAD
+	[x1val] 										AS [TRIS],
+	[y2val] 										AS [Number of reactions received by Member 1]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRI_REA_REC_MS_1.csv';
+
+SQL SELECT 
+	"x1val",
+	"y2val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[Number of reactions received by Member 2]:
+LOAD
+	[x1val] 										AS [TRIS],
+	[y2val] 										AS [Number of reactions received by Member 2]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRI_REA_REC_MS_2.csv';
+
+SQL SELECT 
+	"x1val",
+	"y2val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[Contributions received from stakeholders]:
+LOAD
+	[x1val] 										AS [TRIS],
+	[y1val] 										AS [Contributions received from stakeholders]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRI_REA_STA.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+[Total notifications]:
+LOAD	
+	[x1val] 										AS [TRIS],
+	[y1val] 										AS [Total notifications]
+    
+Where [x1val]<>'Member State';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRI_TOT_NOT.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+[Legal basis]:
+LOAD	
+	[x1val] 										AS [LEG_BAS],
+	[y1val] 										AS [LEG_BAS_LastYear]
+	
+Where [x1val]<>'Legal Base';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRI_NOT_LEG_BAS.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[Sectorial breakdown]:
+LOAD	
+	[x1val] 										AS [NEW_Sector],
+	[y1val] 										AS [Sectorial breakdown]
+    
+where [x1val] <> 'Sector';
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRI_NOT_SEC_NEW.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+[Reactions issued]:
+LOAD	
+	[x1val] 										AS [Reactions issued Author],
+	[x2val] 										AS [Reactions issued Number]
+    
+where [x1val] <> 'Author';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRI_REA_AUT.csv';
+
+SQL SELECT 
+	"x1val",
+	"x2val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+
+
+
+[ALLMETRICS_TRANS_INF_IMI_TRIS]:
+// --------------------------------------------------------------
+NoConcatenate
+LOAD
+    [ISO_code],
+    [Year],
+    [Transposition gen data],
+    [Infringements gen data],
+    [IMI gen data],
+    [SOLVIT gen data],
+	[Indicator 1trans],
+	[Indicator 2trans],
+	[Indicator 3trans],
+	[Indicator 4trans],
+	[Indicator 4.2trans],
+	[Indicator 4.2Btrans],
+	[Indicator 5trans],
+	[Transposition Deficit],
+	[No EU Trans Directives],
+	[EU Transposition Deficit],
+	[No EU Transposition Deficit],
+    [Directives completeness],
+	[Changes in the average transposition deficit percentage],
+	[Value_incompleteness],
+// --------------------------------------------------------------
+    [Indicator 1infg],				
+	[Indicator 1.2infg],
+	[Indicator 2infg],
+	[Indicator 3infg],
+    [Indicator 3.2infg],
+	[Indicator 4infg],
+    [Indicator 4.2infg],
+	[Pending_cases_inf],
+	[EU Infringements Deficit],
+	[No EU Infringements Deficit],
+	[Changes in the average infringements deficit percentage],
+// --------------------------------------------------------------
+	[Indicator 1imi],
+    [Indicator 1Aimi],
+    [Indicator 1Bimi],
+	[Indicator 2imi],
+	[Indicator 2imi req],
+	[Indicator 2imi C req],
+	[Indicator 2imi spe],
+	[Indicator 2imi E req],
+	[Indicator 2imi F spe],
+	[Indicator 2imi G req],
+	[Indicator 2imi H spe],
+	[Indicator 2imi I req],
+	[Indicator 2imi K spe],
+	[Indicator 3imi],
+    [Indicator 3Aimi],
+    [Indicator 3Bimi],
+	[Indicator 4imi],
+	[Indicator 4imi tim Very dissatisfied],
+    [Indicator 4imi tim Dissatisfied],
+    [Indicator 4imi tim Neutral/Notsure],
+    [Indicator 4imi tim Satisfied],			
+    [Indicator 4imi tim Very satisfied],
+	[Indicator 5imi],
+	[Indicator 5imi tim Very dissatisfied],
+    [Indicator 5imi tim Dissatisfied],
+    [Indicator 5imi tim Neutral/Notsure],
+    [Indicator 5imi tim Satisfied],			
+    [Indicator 5imi tim Very satisfied],
+	[Professional qualifications],
+	[Services],
+	[Posting of workers],
+	[Other areas],
+	[GT_IMI_REQ_MS_Policy Area],
+    [Request sent],
+	[GT_IMI_REQ_REC_MS_Policy Area],
+	[Request recieved],
+    [IMI Requests],
+	[IMI Repository entries],
+	[IMI SOLVIT cases],
+	[IMI Notifications],
+	[IMI Alerts],
+	[IMI EPC applications],
+	[IMI GDPR Cases],
+	[IMI NRMM type approvals],
+   	[IMI Firearms refusals]
+Resident [ALLMETRICS_TRANS_INF_IMI];
+// --------------------------------------------------------------
+outer Join
+LOAD
+	[TRIS] 											AS [ISO_code],
+	[Number of drafts],
+    'Current' 										AS [Year]
+Resident [Drafts notified];
+left Join
+LOAD 
+	[TRIS] 											AS [ISO_code],
+	[Number of reactions sent 1],
+    'Current' 										AS [Year]
+Resident [Number of reactions sent 1];
+left Join
+LOAD 
+	[TRIS] 											AS [ISO_code],
+	[Number of reactions sent 2],
+    'Current' 										AS [Year]
+Resident [Number of reactions sent 2];
+left Join
+LOAD 
+	[TRIS] 											AS [ISO_code],
+	[Number of reactions sent 3],
+    'Current' 										AS [Year]
+Resident [Number of reactions sent 3];
+left Join
+LOAD 
+	[TRIS] 											AS [ISO_code],
+	[Draft technical regulation 1],
+    'Current' 										AS [Year]
+Resident [GT_TRI_REA_SEN_BY_MS_1];
+left Join
+LOAD 
+	[TRIS] 											AS [ISO_code],
+	[Draft technical regulation 2],
+    'Current' 										AS [Year]
+Resident [GT_TRI_REA_SEN_BY_MS_2];
+left Join
+LOAD
+	[TRIS] 											AS [ISO_code],
+	[Total notifications],
+    'Current' 										AS [Year]
+Resident [Total notifications];
+left Join
+LOAD
+	[TRIS] 											AS [ISO_code],
+	[Number of reactions received by Member 1],
+    'Current' 										AS [Year]
+Resident [Number of reactions received by Member 1];
+left Join
+LOAD
+	[TRIS] 											AS [ISO_code],
+	[Number of reactions received by Member 2],
+    'Current' 										AS [Year]
+Resident [Number of reactions received by Member 2];
+left Join
+LOAD
+	[TRIS] 											AS [ISO_code],
+	[Contributions received from stakeholders],
+    'Current' 										AS [Year]
+Resident [Contributions received from stakeholders];
+
+
+Drop Table ALLMETRICS_TRANS_INF_IMI, [Drafts notified], [Number of reactions sent 1], [Number of reactions sent 2], [Number of reactions sent 3], [GT_TRI_REA_SEN_BY_MS_1], [GT_TRI_REA_SEN_BY_MS_2], [Total notifications], [Number of reactions received by Member 1], [Number of reactions received by Member 2], [Contributions received from stakeholders];

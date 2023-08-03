@@ -1,0 +1,464 @@
+///$tab 1.- Transposition
+[Performance by enforcement tool]:
+LOAD
+    Countries								AS [ISO_code],
+    Transposition 							AS [Transposition gen data],
+    Infringements 							AS [Infringements gen data],
+    IMI 									AS [IMI gen data],
+    SOLVIT 									AS [SOLVIT gen data]
+
+FROM [lib://SMS/TL_PO.xlsx]
+
+(ooxml, embedded labels, table is PO_GT);
+
+
+[indicador1A]:
+LOAD
+	[x1val] 							AS [Transposition],
+	[y1val] 							AS value_transposition_ind1
+    
+where [x1val]<> 'Edition' and [x1val]<> 'UK';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRA_IND_1.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+[indicador2]:
+LOAD
+	[x1val] 							AS [Transposition],
+	[y1val] 							AS value_transposition_ind2
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '' and [x1val]<> 'Avg';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRA_IND_2.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+[indicador3]:
+LOAD	
+	[x1val] 							AS [Transposition],
+	[x2val] 							AS value_transposition_ind3
+    
+where [x1val] <> 'MS' and [x1val]<> 'Avg';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRA_TL_IND_3.csv (ec2amaz-t6hn9ho_commdes_user1)';
+
+SQL SELECT 
+	"x1val",
+	"x2val"    
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+[indicador4]:
+LOAD
+	[x1val] 							AS [Transposition],
+	[y1val] 							AS value_transposition_ind4
+    
+where [x1val]<> 'Edition' and [x1val]<> 'UK' and [x1val]<> 'Avg';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRA_IND_4.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+[GT_TRA_IND_4]:
+Crosstable (IND4Year, IND4Values, 1)
+LOAD 
+	[x1val] 							AS [ISO_code],
+	[y1val] 							AS [2021],
+	[y2val] 							AS [2020],
+	[y3val] 							AS [2019],
+	[y4val] 							AS [2018]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRA_IND_4.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val",
+	"y2val",
+	"y3val",
+    "y4val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+[GT_TRA_IND_4B]:
+Crosstable (IND4BYear, IND4BValues, 1)
+LOAD
+	[x1val] 							AS [ISO_code],
+    [y1val] 							AS [2021],
+	[y2val] 							AS [2020],
+	[y3val] 							AS [2019],
+	[y4val] 							AS [2018]
+
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRA_IND_1B_4B.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val",
+	"y2val",
+	"y3val",
+    "y4val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[indicador5]:
+LOAD
+	[x1val] 							AS [Transposition],
+	[y1val] 							AS value_transposition_ind5
+    
+where [x1val]<> 'Edition' and [x1val]<> 'UK' and [x1val]<> 'Avg';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRA_IND_5.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+Avg_TRA:
+LOAD 
+	'Avg' 											AS [Transposition], 
+	round(avg(value_transposition_ind1), 0.1) 		AS valAvgTra1
+RESIDENT indicador1A
+group by 'Avg';
+Left Join
+Left Join
+LOAD 
+	'Avg' 											AS [Transposition],
+	round(avg(value_transposition_ind2), 0.1) 		AS valAvgTra2
+RESIDENT indicador2;
+Left Join
+LOAD 
+	'Avg' 											AS [Transposition], 
+	round(avg(value_transposition_ind4), 0.1) 		AS valAvgTra4
+RESIDENT indicador4;
+Left Join
+LOAD 
+	'Avg' 											AS [Transposition],
+	round(avg(value_transposition_ind5), 0.1) 		AS valAvgTra5
+RESIDENT indicador5;
+
+
+
+// ---------------------------------------------------------------------------
+
+resAvgTra1 = Peek('valAvgTra1',0,'Avg_TRA');
+resAvgTra2 = Peek('valAvgTra2',0,'Avg_TRA');
+resAvgTra3 = 'N/A'
+resAvgTra4 = Peek('valAvgTra4',0,'Avg_TRA');
+resAvgTra5 = Peek('valAvgTra5',0,'Avg_TRA');
+
+
+
+
+[No EU Transposition Deficit]:
+LOAD
+	[x1val] 							AS [EEA ΕFTA country],
+	[y1val] 							AS [Transposition Deficit]
+    
+where [x1val] <> 'Date' and [x1val] <> '' and [x1val] <> 'EEA EFTA';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRA_TRA_DEF_EFT.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+  
+[No EU Transposition Directives]:
+LOAD
+	[x1val] 							AS [EEA ΕFTA country],
+	[y1val] 							AS [No EU Trans Directives]
+
+where [x1val] <> 'Date' and [x1val] <> '' and [x1val] <> '-';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRA_TRA_DEF_EFT_2.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[EU_Transposition_deficit]:
+Crosstable ([ISO_code], [EU Transposition Deficit])
+LOAD
+	Text([x1val]) 						AS [Year (Transposition Deficit)],
+	[x2val] 							AS [AT],
+	[x3val] 							AS [BE],
+	[x4val] 							AS [BG],
+	[x5val] 							AS [CY],
+	[x6val] 							AS [CZ],
+	[x7val] 							AS [DE],
+	[x8val] 							AS [DK],
+	[x9val] 							AS [EE],
+	[x10val]							AS [EL],
+	[x11val]							AS [ES],
+	[x12val]							AS [FI],
+	[x13val]							AS [FR],
+	[x14val]							AS [HR],
+	[x15val]							AS [HU],
+	[x16val]							AS [IE],
+	[x17val]							AS [IT],
+	[x18val]							AS [LT],
+	[x19val]							AS [LU],
+	[x20val]							AS [LV],
+	[x21val]							AS [MT],
+	[x22val]							AS [NL],
+	[x23val]							AS [PL],
+	[x24val]							AS [PT],
+	[x25val]							AS [RO],
+	[x26val]							AS [SE],
+	[x27val]							AS [SI],
+	[x28val]							AS [SK],
+	[x29val]							AS [UK],
+	[x30val]							AS [EU]
+    
+where [x1val] <> 'Years' and [x1val] <> 'UK';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_PMS_TRA_DEF_EU.csv';
+
+SQL SELECT 
+"x1val",
+	"x2val",
+	"x3val",
+	"x4val",
+	"x5val",
+	"x6val",
+	"x7val",
+	"x8val",
+	"x9val",
+	"x10val",
+	"x11val",
+	"x12val",
+	"x13val",
+	"x14val",
+	"x15val",
+	"x16val",
+	"x17val",
+	"x18val",
+	"x19val",
+	"x20val",
+	"x21val",
+	"x22val",
+	"x23val",
+	"x24val",
+	"x25val",
+	"x26val",
+	"x27val",
+	"x28val",
+	"x29val",
+	"x30val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[No_EU_Transposition_deficit]:
+Crosstable ([ISO_code], [No EU Transposition Deficit])
+LOAD
+	Text([x1val]) 						AS [Year EFTA],
+    [x2val] 							AS [IS],
+	[x3val] 							AS [LI],
+	[x4val] 							AS [NO],
+	[x5val] 							AS [EEA EFTA]
+    
+where [x1val] <> 'Years' and [x1val] <> 'UK';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_PMS_TRA_DEF_EFTA.csv';
+
+SQL SELECT 
+	"x1val",
+	"x2val",
+	"x3val",
+	"x4val",
+	"x5val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[Directives undergoing completeness]:
+LOAD
+	[x1val] 							AS [ISO_code],
+    [y1val] 							AS [Directives completeness]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRA_COM_CHE.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val",
+	"y2val",
+	"y3val",
+    "y4val",
+    "y5val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[Changes in the average Transposition deficit]:
+LOAD
+	Text([x1val]) 							AS [Year],
+	[x2val] 								AS [Changes in the average transposition deficit percentage]
+    
+where [x1val] <> 'Date' and [x1val] <> '';
+
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRA_CHA_TRA_DEF.csv';
+
+SQL SELECT 
+	"x1val",
+	"x2val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+
+[Changes in the incompleteness rate]:
+LOAD
+	Text([x1val]) 							AS [Year],
+	[x2val] 								AS [Value_incompleteness]
+    
+where [x1val] <> 'Date';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_TRA_COM_RAT.csv';
+
+SQL SELECT 
+	"x1val",
+	"x2val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+
+
+
+[ALLMETRICS_TRANS]:
+// --------------------------------------------------------------
+NoConcatenate
+LOAD
+    [ISO_code],
+    [Transposition gen data],
+    [Infringements gen data],
+    [IMI gen data],
+    [SOLVIT gen data],
+    'Current'							AS [Year]
+Resident [Performance by enforcement tool];
+left Join
+LOAD
+	[Transposition] 					AS [ISO_code],
+	[value_transposition_ind1] 			AS [Indicator 1trans],
+    'Current'							AS [Year]
+Resident [indicador1A];
+left Join
+LOAD
+	[Transposition] 					AS [ISO_code],
+	[value_transposition_ind2] 			AS [Indicator 2trans],
+    'Current'							AS [Year]
+Resident [indicador2];
+left Join
+LOAD	
+	[Transposition] 					AS [ISO_code],
+	[value_transposition_ind3] 			AS [Indicator 3trans],
+    'Current'							AS [Year]
+Resident [indicador3];
+left Join
+LOAD
+	[Transposition] 					AS [ISO_code],
+	[value_transposition_ind4] 			AS [Indicator 4trans],
+    'Current'							AS [Year]
+Resident [indicador4];
+outer Join
+LOAD 
+	[ISO_code],
+	[IND4Year] 							AS [Year],
+	[IND4Values] 						AS [Indicator 4.2trans]
+Resident [GT_TRA_IND_4];
+left Join
+LOAD 
+	[ISO_code],
+	[IND4BYear] 						AS [Year],
+	[IND4BValues] 						AS [Indicator 4.2Btrans]
+Resident [GT_TRA_IND_4B];
+left Join
+LOAD
+	[Transposition] 					AS [ISO_code],
+	[value_transposition_ind5] 			AS [Indicator 5trans],
+    'Current'							AS [Year]
+Resident [indicador5];
+Concatenate
+LOAD 
+	[Transposition]						AS [ISO_code], 
+    valAvgTra1							AS [Indicator 1trans],
+    valAvgTra2							AS [Indicator 2trans],
+    'N/A'								AS [Indicator 3trans],
+    valAvgTra4							AS [Indicator 4trans],
+    valAvgTra5							AS [Indicator 5trans],
+    'Current'					        AS Year
+Resident [Avg_TRA];
+left Join
+LOAD
+	[EEA ΕFTA country] 					AS [ISO_code],
+	[Transposition Deficit],
+    'Current'							AS [Year]
+Resident [No EU Transposition Deficit];
+left Join
+LOAD
+	[EEA ΕFTA country] 					AS [ISO_code],
+	[No EU Trans Directives],
+    'Current'							AS [Year]
+Resident [No EU Transposition Directives];
+outer Join
+LOAD
+	[Year (Transposition Deficit)] 		AS [Year],
+	[ISO_code],
+	[EU Transposition Deficit]
+Resident [EU_Transposition_deficit];
+outer Join
+LOAD
+	[Year EFTA] 						AS [Year],
+    [ISO_code],
+	[No EU Transposition Deficit]
+Resident [No_EU_Transposition_deficit];
+left join
+LOAD
+	[ISO_code],
+    [Directives completeness],
+    'Current'							AS [Year]
+Resident [Directives undergoing completeness];
+outer Join
+LOAD
+	[Year],
+	[Changes in the average transposition deficit percentage],
+    '-' 								AS [ISO_code]
+Resident [Changes in the average Transposition deficit];
+left Join
+LOAD
+	[Year],
+	[Value_incompleteness],
+    '-' 								AS [ISO_code]
+Resident [Changes in the incompleteness rate];
+
+
+
+Drop Table [Performance by enforcement tool], [indicador1A], [indicador2], [indicador3], [indicador4], [indicador5], [Avg_TRA], [GT_TRA_IND_4], [GT_TRA_IND_4B], [No EU Transposition Deficit], [No EU Transposition Directives], [EU_Transposition_deficit], [No_EU_Transposition_deficit], [Directives undergoing completeness], [Changes in the average Transposition deficit], [Changes in the incompleteness rate];

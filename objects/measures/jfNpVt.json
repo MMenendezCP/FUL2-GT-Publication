@@ -1,0 +1,31 @@
+{
+  "qInfo": {
+    "qId": "jfNpVt",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "SOLVIT - Indicator 4 not accepted in 31 days or more",
+    "qDef": "(100 - [Indicator 4 solvit]) / ((100 - [Indicator 4 solvit]) + [Indicator 4 solvit])\r\n",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'not accepted in 31 days or more'",
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#b95545",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "SOLVIT - Indicator 4 not accepted in 31 days or more",
+    "description": "SOLVIT - Indicator 4",
+    "tags": []
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "KsCuL",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "IMI - Indicator 4 Neutral",
+    "qDef": "[Indicator 4imi tim Neutral/Notsure]",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'Neutral/Notsure'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#FDD45A",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "IMI - Indicator 4 Neutral",
+    "description": "IMI - Indicator 4 Neutral",
+    "tags": []
+  }
+}

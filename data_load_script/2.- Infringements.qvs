@@ -1,0 +1,419 @@
+///$tab 2.- Infringements
+[indicator 1infg]:
+LOAD
+	[x1val] 									AS [Infringements],
+    [y1val] 									AS [Indicator 1infg],
+	[y2val] 									AS [GT_INF_IND_1.2020],
+	[y3val] 									AS [GT_INF_IND_1.2019],
+	[y4val] 									AS [GT_INF_IND_1.2018],
+    [y5val] 									AS [GT_INF_IND_1.2017]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_INF_IND_1.csv';
+
+SQL SELECT 
+	"x1val",
+    "y1val",
+	"y2val",
+	"y3val",
+	"y4val",
+    "y5val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+[GT_INF_IND_1_table]:
+Crosstable (INF_IND1_Year, INF_IND1_Values, 1)
+LOAD
+	[Infringements]								AS [ISO_code],
+	[GT_INF_IND_1.2018] 						AS [2018],
+	[GT_INF_IND_1.2019] 						AS [2019],
+	[GT_INF_IND_1.2020] 						AS [2020],
+	[Indicator 1infg] 							AS [2021]
+RESIDENT [indicator 1infg];
+
+
+
+[indicator 2infg]:
+LOAD
+	[x1val] 									AS [Infringements],
+	[y1val] 									AS [Indicator 2infg]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_INF_IND_2.csv';
+
+SQL SELECT
+	"x1val",
+    "y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[indicator 3infg]:
+LOAD
+	[x1val] 									AS [ISO_code],
+	[y1val] 									AS [Indicator 3infg]
+
+where [x1val]<> 'Edition' and [x1val]<> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_INF_IND_3.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[GT_INF_IND_3]:
+LOAD
+	[x1val] 									AS [Infringements],
+    [y1val] 									AS [Indicator 3.2infg]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_INF_IND_3B.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[indicator 4infg]:
+LOAD
+	[x1val] 									AS [ISO_code],
+	[y1val] 									AS [Indicator 4infg]
+
+where [x1val]<> 'Edition' and [x1val]<> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_INF_IND_4.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+
+[GT_INF_IND_4]:
+LOAD
+	[x1val] 									AS [Infringements],
+    [y1val] 									AS [Indicator 4.2infg]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_INF_IND_4B.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+
+Avg_INF:
+LOAD 
+	[Infringements] 							AS AVGINF_Label, 
+	[Indicator 1infg] 							AS valAvgINF1
+RESIDENT [indicator 1infg]
+where [Infringements]='Avg';
+LEFT JOIN
+LOAD 
+	[Infringements] 							AS AVGINF_Label, 
+	[Indicator 2infg] 							AS valAvgINF2
+RESIDENT [indicator 2infg]
+where [Infringements]='Avg';
+LEFT JOIN
+LOAD 
+	[ISO_code] 									AS AVGINF_Label, 
+	[Indicator 3infg]							AS valAvgINF3
+RESIDENT [indicator 3infg]
+where [ISO_code]='Avg';
+LEFT JOIN
+LOAD 
+	[ISO_code] 									AS AVGINF_Label, 
+	[Indicator 4infg]							AS valAvgINF4
+RESIDENT [indicator 4infg]
+where [ISO_code]='Avg';
+
+resAvgInf1=Peek('valAvgINF1',0,'Avg_INF');
+resAvgInf2=Peek('valAvgINF2',0,'Avg_INF');
+resAvgInf3=Peek('valAvgINF3',0,'Avg_INF');
+resAvgInf4=Peek('valAvgINF4',0,'Avg_INF');
+
+
+Drop Table Avg_INF;
+
+
+
+[Pending_Cases]:
+Crosstable (Year_Pending_cases, Pending_cases_values, 1)
+LOAD
+	[x1val] 									AS [ISO_code],
+    [y1val] 									AS [2021],
+	[y2val] 									AS [2020],
+	[y3val] 									AS [2019],
+	[y4val] 									AS [2018]
+								
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_INF_PEN_CAS_EFT.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val",
+	"y2val",
+	"y3val",
+    "y4val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+
+EU_Infringements_deficit:
+Crosstable ([ISO_code], [EU_Infringements_deficit])
+LOAD
+	Text([x1val]) 								AS [Year (Infringements)],
+	[x2val] 									AS [AT],
+	[x3val] 									AS [BE],
+	[x4val] 									AS [BG],
+	[x5val] 									AS [CY],
+	[x6val] 									AS [CZ],
+	[x7val] 									AS [DE],
+	[x8val] 									AS [DK],
+	[x9val] 									AS [EE],
+	[x10val] 									AS [EL],
+	[x11val] 									AS [ES],
+	[x12val] 									AS [FI],
+	[x13val] 									AS [FR],
+	[x14val] 									AS [HR],
+	[x15val] 									AS [HU],
+	[x16val] 									AS [IE],
+	[x17val] 									AS [IT],
+	[x18val] 									AS [LT],
+	[x19val] 									AS [LU],
+	[x20val] 									AS [LV],
+	[x21val] 									AS [MT],
+	[x22val] 									AS [NL],
+	[x23val] 									AS [PL],
+	[x24val] 									AS [PT],
+	[x25val] 									AS [RO],
+	[x26val] 									AS [SE],
+	[x27val] 									AS [SI],
+	[x28val] 									AS [SK],
+	[x29val] 									AS [UK],
+	[x30val] 									AS [EU AVG]
+    
+where [x1val] <> 'Years' and [x1val] <> 'UK';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_PMS_INF_EVO_EU.csv';
+
+SQL SELECT 
+	"x1val",
+	"x2val",
+	"x3val",
+	"x4val",
+	"x5val",
+	"x6val",
+	"x7val",
+	"x8val",
+	"x9val",
+	"x10val",
+	"x11val",
+	"x12val",
+	"x13val",
+	"x14val",
+	"x15val",
+	"x16val",
+	"x17val",
+	"x18val",
+	"x19val",
+	"x20val",
+	"x21val",
+	"x22val",
+	"x23val",
+	"x24val",
+	"x25val",
+	"x26val",
+	"x27val",
+	"x28val",
+	"x29val",
+	"x30val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+No_EU_Infringements_deficit:
+Crosstable ([ISO_code], [No_EU_Infringements_deficit])
+LOAD
+	Text([x1val]) 							AS [Year EFTA (Infringements)],
+    [x2val] 								AS [IS],
+	[x3val] 								AS [LI],
+	[x4val] 								AS [NO],
+	[x5val] 								AS [EEA EFTA]
+    
+where [x1val] <> 'Years' and [x1val] <> 'UK';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_PMS_INF_EVO_EFTA.csv';
+
+SQL SELECT 
+	"x1val",
+	"x2val",
+	"x3val",
+	"x4val",
+	"x5val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+[Changes in the average Infringements deficit]:
+Load
+	Text([x1val] ) 								AS [Year],
+	[x2val] 									AS [Changes in the average infringements deficit percentage]
+    
+where [x1val] <> 'Year';
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_INF_NO_OF_INF_CAS.csv';
+
+SQL SELECT 
+	"x1val",
+	"x2val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[ALLMETRICS_TRANS_INF]:
+// --------------------------------------------------------------
+NoConcatenate
+LOAD
+    [ISO_code],
+    [Year],
+    [Transposition gen data],
+    [Infringements gen data],
+    [IMI gen data],
+    [SOLVIT gen data],
+	[Indicator 1trans],
+	[Indicator 2trans],
+	[Indicator 3trans],
+	[Indicator 4trans],
+	[Indicator 4.2trans],
+	[Indicator 4.2Btrans],
+	[Indicator 5trans],
+	[Transposition Deficit],
+	[No EU Trans Directives],
+	[EU Transposition Deficit],
+	[No EU Transposition Deficit],
+    [Directives completeness],
+	[Changes in the average transposition deficit percentage],
+	[Value_incompleteness]
+Resident [ALLMETRICS_TRANS];
+// --------------------------------------------------------------
+left Join
+LOAD
+	[Infringements]								AS [ISO_code],
+    [Indicator 1infg],
+    'Current'									AS [Year]
+Resident [indicator 1infg];
+left Join
+LOAD
+	[ISO_code],
+	[INF_IND1_Year]								AS [Year], 					
+	[INF_IND1_Values] 							AS [Indicator 1.2infg]				
+Resident GT_INF_IND_1_table;
+left Join 
+LOAD
+	[Infringements]								AS [ISO_code],
+	[Indicator 2infg],
+    'Current'									AS [Year]
+Resident [indicator 2infg];
+left Join
+LOAD
+	[ISO_code],
+	[Indicator 3infg],
+    'Current'									AS [Year]
+Resident [indicator 3infg];
+left Join
+LOAD
+	[Infringements]								AS [ISO_code],
+    [Indicator 3.2infg],
+    'Current'									AS [Year]
+Resident [GT_INF_IND_3];
+left Join 
+LOAD
+	[ISO_code],
+	[Indicator 4infg],
+    'Current'									AS [Year]
+Resident [indicator 4infg];
+left join 
+LOAD
+	[Infringements]								AS [ISO_code],
+    [Indicator 4.2infg],
+    'Current'									AS [Year]
+Resident [GT_INF_IND_4];
+outer Join 
+LOAD
+	[ISO_code],
+    [Year_Pending_cases]						AS [Year],
+	[Pending_cases_values]						AS [Pending_cases_inf]
+Resident [Pending_Cases];
+outer Join 
+LOAD
+	[Year (Infringements)]						AS [Year],
+	[ISO_code],
+	[EU_Infringements_deficit]					AS [EU Infringements Deficit]
+Resident EU_Infringements_deficit;
+left Join 
+LOAD
+	[Year EFTA (Infringements)]					AS [Year],
+    [ISO_code],
+	[No_EU_Infringements_deficit]				AS [No EU Infringements Deficit]
+Resident No_EU_Infringements_deficit;
+left Join 
+Load
+	[Year],
+	[Changes in the average infringements deficit percentage],
+    '-' 								AS [ISO_code]
+Resident [Changes in the average Infringements deficit];
+
+
+
+
+
+Drop Table [ALLMETRICS_TRANS], [indicator 1infg], GT_INF_IND_1_table, [indicator 2infg], [indicator 3infg], [GT_INF_IND_3], [indicator 4infg], [GT_INF_IND_4], [Pending_Cases], [EU_Infringements_deficit], No_EU_Infringements_deficit, [Changes in the average Infringements deficit];
+
+
+
+[Types of case]:
+LOAD
+	[x1val] 								AS [Type of Case],
+	[y1val] 								AS [Number of pending infringement cases]
+
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_INF_TYP_OF_CAS.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+
+[Average duration by sector]:
+LOAD
+	[x1val] 									AS [Average duration by sector],
+    [x2val] 									AS [Average infg duration],
+	[x3val] 									AS [Months]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> 'Avg';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_INF_DUR_BY_SEC.csv';
+
+SQL SELECT 
+	"x1val",
+	"x2val",
+	"x3val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";

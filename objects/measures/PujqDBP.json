@@ -1,0 +1,31 @@
+{
+  "qInfo": {
+    "qId": "PujqDBP",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "SOLVIT - Indicator 6 71 days or more",
+    "qDef": "(100 - [Indicator 6 solvit]) / ((100 - [Indicator 6 solvit]) + [Indicator 6 solvit])",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'71 days or more'",
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#b95545",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "SOLVIT - Indicator 6 71 days or more",
+    "description": "SOLVIT - Indicator 6",
+    "tags": []
+  }
+}

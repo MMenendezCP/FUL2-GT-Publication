@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "pnYpsJ",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "IMI - Request per sending Posting of workers",
+    "qDef": "only(if([GT_IMI_REQ_MS_Policy Area] =  'Posting of workers', [Request sent]))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'Posting of workers'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#,##0",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#FF9219",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "IMI - Request per sending Posting of workers",
+    "description": "IMI - Request per sending",
+    "tags": []
+  }
+}

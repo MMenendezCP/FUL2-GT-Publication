@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "nem",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "IMI - Request per recipient Other areas*",
+    "qDef": "only(if([GT_IMI_REQ_REC_MS_Policy Area] =  'Other areas*', [Request recieved]))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'Other areas*'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#,##0",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#75507b",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "IMI - Request per recipient Other areas*",
+    "description": "IMI - Request per recipient",
+    "tags": []
+  }
+}

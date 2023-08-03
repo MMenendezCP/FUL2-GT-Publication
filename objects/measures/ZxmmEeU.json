@@ -1,0 +1,31 @@
+{
+  "qInfo": {
+    "qId": "ZxmmEeU",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "SOLVIT Cases submited 1",
+    "qDef": "[Solvit_Cases_submited_2018]",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "=SysTreeYearsAgo/*Date(AddYears(SysLastYearReal, 3),'YYYY')",
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#20603F",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "SOLVIT Cases submited 1",
+    "description": "SOLVIT Cases submited",
+    "tags": []
+  }
+}

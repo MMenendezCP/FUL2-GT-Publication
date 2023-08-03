@@ -1,0 +1,857 @@
+{
+  "qProperty": {
+    "qInfo": {
+      "qId": "26edb25d-9048-4834-ac15-0343c81ce823",
+      "qType": "sheet"
+    },
+    "qMetaDef": {
+      "title": "Performance by enforcement tool",
+      "description": ""
+    },
+    "rank": -2,
+    "thumbnail": {
+      "qStaticContentUrlDef": {}
+    },
+    "columns": 24,
+    "rows": 12,
+    "cells": [
+      {
+        "name": "dyWqu",
+        "type": "table",
+        "col": 0,
+        "row": 6,
+        "colspan": 12,
+        "rowspan": 6,
+        "bounds": {
+          "y": 50,
+          "x": 0,
+          "width": 50,
+          "height": 50
+        }
+      },
+      {
+        "name": "MWACR",
+        "type": "sms_heatmap",
+        "col": 0,
+        "row": 0,
+        "colspan": 22,
+        "rowspan": 6,
+        "bounds": {
+          "y": 0,
+          "x": 0,
+          "width": 91.66666666666666,
+          "height": 50
+        }
+      }
+    ],
+    "qChildListDef": {
+      "qData": {
+        "title": "/title"
+      }
+    },
+    "customRowBase": 12,
+    "gridResolution": "small",
+    "layoutOptions": {
+      "mobileLayout": "LIST"
+    },
+    "gridMode": "edit"
+  },
+  "qChildren": [
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "MWACR",
+          "qType": "sms_heatmap"
+        },
+        "qMetaDef": {},
+        "qHyperCubeDef": {
+          "qDimensions": [
+            {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=if ( not isnull([Transposition gen data]) or not isnull([IMI gen data]), [ISO_code])"
+                ],
+                "qFieldLabels": [
+                  ""
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByLoadOrder": 1,
+                    "qSortByExpression": 1,
+                    "qExpression": {
+                      "qv": "Match([ISO_code], 'AT','BE','BG','CY','CZ','DK','DE','EE','EL','ES','FI','FR','HR','HU','IE','IT','LT','LU','LV','MT','NL','PL','PT','RO','SE','SI','SK','IS','LI','NO')"
+                    }
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": false,
+                "cId": "ThaVgW",
+                "othersLabel": "Others"
+              },
+              "qNullSuppression": true,
+              "qOtherTotalSpec": {
+                "qOtherMode": "OTHER_OFF",
+                "qOtherCounted": {
+                  "qv": "10"
+                },
+                "qOtherLimit": {
+                  "qv": "0"
+                },
+                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                "qForceBadValueKeeping": true,
+                "qApplyEvenWhenPossiblyWrongResult": true,
+                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                "qTotalMode": "TOTAL_OFF",
+                "qReferencedExpression": {}
+              },
+              "qOtherLabel": {
+                "qv": "Others"
+              },
+              "qTotalLabel": {},
+              "qCalcCond": {},
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              }
+            },
+            {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=if (General_flag = 1, indicator_print)\r\n\n/*\n\n=if(indicatorPOGT='SOLVIT','SOLVIT (staffing)',indicatorPOGT)"
+                ],
+                "qFieldLabels": [
+                  ""
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": false,
+                "cId": "gXtEWF",
+                "othersLabel": "Others"
+              },
+              "qNullSuppression": true,
+              "qOtherTotalSpec": {
+                "qOtherMode": "OTHER_OFF",
+                "qOtherCounted": {
+                  "qv": "10"
+                },
+                "qOtherLimit": {
+                  "qv": "0"
+                },
+                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                "qForceBadValueKeeping": true,
+                "qApplyEvenWhenPossiblyWrongResult": true,
+                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                "qTotalMode": "TOTAL_OFF",
+                "qReferencedExpression": {}
+              },
+              "qOtherLabel": {
+                "qv": "Others"
+              },
+              "qTotalLabel": {},
+              "qCalcCond": {},
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              }
+            }
+          ],
+          "qMeasures": [
+            {
+              "qDef": {
+                "qTags": [],
+                "qGrouping": "N",
+                "qDef": "\r\n\n\nif (\n\tindicator = 'Transposition gen data', \t\tif ([Transposition gen data] = 0, \t'↓' , if ([Transposition gen data] = 1, \t\t'-' , if ([Transposition gen data] = 2,\t\t\t'↑' , if (isnull([Transposition gen data]),\t\t '-' )))), if (\n    indicator = 'Infringements gen data', \t\tif ([Infringements gen data] = 0, \t'↓' , if ([Infringements gen data] = 1, \t\t'-' , if ([Infringements gen data] = 2,\t\t \t'↑' , if (isnull([Infringements gen data]),\t\t '-' )))), if (\n    indicator = 'IMI gen data', \t\t\t\tif ([IMI gen data] = 0, \t\t\t'↓' , if ([IMI gen data] = 1, \t\t\t\t\t'-' , if ([IMI gen data] = 2\t\t,\t\t\t'↑' , if (isnull([IMI gen data]),\t\t\t\t '-' )))), if (\n    indicator = 'SOLVIT gen data', \t\t\t\tif ([SOLVIT gen data] = 0,\t\t\t'↓' , if ([SOLVIT gen data] = 1,\t\t\t\t'-' , if ([SOLVIT gen data] = 2,\t\t\t\t'↑' , if (isnull([SOLVIT gen data]),\t\t\t '-' )))), '-'\n    )\n    )\n    )\n\n)\n\n\n\n\n\n/*\n\n\nif (\n\tindicator = 'Transposition gen data', \t\tif ([Transposition gen data] = 0, \t'#DA5546' & '↓' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux], if ([Transposition gen data] = 1, \t\t'#DBC42E' & '-' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux], if ([Transposition gen data] = 2,\t\t '#71ab7c' & '↑' & [Real_name], if (isnull([Transposition gen data]),\t\t '#DBC42E' & '-' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux])))), if (\n    indicator = 'Infringements gen data', \t\tif ([Infringements gen data] = 0, \t'#DA5546' & '↓' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux], if ([Infringements gen data] = 1, \t\t'#DBC42E' & '-' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux], if ([Infringements gen data] = 2,\t\t '#71ab7c' & '↑' & [Real_name], if (isnull([Infringements gen data]),\t\t '#DBC42E' & '-' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux])))), if (\n    indicator = 'IMI gen data', \t\t\t\tif ([IMI gen data] = 0, \t\t\t'#DA5546' & '↓' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux], if ([IMI gen data] = 1, \t\t\t\t\t'#DBC42E' & '-' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux], if ([IMI gen data] = 2\t\t,\t\t '#71ab7c' & '↑' & [Real_name], if (isnull([IMI gen data]),\t\t\t\t \t '#DBC42E' & '-' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux])))), if (\n    indicator = 'SOLVIT gen data', \t\t\t\tif ([SOLVIT gen data] = 0,\t\t\t'#DA5546' & '↓' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux], if ([SOLVIT gen data] = 1,\t\t\t\t'#DBC42E' & '-' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux], if ([SOLVIT gen data] = 2,\t\t\t\t '#71ab7c' & '↑' & [Real_name], if (isnull([SOLVIT gen data]),\t\t\t \t '#DBC42E' & '-' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux])))), '#DBC42E'\n    )\n    )\n    )\n\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*\n\n\n\n\n\nif(\n\n//TRANSPOSITION\nindicatorPOGT='Transposition',\n\t//UP\n\tif(POGTC='CY' or POGTC='HU' or POGTC='LU' or POGTC='NL' or POGTC='PL' or POGTC='SI' or POGTC='SK','↑',\n    //DOWN    \n    if(POGTC='BE' or POGTC='CZ' or POGTC='DK' or POGTC='EE' or POGTC='EL' or POGTC='FR' or POGTC='IT' or POGTC='MT' or POGTC='PT' or POGTC='RO','↓')),\n\n//Infringements\nif(\tindicatorPOGT='Infringements',\n\t//UP\n\tif(POGTC='AT' or POGTC='BE' or POGTC='BG' or POGTC='CZ' or POGTC='DE' or POGTC='EL' or POGTC='ES' or POGTC='FR' or POGTC='HU' or POGTC='IT' or POGTC='MT' \n    or POGTC='NL' or POGTC='PL' or POGTC='PT' or POGTC='RO','↑',\n    //DOWN    \n    if(POGTC='DK' or POGTC='EE' or POGTC='FI' or POGTC='HR','↓')),\n\n//IMI\nif(\tindicatorPOGT='IMI',\n\t//UP\n\tif(POGTC='DE' or POGTC='IT' or POGTC='LU' or POGTC='MT' or POGTC='SI','↑' ,\n    //DOWN    \n    if(POGTC='DK' or POGTC='IE' or POGTC='IS','↓')),\n\n//SOLVIT\nif(\tindicatorPOGT='SOLVIT',\n\t//UP\n\tif(POGTC='AT' or POGTC='BE' or POGTC='CY' or POGTC='IT' or POGTC='LU' or POGTC='PL' or POGTC='RO' or POGTC='SI' or POGTC='IS','↑' ,\n    //DOWN    \n    if(POGTC='DK' or POGTC='EE' or POGTC='ES' or POGTC='NO','↓'))))))\n\n\n\n/*if(indicatorPOGT='Transposition' and POGTC='AT','↓',if (indicatorPOGT='Transposition' and POGTC='BE','↓',if (indicatorPOGT='Transposition' and POGTC='BG','↓',\nif (indicatorPOGT='Transposition' and POGTC='CY','↓',if (indicatorPOGT='Transposition' and POGTC='CZ','↑',if (indicatorPOGT='Transposition' and POGTC='DK','↑',\nif (indicatorPOGT='Transposition' and POGTC='DE','↑',if (indicatorPOGT='Transposition' and POGTC='EE','↑',if (indicatorPOGT='Transposition' and POGTC='FR','↑',\nif (indicatorPOGT='Transposition' and POGTC='HR','↓',if (indicatorPOGT='Transposition' and POGTC='HU','↓',if (indicatorPOGT='Transposition' and POGTC='IE','↓',\nif (indicatorPOGT='Transposition' and POGTC='IT','↓',if (indicatorPOGT='Transposition' and POGTC='LU','↓',if (indicatorPOGT='Transposition' and POGTC='LV','↓',\nif (indicatorPOGT='Transposition' and POGTC='PL','↓',if (indicatorPOGT='Transposition' and POGTC='SE','↓',if (indicatorPOGT='Transposition' and POGTC='SI','↓',\nif (indicatorPOGT='Transposition' and POGTC='SK','↓', if(indicatorPOGT='Infringements' and POGTC='BE','↓',if(indicatorPOGT='Infringements' and POGTC='BG','↓',\n\nif(indicatorPOGT='Infringements' and POGTC='CZ','↓',if(indicatorPOGT='Infringements' and POGTC='DK','↑',if(indicatorPOGT='Infringements' and POGTC='HU','↑',\nif(indicatorPOGT='Infringements' and POGTC='IE','↑',if(indicatorPOGT='Infringements' and POGTC='NL','↑',if(indicatorPOGT='Infringements' and POGTC='SK','↑',\nif(indicatorPOGT='Infringements' and POGTC='RO','↓',if(indicatorPOGT='IMI' and POGTC='DE','↓',\n\nif(indicatorPOGT='IMI' and POGTC='EL','↓',\nif(indicatorPOGT='IMI' and POGTC='MT','↓',\nif(indicatorPOGT='IMI' and POGTC='LI','↓',\nif(indicatorPOGT='IMI' and POGTC='NO','↓',\nif(indicatorPOGT='IMI' and POGTC='BE','↑',\nif(indicatorPOGT='IMI' and POGTC='EE','↑',if(indicatorPOGT='IMI' and POGTC='HR','↑',if(indicatorPOGT='IMI' and POGTC='IT','↑',if(indicatorPOGT='IMI' and POGTC='LV','↑',\nif(indicatorPOGT='IMI' and POGTC='PL','↑',if(indicatorPOGT='IMI' and POGTC='PT','↑',if(indicatorPOGT='IMI' and POGTC='SI','↑',if(indicatorPOGT='IMI' and POGTC='IS','↑',\n\n//if(indicatorPOGT='Your Europe' and POGTC='HU','↑',if(indicatorPOGT='Your Europe' and POGTC='LT','↑',if(indicatorPOGT='Your Europe' and POGTC='SI','↑',\n//if(indicatorPOGT='Your Europe' and POGTC='IS','↑',if(indicatorPOGT='Your Europe' and POGTC='LI','↑',if(indicatorPOGT='SOLVIT' and POGTC='BE','↑',\n\nif(indicatorPOGT='SOLVIT' and POGTC='CZ','↑',\nif(indicatorPOGT='SOLVIT' and POGTC='ES','↑',if(indicatorPOGT='SOLVIT' and POGTC='FI','↑',if(indicatorPOGT='SOLVIT' and POGTC='MT','↑',if(indicatorPOGT='SOLVIT' and POGTC='PL','↑',\nif(indicatorPOGT='SOLVIT' and POGTC='SE','↑',if(indicatorPOGT='SOLVIT' and POGTC='LI','↑',if(indicatorPOGT='SOLVIT' and POGTC='CY','↓',if(indicatorPOGT='SOLVIT' and POGTC='HR','↓'\n,if(indicatorPOGT='SOLVIT' and POGTC='IE','↓',if(indicatorPOGT='SOLVIT' and POGTC='LT','↓',if(indicatorPOGT='SOLVIT' and POGTC='LU','↓',if(indicatorPOGT='SOLVIT' and POGTC='NL','↓',\nif(indicatorPOGT='SOLVIT' and POGTC='SI','↓',if(indicatorPOGT='SOLVIT' and POGTC='NO','↓',' ')))))))))))))))))))))))))))))))))))))))))))))))))))))))))//))))))",
+                "qNumFormat": {
+                  "qType": "U",
+                  "qnDec": 10,
+                  "qUseThou": 0
+                },
+                "qAccumulate": 0,
+                "qActiveExpression": 0,
+                "qExpressions": [],
+                "autoSort": true,
+                "cId": "GzTpe",
+                "numFormatFromTemplate": true
+              },
+              "qSortBy": {
+                "qSortByNumeric": -1,
+                "qSortByLoadOrder": 1,
+                "qExpression": {}
+              },
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCond": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qTrendLines": [],
+              "qMiniChartDef": {
+                "qSortBy": {
+                  "qExpression": {}
+                },
+                "qOtherTotalSpec": {
+                  "qOtherMode": "OTHER_OFF",
+                  "qOtherCounted": {},
+                  "qOtherLimit": {},
+                  "qOtherLimitMode": "OTHER_GT_LIMIT",
+                  "qForceBadValueKeeping": true,
+                  "qApplyEvenWhenPossiblyWrongResult": true,
+                  "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                  "qTotalMode": "TOTAL_OFF",
+                  "qReferencedExpression": {}
+                },
+                "qMaxNumberPoints": -1,
+                "qAttributeExpressions": []
+              }
+            },
+            {
+              "qDef": {
+                "qTags": [],
+                "qGrouping": "N",
+                "qDef": "if (\r\n\tindicator = 'Transposition gen data', \t\tif (not isnull([Transposition gen data]) \tand [Transposition gen data] = 0, \t\t'#DA5546' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux], if (not isnull([Transposition gen data]) \t\tand[Transposition gen data] = 1, \t\t'#DBC42E' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux], if (not isnull([Transposition gen data]) \t\tand[Transposition gen data] = 2,\t\t '#71ab7c' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux], if (isnull([Transposition gen data]),\t\t '#C0C0C0' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux])))), if (\n    indicator = 'Infringements gen data', \t\tif (not isnull([Infringements gen data]) \tand [Infringements gen data] = 0, \t\t'#DA5546' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux], if (not isnull([Infringements gen data]) \t\tand[Infringements gen data] = 1, \t\t'#DBC42E' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux], if (not isnull([Infringements gen data]) \t\tand[Infringements gen data] = 2,\t\t '#71ab7c' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux], if (isnull([Infringements gen data]),\t\t '#C0C0C0' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux])))), if (\n    indicator = 'IMI gen data', \t\t\t\tif (not isnull([IMI gen data]) \t\t\t\tand [IMI gen data] = 0, \t\t\t\t'#DA5546' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux], if (not isnull([IMI gen data]) \t\t\t\tand[IMI gen data] = 1, \t\t\t\t\t'#DBC42E' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux], if (not isnull([IMI gen data]) \t\t\t\tand[IMI gen data] = 2\t\t,\t\t \t '#71ab7c' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux], if (isnull([IMI gen data]),\t\t\t\t\t '#C0C0C0' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux])))), if (\n    indicator = 'SOLVIT gen data', \t\t\t\tif (not isnull([SOLVIT gen data]) \t\t\tand [SOLVIT gen data] = 0,\t\t\t\t'#DA5546' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux], if (not isnull([SOLVIT gen data]) \t\t\tand[SOLVIT gen data] = 1,\t\t\t\t'#DBC42E' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux], if (not isnull([SOLVIT gen data]) \t\t\tand[SOLVIT gen data] = 2,\t\t\t \t '#71ab7c' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux], if (isnull([SOLVIT gen data]),\t\t\t\t '#C0C0C0' & '^https://single-market-scoreboard.ec.europa.eu/countries/' & [RealName_aux])))), '#C0C0C0'\n    )\n    )\n    )\n\n)",
+                "qNumFormat": {
+                  "qType": "U",
+                  "qnDec": 10,
+                  "qUseThou": 0
+                },
+                "qAccumulate": 0,
+                "qActiveExpression": 0,
+                "qExpressions": [],
+                "autoSort": true,
+                "cId": "bQGmvU",
+                "numFormatFromTemplate": true
+              },
+              "qSortBy": {
+                "qSortByNumeric": -1,
+                "qSortByLoadOrder": 1,
+                "qExpression": {}
+              },
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCond": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qTrendLines": [],
+              "qMiniChartDef": {
+                "qSortBy": {
+                  "qExpression": {}
+                },
+                "qOtherTotalSpec": {
+                  "qOtherMode": "OTHER_OFF",
+                  "qOtherCounted": {},
+                  "qOtherLimit": {},
+                  "qOtherLimitMode": "OTHER_GT_LIMIT",
+                  "qForceBadValueKeeping": true,
+                  "qApplyEvenWhenPossiblyWrongResult": true,
+                  "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                  "qTotalMode": "TOTAL_OFF",
+                  "qReferencedExpression": {}
+                },
+                "qMaxNumberPoints": -1,
+                "qAttributeExpressions": []
+              }
+            }
+          ],
+          "qInterColumnSortOrder": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "qInitialDataFetch": [
+            {
+              "qLeft": 0,
+              "qTop": 0,
+              "qWidth": 4,
+              "qHeight": 2500
+            }
+          ],
+          "qReductionMode": "N",
+          "qMode": "S",
+          "qPseudoDimPos": -1,
+          "qNoOfLeftDims": -1,
+          "qMaxStackedCells": 5000,
+          "qCalcCond": {},
+          "qTitle": {},
+          "qCalcCondition": {
+            "qCond": {},
+            "qMsg": {}
+          },
+          "qColumnOrder": [],
+          "qExpansionState": [],
+          "qDynamicScript": [],
+          "qLayoutExclude": {
+            "qHyperCubeDef": {
+              "qDimensions": [],
+              "qMeasures": [],
+              "qInterColumnSortOrder": [],
+              "qInitialDataFetch": [],
+              "qReductionMode": "N",
+              "qMode": "S",
+              "qPseudoDimPos": -1,
+              "qNoOfLeftDims": -1,
+              "qMaxStackedCells": 5000,
+              "qCalcCond": {},
+              "qTitle": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qColumnOrder": [],
+              "qExpansionState": [],
+              "qDynamicScript": []
+            }
+          }
+        },
+        "showTitles": true,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": false,
+        "showDetailsExpression": false,
+        "visualization": "sms_heatmap",
+        "version": "1.0.0",
+        "extensionMeta": {
+          "translationKey": "",
+          "icon": "table",
+          "iconChar": "puzzle",
+          "isLibraryItem": true,
+          "visible": true,
+          "name": "sms_heatmap",
+          "description": "Table visualization template",
+          "template": "sms_heatmap",
+          "iconPath": "M14.5,9 L13,9 L13,3.3 C13,3.1 12.9,3 12.7,3 L8,3 L8,1.5 C8,0.7 7.3,0 6.5,0 C5.7,0 5,0.7 5,1.5 L5,3 L0.3,3 C0.1,3 0,3.1 0,3.3 L0,9 L1.5,9 C2.3,9 3,9.7 3,10.5 C3,11.3 2.3,12 1.5,12 L0,12 L0,15.7 C0,15.9 0.1,16 0.3,16 L5,16 L5,14.5 C5,13.7 5.7,13 6.5,13 C7.3,13 8,13.7 8,14.5 L8,16 L12.7,16 C12.9,16 13,15.9 13,15.7 L13,12 L14.5,12 C15.3,12 16,11.3 16,10.5 C16,9.7 15.3,9 14.5,9 Z",
+          "isThirdParty": true,
+          "type": "visualization",
+          "version": "1.0.0",
+          "author": "",
+          "homepage": "",
+          "keywords": "qlik-sense, visualization",
+          "license": "",
+          "repository": "",
+          "dependencies": {
+            "qlik-sense": ">=3.0.x"
+          }
+        }
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "dyWqu",
+          "qType": "table"
+        },
+        "qMetaDef": {},
+        "qHyperCubeDef": {
+          "qDimensions": [
+            {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "ISO_code"
+                ],
+                "qFieldLabels": [
+                  ""
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "HSuz",
+                "othersLabel": "Others",
+                "textAlign": {
+                  "auto": true,
+                  "align": "left"
+                },
+                "representation": {
+                  "type": "text",
+                  "urlPosition": "dimension",
+                  "urlLabel": "",
+                  "linkUrl": "",
+                  "imageSetting": "label",
+                  "imageLabel": "",
+                  "imageUrl": "",
+                  "imageSize": "fitHeight",
+                  "imagePosition": "topCenter"
+                }
+              },
+              "qOtherTotalSpec": {
+                "qOtherMode": "OTHER_OFF",
+                "qOtherCounted": {
+                  "qv": "10"
+                },
+                "qOtherLimit": {
+                  "qv": "0"
+                },
+                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                "qForceBadValueKeeping": true,
+                "qApplyEvenWhenPossiblyWrongResult": true,
+                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                "qTotalMode": "TOTAL_OFF",
+                "qReferencedExpression": {}
+              },
+              "qOtherLabel": {
+                "qv": "Others"
+              },
+              "qTotalLabel": {},
+              "qCalcCond": {},
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              }
+            },
+            {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "Transposition gen data"
+                ],
+                "qFieldLabels": [
+                  ""
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "SSQwVE",
+                "othersLabel": "Others",
+                "textAlign": {
+                  "auto": true,
+                  "align": "left"
+                },
+                "representation": {
+                  "type": "text",
+                  "urlPosition": "dimension",
+                  "urlLabel": "",
+                  "linkUrl": "",
+                  "imageSetting": "label",
+                  "imageLabel": "",
+                  "imageUrl": "",
+                  "imageSize": "fitHeight",
+                  "imagePosition": "topCenter"
+                }
+              },
+              "qOtherTotalSpec": {
+                "qOtherMode": "OTHER_OFF",
+                "qOtherCounted": {
+                  "qv": "10"
+                },
+                "qOtherLimit": {
+                  "qv": "0"
+                },
+                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                "qForceBadValueKeeping": true,
+                "qApplyEvenWhenPossiblyWrongResult": true,
+                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                "qTotalMode": "TOTAL_OFF",
+                "qReferencedExpression": {}
+              },
+              "qOtherLabel": {
+                "qv": "Others"
+              },
+              "qTotalLabel": {},
+              "qCalcCond": {},
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              }
+            },
+            {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "Infringements gen data"
+                ],
+                "qFieldLabels": [
+                  ""
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "BAEc",
+                "othersLabel": "Others",
+                "textAlign": {
+                  "auto": true,
+                  "align": "left"
+                },
+                "representation": {
+                  "type": "text",
+                  "urlPosition": "dimension",
+                  "urlLabel": "",
+                  "linkUrl": "",
+                  "imageSetting": "label",
+                  "imageLabel": "",
+                  "imageUrl": "",
+                  "imageSize": "fitHeight",
+                  "imagePosition": "topCenter"
+                }
+              },
+              "qOtherTotalSpec": {
+                "qOtherMode": "OTHER_OFF",
+                "qOtherCounted": {
+                  "qv": "10"
+                },
+                "qOtherLimit": {
+                  "qv": "0"
+                },
+                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                "qForceBadValueKeeping": true,
+                "qApplyEvenWhenPossiblyWrongResult": true,
+                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                "qTotalMode": "TOTAL_OFF",
+                "qReferencedExpression": {}
+              },
+              "qOtherLabel": {
+                "qv": "Others"
+              },
+              "qTotalLabel": {},
+              "qCalcCond": {},
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              }
+            },
+            {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "IMI gen data"
+                ],
+                "qFieldLabels": [
+                  ""
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "hqJTUM",
+                "othersLabel": "Others",
+                "textAlign": {
+                  "auto": true,
+                  "align": "left"
+                },
+                "representation": {
+                  "type": "text",
+                  "urlPosition": "dimension",
+                  "urlLabel": "",
+                  "linkUrl": "",
+                  "imageSetting": "label",
+                  "imageLabel": "",
+                  "imageUrl": "",
+                  "imageSize": "fitHeight",
+                  "imagePosition": "topCenter"
+                }
+              },
+              "qOtherTotalSpec": {
+                "qOtherMode": "OTHER_OFF",
+                "qOtherCounted": {
+                  "qv": "10"
+                },
+                "qOtherLimit": {
+                  "qv": "0"
+                },
+                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                "qForceBadValueKeeping": true,
+                "qApplyEvenWhenPossiblyWrongResult": true,
+                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                "qTotalMode": "TOTAL_OFF",
+                "qReferencedExpression": {}
+              },
+              "qOtherLabel": {
+                "qv": "Others"
+              },
+              "qTotalLabel": {},
+              "qCalcCond": {},
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              }
+            },
+            {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "SOLVIT gen data"
+                ],
+                "qFieldLabels": [
+                  ""
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "tJA",
+                "othersLabel": "Others",
+                "textAlign": {
+                  "auto": true,
+                  "align": "left"
+                },
+                "representation": {
+                  "type": "text",
+                  "urlPosition": "dimension",
+                  "urlLabel": "",
+                  "linkUrl": "",
+                  "imageSetting": "label",
+                  "imageLabel": "",
+                  "imageUrl": "",
+                  "imageSize": "fitHeight",
+                  "imagePosition": "topCenter"
+                }
+              },
+              "qOtherTotalSpec": {
+                "qOtherMode": "OTHER_OFF",
+                "qOtherCounted": {
+                  "qv": "10"
+                },
+                "qOtherLimit": {
+                  "qv": "0"
+                },
+                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                "qForceBadValueKeeping": true,
+                "qApplyEvenWhenPossiblyWrongResult": true,
+                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                "qTotalMode": "TOTAL_OFF",
+                "qReferencedExpression": {}
+              },
+              "qOtherLabel": {
+                "qv": "Others"
+              },
+              "qTotalLabel": {},
+              "qCalcCond": {},
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              }
+            },
+            {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "Real_name"
+                ],
+                "qFieldLabels": [
+                  ""
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "QmpCP",
+                "othersLabel": "Others",
+                "textAlign": {
+                  "auto": true,
+                  "align": "left"
+                },
+                "representation": {
+                  "type": "text",
+                  "urlPosition": "dimension",
+                  "urlLabel": "",
+                  "linkUrl": "",
+                  "imageSetting": "label",
+                  "imageLabel": "",
+                  "imageUrl": "",
+                  "imageSize": "fitHeight",
+                  "imagePosition": "topCenter"
+                }
+              },
+              "qOtherTotalSpec": {
+                "qOtherMode": "OTHER_OFF",
+                "qOtherCounted": {
+                  "qv": "10"
+                },
+                "qOtherLimit": {
+                  "qv": "0"
+                },
+                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                "qForceBadValueKeeping": true,
+                "qApplyEvenWhenPossiblyWrongResult": true,
+                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                "qTotalMode": "TOTAL_OFF",
+                "qReferencedExpression": {}
+              },
+              "qOtherLabel": {
+                "qv": "Others"
+              },
+              "qTotalLabel": {},
+              "qCalcCond": {},
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              }
+            }
+          ],
+          "qMeasures": [],
+          "qInterColumnSortOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "qSuppressMissing": true,
+          "qInitialDataFetch": [],
+          "qReductionMode": "N",
+          "qMode": "S",
+          "qPseudoDimPos": -1,
+          "qNoOfLeftDims": -1,
+          "qMaxStackedCells": 5000,
+          "qCalcCond": {},
+          "qTitle": {},
+          "qCalcCondition": {
+            "qCond": {},
+            "qMsg": {}
+          },
+          "qColumnOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "qExpansionState": [],
+          "qDynamicScript": [],
+          "columnOrder": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "columnWidths": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "qLayoutExclude": {
+            "qHyperCubeDef": {
+              "qDimensions": [],
+              "qMeasures": [],
+              "qInterColumnSortOrder": [],
+              "qInitialDataFetch": [],
+              "qReductionMode": "N",
+              "qMode": "S",
+              "qPseudoDimPos": -1,
+              "qNoOfLeftDims": -1,
+              "qMaxStackedCells": 5000,
+              "qCalcCond": {},
+              "qTitle": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qColumnOrder": [],
+              "qExpansionState": [],
+              "qDynamicScript": []
+            }
+          }
+        },
+        "script": "",
+        "search": {
+          "sorting": "auto"
+        },
+        "showTitles": true,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": false,
+        "showDetailsExpression": false,
+        "totals": {
+          "show": true,
+          "position": "noTotals",
+          "label": "Totals"
+        },
+        "scrolling": {
+          "horizontal": true,
+          "keepFirstColumnInView": false,
+          "keepFirstColumnInViewTouch": false
+        },
+        "multiline": {
+          "wrapTextInHeaders": true,
+          "wrapTextInCells": true
+        },
+        "visualization": "table"
+      },
+      "qChildren": []
+    }
+  ]
+}

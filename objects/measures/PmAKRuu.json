@@ -1,0 +1,30 @@
+{
+  "qInfo": {
+    "qId": "PmAKRuu",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "Caseload as home centre",
+    "qDef": "[Distribution HOM]",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#4186ED",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "Caseload as home centre",
+    "description": "",
+    "tags": []
+  }
+}

@@ -1,0 +1,601 @@
+///$tab 4.- IMI
+[indicator 1A]:
+
+LOAD
+	[x1val] 										AS [IMI],
+	[y1val] 										AS [GT_IMI_TOT_REC_1A_2021]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_IMI_TOT_REC_1A.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+[indicator 2 acc]:
+LOAD
+	[x1val] 										AS [IMI],
+	[y1val] 										AS GT_IMI_ACC_2B_2021
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_IMI_ACC_2B.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+[indicator 2 spe]:
+LOAD
+	[x1val] 										AS [IMI],
+	[y1val] 										AS [GT_IMI_SPE_2B_2021]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_IMI_SPE_2B.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+[indicator 2 req]:
+LOAD
+	[x1val] 										AS [IMI],
+	[y1val] 										AS [GT_IMI_REQ_2A_2021]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_IMI_REQ_2A.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+[indicator 2C req]:
+LOAD
+	[x1val] 										AS [IMI],
+	[y1val] 										AS [GT_IMI_REQ_2C_2021]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_IMI_REQ_2C.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+[indicator 2D spe]:
+LOAD
+	[x1val] 										AS [IMI],
+	[y1val] 										AS [GT_IMI_SPE_2D_2021],
+	[y2val] 										AS [GT_IMI_SPE_2D_2020],
+	[y3val] 										AS [GT_IMI_SPE_2D_2019]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_IMI_SPE_2D.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val",
+	"y2val",
+	"y3val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[indicator 2E req]:
+LOAD
+	[x1val] 										AS [IMI],
+	[y1val] 										AS [GT_IMI_REQ_2E_2021]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_IMI_REQ_2E.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[indicator 2F spe]:
+LOAD
+	[x1val] 										AS [IMI],
+	[y1val] 										AS [GT_IMI_SPE_2F_2021]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_IMI_SPE_2F.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+[indicator 2G req]:
+LOAD
+	[x1val] 										AS [IMI],
+	[y1val] 										AS [GT_IMI_REQ_2G_2021]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_IMI_REQ_2G.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[indicator 2H spe]:
+LOAD
+	[x1val] 										AS [IMI],
+	[y1val] 										AS [GT_IMI_SPE_2H_2021]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_IMI_SPE_2H.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+
+[indicator 2I req]:
+LOAD
+	[x1val] 										AS [IMI],
+	[y1val] 										AS [GT_IMI_REQ_2I_2021]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_IMI_REQ_2I.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+[indicator 2K spe]:
+LOAD
+	[x1val] 										AS [IMI],
+	[y1val] 										AS [GT_IMI_SPE_2K_2021]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_IMI_SPE_2K.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[indicator 3A]:
+LOAD
+	[x1val] 										AS [IMI],
+	[y1val] 										AS GT_IMI_REQ_REC_3A_2021
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_IMI_REQ_REC_3A.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[indicator 3B]:
+LOAD
+	[x1val] 										AS [IMI],
+	[y1val] 										AS GT_IMI_ANS_IND3.2021
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_IMI_ANS_3B.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+
+
+INT_IMI:
+LOAD 
+	[IMI],
+	[GT_IMI_TOT_REC_1A_2021] 						AS val_int_imi
+RESIDENT [indicator 1A];
+left join
+LOAD 
+	[IMI],
+	[GT_IMI_ACC_2B_2021] 							AS val_int_imi2
+RESIDENT [indicator 2 acc];
+
+INT_IMI2:
+LOAD 
+	[IMI],
+	[GT_IMI_REQ_REC_3A_2021] 						AS val_int_imi3
+RESIDENT [indicator 3A];
+left join
+LOAD 
+	[IMI],
+	[GT_IMI_ANS_IND3.2021] 							AS val_int_imi4
+RESIDENT [indicator 3B];
+
+
+
+[indicator 4]:
+LOAD
+	[x1val] 										AS [IMI],
+	[x2val] 										AS [Very satisfied_2020],
+	[x3val] 										AS [satisfied_2020],
+	[x4val] 										AS [Neutral_2020],
+	[x5val] 										AS [Dissatisfied_2020],
+	[x6val] 										AS [Very dissatisfied_2020]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> 'Rating';
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_IMI_TIM_4.csv';
+
+SQL SELECT 
+	"x1val",
+	"x2val",
+	"x3val",
+	"x4val",
+	"x5val",
+	"x6val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+[indicator 4imi tim]:
+NoConcatenate
+LOAD
+	IMI,
+	[Very dissatisfied_2020]/([Dissatisfied_2020] + [Neutral_2020] + [satisfied_2020] + [Very dissatisfied_2020] + [Very satisfied_2020]) 	AS [Indicator 4imi tim Very dissatisfied],
+    [Dissatisfied_2020]/([Dissatisfied_2020] + [Neutral_2020] + [satisfied_2020] + [Very dissatisfied_2020] + [Very satisfied_2020]) 		AS [Indicator 4imi tim Dissatisfied],
+    [Neutral_2020]/([Dissatisfied_2020] + [Neutral_2020] + [satisfied_2020] + [Very dissatisfied_2020] + [Very satisfied_2020])				AS [Indicator 4imi tim Neutral/Notsure],
+	[satisfied_2020]/([Dissatisfied_2020] + [Neutral_2020] + [satisfied_2020] + [Very dissatisfied_2020] + [Very satisfied_2020]) 			AS [Indicator 4imi tim Satisfied],
+    [Very satisfied_2020]/([Dissatisfied_2020] + [Neutral_2020] + [satisfied_2020] + [Very dissatisfied_2020] + [Very satisfied_2020]) 		AS [Indicator 4imi tim Very satisfied]
+Resident [indicator 4];
+
+
+[indicator 5]:
+NoConcatenate
+LOAD
+	[x1val] 										AS [IMI],
+	[x2val] 										AS [GT_IMI_EFF_IND5.Very Satisfied_2020],
+	[x3val] 										AS [GT_IMI_EFF_IND5.Satisfied_2020],
+	[x4val] 										AS [GT_IMI_EFF_IND5.Neutral_2020],
+	[x5val] 										AS [GT_IMI_EFF_IND5.Dissatisfied_2020],
+	[x6val] 										AS [GT_IMI_EFF_IND5.Very Dissatisfied_2020]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> 'Rating';
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_IMI_EFF_5.csv';
+
+SQL SELECT 
+	"x1val",
+	"x2val",
+	"x3val",
+	"x4val",
+	"x5val",
+	"x6val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+    
+    
+[indicator 5imi tim]:
+NoConcatenate
+LOAD
+	[IMI],
+	[GT_IMI_EFF_IND5.Very Dissatisfied_2020]/([GT_IMI_EFF_IND5.Dissatisfied_2020]+[GT_IMI_EFF_IND5.Very Dissatisfied_2020]+[GT_IMI_EFF_IND5.Neutral_2020]+[GT_IMI_EFF_IND5.Satisfied_2020]+[GT_IMI_EFF_IND5.Very Satisfied_2020]) 	AS [Indicator 5imi tim Very dissatisfied],  
+    [GT_IMI_EFF_IND5.Dissatisfied_2020]/([GT_IMI_EFF_IND5.Dissatisfied_2020]+[GT_IMI_EFF_IND5.Very Dissatisfied_2020]+[GT_IMI_EFF_IND5.Neutral_2020]+[GT_IMI_EFF_IND5.Satisfied_2020]+[GT_IMI_EFF_IND5.Very Satisfied_2020]) 		AS [Indicator 5imi tim Dissatisfied],
+	[GT_IMI_EFF_IND5.Neutral_2020]/([GT_IMI_EFF_IND5.Dissatisfied_2020]+[GT_IMI_EFF_IND5.Very Dissatisfied_2020]+[GT_IMI_EFF_IND5.Neutral_2020]+[GT_IMI_EFF_IND5.Satisfied_2020]+[GT_IMI_EFF_IND5.Very Satisfied_2020]) 			AS [Indicator 5imi tim Neutral/Notsure],
+	[GT_IMI_EFF_IND5.Satisfied_2020]/([GT_IMI_EFF_IND5.Dissatisfied_2020]+[GT_IMI_EFF_IND5.Very Dissatisfied_2020]+[GT_IMI_EFF_IND5.Neutral_2020]+[GT_IMI_EFF_IND5.Satisfied_2020]+[GT_IMI_EFF_IND5.Very Satisfied_2020]) 			AS [Indicator 5imi tim Satisfied],
+	[GT_IMI_EFF_IND5.Very Satisfied_2020]/([GT_IMI_EFF_IND5.Dissatisfied_2020]+[GT_IMI_EFF_IND5.Very Dissatisfied_2020]+[GT_IMI_EFF_IND5.Neutral_2020]+[GT_IMI_EFF_IND5.Satisfied_2020]+[GT_IMI_EFF_IND5.Very Satisfied_2020]) 		AS [Indicator 5imi tim Very satisfied]
+Resident [indicator 5]; 
+
+
+
+
+
+[IMI Info Exchanges]:
+LOAD
+	text([x1val])									AS [Year],
+	[x2val]											AS [IMI Requests],
+	[x3val]											AS [IMI Repository entries],
+	[x4val]											AS [IMI SOLVIT cases],
+	[x5val]											AS [IMI Notifications],
+	[x6val]											AS [IMI Alerts],
+	[x7val]											AS [IMI EPC applications],
+	[x8val]											AS [IMI GDPR Cases],
+	[x9val]											AS [IMI NRMM type approvals],
+    [x10val] 										AS [IMI Firearms refusals]
+
+where [x1val] <> 'Year';
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_IMI_ALL_EXC.csv';
+
+SQL SELECT 
+	"x1val",
+	"x2val",
+	"x3val",
+	"x4val",
+	"x5val",
+	"x6val",
+	"x7val",
+	"x8val",
+	"x9val",
+	"x10val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[Request per quarter]:
+LOAD
+	[x1val] 										AS [Periods],
+	[x2val] 										AS [Professional qualifications],
+	[x3val] 										AS [Services],
+	[x4val] 										AS [Posting of workers],
+	[x5val] 										AS [Other areas]
+    
+where [x1val] <> 'Label';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_IMI_REQ_QUA.csv';
+
+SQL SELECT 
+	"x1val",
+	"x2val",
+	"x3val",
+	"x4val",
+	"x5val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[Request sent]:
+NoConcatenate
+LOAD
+	[x1val] 										AS [GT_IMI_REQ_MS_Policy Area],
+	[x2val] 										AS [ISO_code],
+    [y1val] 										AS [Request sent]
+    
+where [x1val] <> 'Policy Area' and [x2val] <> 'UK' and [x2val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_IMI_REQ_MS.csv';
+
+SQL SELECT 
+	"x1val",
+	"x2val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[Request recieved]:
+NoConcatenate
+LOAD
+	[x1val] 										AS [GT_IMI_REQ_REC_MS_Policy Area],
+	[x2val] 										AS [ISO_code],
+	[y1val] 										AS [Request recieved]
+    
+where [x1val] <> 'Policy Area' and [x2val] <> 'UK';
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_IMI_REQ_REC_MS.csv';
+
+SQL SELECT 
+	"x1val",
+	"x2val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+
+[ALLMETRICS_TRANS_INF_IMI]:
+// --------------------------------------------------------------
+NoConcatenate
+LOAD
+    [ISO_code],
+    [Year],
+    [Transposition gen data],
+    [Infringements gen data],
+    [IMI gen data],
+    [SOLVIT gen data],
+	[Indicator 1trans],
+	[Indicator 2trans],
+	[Indicator 3trans],
+	[Indicator 4trans],
+	[Indicator 4.2trans],
+	[Indicator 4.2Btrans],
+	[Indicator 5trans],
+	[Transposition Deficit],
+	[No EU Trans Directives],
+	[EU Transposition Deficit],
+	[No EU Transposition Deficit],
+    [Directives completeness],
+	[Changes in the average transposition deficit percentage],
+	[Value_incompleteness],
+// --------------------------------------------------------------
+    [Indicator 1infg],				
+	[Indicator 1.2infg],
+	[Indicator 2infg],
+	[Indicator 3infg],
+    [Indicator 3.2infg],
+	[Indicator 4infg],
+    [Indicator 4.2infg],
+	[Pending_cases_inf],
+	[EU Infringements Deficit],
+	[No EU Infringements Deficit],
+	[Changes in the average infringements deficit percentage]
+Resident [ALLMETRICS_TRANS_INF];
+// --------------------------------------------------------------
+left Join
+LOAD 
+	[IMI] 											AS [ISO_code],
+    round((val_int_imi2*100/val_int_imi),0.1) 		AS [Indicator 1imi],
+    round([val_int_imi] , 0.1)						AS [Indicator 1Aimi],
+    round([val_int_imi2] , 0.1) 					As [Indicator 1Bimi],
+    'Current'										AS Year
+RESIDENT INT_IMI;
+left join
+LOAD 
+	[IMI] 											AS [ISO_code],
+	round( [GT_IMI_SPE_2B_2021], 0.1) 				AS [Indicator 2imi],
+    'Current'										AS Year
+RESIDENT [indicator 2 spe];
+left join
+LOAD 
+	[IMI] 											AS [ISO_code],
+	round( [GT_IMI_REQ_2A_2021], 0.1) 				AS [Indicator 2imi req],
+    'Current'										AS Year
+RESIDENT [indicator 2 req];
+left join
+LOAD 
+	[IMI] 											AS [ISO_code],
+	round( [GT_IMI_REQ_2C_2021], 0.1) 				AS [Indicator 2imi C req],
+    'Current'										AS Year
+RESIDENT [indicator 2C req];
+left join
+LOAD 
+	[IMI] 											AS [ISO_code],
+	round( [GT_IMI_SPE_2D_2021], 0.1) 				AS [Indicator 2imi spe],
+    'Current'										AS Year
+RESIDENT [indicator 2D spe];
+left join
+LOAD 
+	[IMI] 											AS [ISO_code],
+	round( [GT_IMI_REQ_2E_2021], 0.1) 				AS [Indicator 2imi E req],
+    'Current'										AS Year
+RESIDENT [indicator 2E req];
+left join
+LOAD 
+	[IMI] 											AS [ISO_code],
+	round( [GT_IMI_SPE_2F_2021], 0.1) 				AS [Indicator 2imi F spe],
+    'Current'										AS Year
+RESIDENT [indicator 2F spe];
+left join
+LOAD 
+	[IMI] 											AS [ISO_code],
+	[GT_IMI_REQ_2G_2021] 							AS [Indicator 2imi G req],
+    'Current'										AS Year
+RESIDENT [indicator 2G req];
+left join
+LOAD 
+	[IMI] 											AS [ISO_code],
+	 [GT_IMI_SPE_2H_2021] 							AS [Indicator 2imi H spe],
+    'Current'										AS Year
+RESIDENT [indicator 2H spe];
+left join
+LOAD 
+	[IMI] 											AS [ISO_code],
+	[GT_IMI_REQ_2I_2021] 							AS [Indicator 2imi I req],
+    'Current'										AS Year
+RESIDENT [indicator 2I req];
+left join
+LOAD 
+	[IMI] 											AS [ISO_code],
+	[GT_IMI_SPE_2K_2021] 							AS [Indicator 2imi K spe],
+    'Current'										AS Year
+RESIDENT [indicator 2K spe];
+left join
+LOAD 
+	[IMI] 											AS [ISO_code],
+	round( (val_int_imi4*100/val_int_imi3), 0.1) 	AS [Indicator 3imi],
+    round( val_int_imi3, 0.1)						AS [Indicator 3Aimi],
+    round( val_int_imi4, 0.1)						AS [Indicator 3Bimi],
+    'Current'										AS Year
+RESIDENT INT_IMI2;
+left join
+LOAD 
+	[IMI]											AS [ISO_code],
+	round((([Dissatisfied_2020] + [Very dissatisfied_2020])/([Neutral_2020]+[satisfied_2020]+[Very satisfied_2020]+[Dissatisfied_2020] + [Very dissatisfied_2020]))*100, 0.1) 	AS [Indicator 4imi],
+    'Current'										AS Year
+RESIDENT [indicator 4];
+left join
+LOAD 
+	[IMI] 											AS [ISO_code],
+	[Indicator 4imi tim Very dissatisfied],
+    [Indicator 4imi tim Dissatisfied],
+    [Indicator 4imi tim Neutral/Notsure],
+    [Indicator 4imi tim Satisfied],			
+    [Indicator 4imi tim Very satisfied],
+    'Current'										AS Year
+RESIDENT [indicator 4imi tim];
+left join
+LOAD 
+	[IMI] 											AS [ISO_code],
+	round((([GT_IMI_EFF_IND5.Dissatisfied_2020] + [GT_IMI_EFF_IND5.Very Dissatisfied_2020])/([GT_IMI_EFF_IND5.Dissatisfied_2020] + [GT_IMI_EFF_IND5.Very Dissatisfied_2020]+[GT_IMI_EFF_IND5.Neutral_2020]+[GT_IMI_EFF_IND5.Satisfied_2020]+[GT_IMI_EFF_IND5.Very Satisfied_2020]))*100, 0.1) AS [Indicator 5imi],
+    'Current'										AS Year
+RESIDENT [indicator 5];
+left join
+LOAD 
+	[IMI] 											AS [ISO_code],
+	[Indicator 5imi tim Very dissatisfied],
+    [Indicator 5imi tim Dissatisfied],
+    [Indicator 5imi tim Neutral/Notsure],
+    [Indicator 5imi tim Satisfied],			
+    [Indicator 5imi tim Very satisfied],
+    'Current'										AS Year
+RESIDENT [indicator 5imi tim];
+outer Join
+LOAD
+	[Periods] 										AS [Year],
+	[Professional qualifications],
+	[Services],
+	[Posting of workers],
+	[Other areas],
+    '-'												AS [ISO_code]
+Resident [Request per quarter];
+left Join
+LOAD
+	[GT_IMI_REQ_MS_Policy Area],
+	[ISO_code],
+    [Request sent],
+    'Current'										AS Year
+Resident [Request sent];
+left Join
+LOAD
+	[GT_IMI_REQ_REC_MS_Policy Area],
+	[ISO_code],
+	[Request recieved],
+    'Current'										AS Year
+Resident [Request recieved];
+outer join
+LOAD
+	[Year],
+	[IMI Requests],
+	[IMI Repository entries],
+	[IMI SOLVIT cases],
+	[IMI Notifications],
+	[IMI Alerts],
+	[IMI EPC applications],
+	[IMI GDPR Cases],
+	[IMI NRMM type approvals],
+   	[IMI Firearms refusals]
+Resident [IMI Info Exchanges];
+
+Drop Table ALLMETRICS_TRANS_INF, [Request per quarter], [Request sent], [Request recieved], [IMI Info Exchanges];
+Drop Table [indicator 1A], [indicator 2 acc], [indicator 2 spe], [indicator 2 req], [indicator 2C req], [indicator 2D spe], [indicator 2E req], [indicator 2F spe], [indicator 2G req], [indicator 2H spe], [indicator 2I req], [indicator 2K spe], [indicator 3A], [indicator 3B], INT_IMI, INT_IMI2, [indicator 4], [indicator 4imi tim], [indicator 5], [indicator 5imi tim];

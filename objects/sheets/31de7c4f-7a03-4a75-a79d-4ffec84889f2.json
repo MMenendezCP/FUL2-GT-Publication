@@ -1,0 +1,486 @@
+{
+  "qProperty": {
+    "qInfo": {
+      "qId": "31de7c4f-7a03-4a75-a79d-4ffec84889f2",
+      "qType": "sheet"
+    },
+    "qMetaDef": {
+      "title": "Transposition -  Changes in the average",
+      "description": ""
+    },
+    "rank": 5,
+    "thumbnail": {
+      "qStaticContentUrlDef": {}
+    },
+    "columns": 24,
+    "rows": 12,
+    "cells": [
+      {
+        "name": "xKNJfa",
+        "type": "linechart",
+        "col": 0,
+        "row": 0,
+        "colspan": 22,
+        "rowspan": 6,
+        "bounds": {
+          "y": 0,
+          "x": 0,
+          "width": 91.66666666666666,
+          "height": 50
+        }
+      }
+    ],
+    "qChildListDef": {
+      "qData": {
+        "title": "/title"
+      }
+    },
+    "gridResolution": "small",
+    "layoutOptions": {
+      "mobileLayout": "LIST"
+    },
+    "gridMode": "edit"
+  },
+  "qChildren": [
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "xKNJfa",
+          "qType": "linechart"
+        },
+        "qMetaDef": {},
+        "qHyperCubeDef": {
+          "qDimensions": [
+            {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=if (not IsNull([Changes in the average transposition deficit percentage]), [Year])\r\n\n"
+                ],
+                "qFieldLabels": [
+                  "Month"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "aWxdk",
+                "othersLabel": "Others"
+              },
+              "qNullSuppression": true,
+              "qOtherTotalSpec": {
+                "qOtherMode": "OTHER_OFF",
+                "qOtherCounted": {
+                  "qv": "10"
+                },
+                "qOtherLimit": {
+                  "qv": "0"
+                },
+                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                "qForceBadValueKeeping": true,
+                "qApplyEvenWhenPossiblyWrongResult": true,
+                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                "qTotalMode": "TOTAL_OFF",
+                "qReferencedExpression": {}
+              },
+              "qOtherLabel": {
+                "qv": "Others"
+              },
+              "qTotalLabel": {},
+              "qCalcCond": {},
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              }
+            }
+          ],
+          "qMeasures": [
+            {
+              "qDef": {
+                "qLabel": "Deficit",
+                "qTags": [],
+                "qGrouping": "N",
+                "qDef": "[Changes in the average transposition deficit percentage]/100",
+                "qNumFormat": {
+                  "qType": "F",
+                  "qnDec": 2,
+                  "qUseThou": 0,
+                  "qFmt": "0.0%",
+                  "qDec": ".",
+                  "qThou": ","
+                },
+                "qAccumulate": 0,
+                "qActiveExpression": 0,
+                "qExpressions": [],
+                "autoSort": false,
+                "cId": "hVqGX",
+                "numFormatFromTemplate": true,
+                "isCustomFormatted": false
+              },
+              "qSortBy": {
+                "qSortByNumeric": -1,
+                "qSortByLoadOrder": 1,
+                "qExpression": {}
+              },
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCond": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qTrendLines": [],
+              "qMiniChartDef": {
+                "qSortBy": {
+                  "qExpression": {}
+                },
+                "qOtherTotalSpec": {
+                  "qOtherMode": "OTHER_OFF",
+                  "qOtherCounted": {},
+                  "qOtherLimit": {},
+                  "qOtherLimitMode": "OTHER_GT_LIMIT",
+                  "qForceBadValueKeeping": true,
+                  "qApplyEvenWhenPossiblyWrongResult": true,
+                  "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                  "qTotalMode": "TOTAL_OFF",
+                  "qReferencedExpression": {}
+                },
+                "qMaxNumberPoints": -1,
+                "qAttributeExpressions": []
+              }
+            }
+          ],
+          "qInterColumnSortOrder": [
+            0,
+            1
+          ],
+          "qSuppressMissing": true,
+          "qInitialDataFetch": [
+            {
+              "qLeft": 0,
+              "qTop": 0,
+              "qWidth": 17,
+              "qHeight": 500
+            }
+          ],
+          "qReductionMode": "N",
+          "qMode": "S",
+          "qPseudoDimPos": -1,
+          "qNoOfLeftDims": -1,
+          "qAlwaysFullyExpanded": true,
+          "qMaxStackedCells": 5000,
+          "qCalcCond": {},
+          "qTitle": {},
+          "qCalcCondition": {
+            "qCond": {},
+            "qMsg": {}
+          },
+          "qColumnOrder": [],
+          "qExpansionState": [],
+          "qDynamicScript": [],
+          "qLayoutExclude": {
+            "qHyperCubeDef": {
+              "qDimensions": [],
+              "qMeasures": [],
+              "qInterColumnSortOrder": [],
+              "qInitialDataFetch": [],
+              "qReductionMode": "N",
+              "qMode": "S",
+              "qPseudoDimPos": -1,
+              "qNoOfLeftDims": -1,
+              "qMaxStackedCells": 5000,
+              "qCalcCond": {},
+              "qTitle": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qColumnOrder": [],
+              "qExpansionState": [],
+              "qDynamicScript": []
+            }
+          }
+        },
+        "script": "",
+        "refLine": {
+          "refLines": [],
+          "dimRefLines": [
+            {
+              "show": "",
+              "label": "Scoreboard effect",
+              "showLabel": true,
+              "refLineExpr": {
+                "value": 1997,
+                "label": "1997",
+                "stringValue": "1997"
+              },
+              "showValue": false,
+              "align": "end",
+              "paletteColor": {
+                "index": -1,
+                "color": "#333333"
+              },
+              "style": {
+                "lineThickness": 2,
+                "lineType": ""
+              },
+              "coloredBackground": false,
+              "cId": "LnEjWq"
+            },
+            {
+              "show": "",
+              "label": "1.5% Target",
+              "showLabel": true,
+              "refLineExpr": {
+                "value": 2000,
+                "label": "2000",
+                "stringValue": "2000"
+              },
+              "showValue": false,
+              "align": "end",
+              "paletteColor": {
+                "index": -1,
+                "color": "#333333"
+              },
+              "style": {
+                "lineThickness": 2,
+                "lineType": ""
+              },
+              "coloredBackground": false,
+              "cId": "FdTUnn"
+            },
+            {
+              "show": "",
+              "label": "EU-25",
+              "showLabel": true,
+              "refLineExpr": {
+                "value": 2003,
+                "label": "2003",
+                "stringValue": "2003"
+              },
+              "showValue": false,
+              "align": "end",
+              "paletteColor": {
+                "index": -1,
+                "color": "#333333"
+              },
+              "style": {
+                "lineThickness": 2,
+                "lineType": ""
+              },
+              "coloredBackground": false,
+              "cId": "tgBddnH"
+            },
+            {
+              "show": "",
+              "label": "EU-27 and 1% Target",
+              "showLabel": true,
+              "refLineExpr": {
+                "value": 2006,
+                "label": "2006",
+                "stringValue": "2006"
+              },
+              "showValue": false,
+              "align": "end",
+              "paletteColor": {
+                "index": -1,
+                "color": "#333333"
+              },
+              "style": {
+                "lineThickness": 2,
+                "lineType": ""
+              },
+              "coloredBackground": false,
+              "cId": "jALbxy"
+            },
+            {
+              "show": "",
+              "label": "0.5% Proposed Target",
+              "showLabel": true,
+              "refLineExpr": {
+                "value": 2010,
+                "label": "2010",
+                "stringValue": "2010"
+              },
+              "showValue": false,
+              "align": "end",
+              "paletteColor": {
+                "index": -1,
+                "color": "#333333"
+              },
+              "style": {
+                "lineThickness": 2,
+                "lineType": ""
+              },
+              "coloredBackground": false,
+              "cId": "PGUJFCw"
+            },
+            {
+              "show": "",
+              "label": "EU-28",
+              "showLabel": true,
+              "refLineExpr": {
+                "value": 2012,
+                "label": "2012",
+                "stringValue": "2012"
+              },
+              "showValue": false,
+              "align": "end",
+              "paletteColor": {
+                "index": -1,
+                "color": "#333333"
+              },
+              "style": {
+                "lineThickness": 2,
+                "lineType": ""
+              },
+              "coloredBackground": false,
+              "cId": "pxzA"
+            },
+            {
+              "show": "",
+              "label": "Package of 66 directives",
+              "showLabel": true,
+              "refLineExpr": {
+                "value": 2015,
+                "label": "2015",
+                "stringValue": "2015"
+              },
+              "showValue": false,
+              "align": "end",
+              "paletteColor": {
+                "index": -1,
+                "color": "#333333"
+              },
+              "style": {
+                "lineThickness": 2,
+                "lineType": ""
+              },
+              "coloredBackground": false,
+              "cId": "hPTVp"
+            },
+            {
+              "show": {
+                "qValueExpression": {}
+              },
+              "label": "EU-27 / Covid-19 crisis",
+              "showLabel": true,
+              "refLineExpr": {
+                "value": 2021,
+                "label": "2021",
+                "stringValue": "2021"
+              },
+              "showValue": false,
+              "align": "start",
+              "paletteColor": {
+                "index": -1,
+                "color": "#333333"
+              },
+              "style": {
+                "lineThickness": 2,
+                "lineType": ""
+              },
+              "coloredBackground": false,
+              "cId": "TRpv"
+            }
+          ]
+        },
+        "showTitles": true,
+        "title": "Trends",
+        "subtitle": "Changes in the average transposition deficit",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": false,
+        "showDetailsExpression": false,
+        "showDisclaimer": true,
+        "components": [],
+        "lineType": "line",
+        "stackedArea": false,
+        "separateStacking": true,
+        "orientation": "horizontal",
+        "scrollbar": "bar",
+        "scrollStartPos": 1,
+        "nullMode": "connect",
+        "dataPoint": {
+          "show": true,
+          "showLabels": true
+        },
+        "gridLine": {
+          "auto": false,
+          "spacing": 3
+        },
+        "color": {
+          "auto": false,
+          "mode": "primary",
+          "formatting": {
+            "numFormatFromTemplate": true
+          },
+          "useBaseColors": "off",
+          "paletteColor": {
+            "index": 7,
+            "color": "#8e477d"
+          },
+          "useDimColVal": true,
+          "useMeasureGradient": true,
+          "persistent": true,
+          "expressionIsColor": true,
+          "expressionLabel": "",
+          "measureScheme": "sg",
+          "reverseScheme": false,
+          "dimensionScheme": "12",
+          "autoMinMax": true,
+          "measureMin": 0,
+          "measureMax": 10
+        },
+        "legend": {
+          "show": true,
+          "dock": "auto",
+          "showTitle": true
+        },
+        "dimensionAxis": {
+          "continuousAuto": true,
+          "show": "labels",
+          "label": "horizontal",
+          "dock": "near",
+          "axisDisplayMode": "max",
+          "maxVisibleItems": 7
+        },
+        "preferContinuousAxis": true,
+        "measureAxis": {
+          "show": "labels",
+          "dock": "near",
+          "spacing": 0.5,
+          "autoMinMax": false,
+          "minMax": "min",
+          "min": 0,
+          "max": 7,
+          "logarithmic": true
+        },
+        "tooltip": {
+          "auto": true,
+          "hideBasic": false,
+          "chart": {
+            "style": {
+              "size": "medium"
+            }
+          },
+          "title": "",
+          "description": ""
+        },
+        "visualization": "linechart",
+        "version": "1.15.12",
+        "showMiniChartForContinuousAxis": true
+      },
+      "qChildren": []
+    }
+  ]
+}

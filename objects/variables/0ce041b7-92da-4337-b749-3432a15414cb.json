@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "0ce041b7-92da-4337-b749-3432a15414cb",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "resAvgInf2",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "-1",
+  "qIsScriptCreated": true
+}

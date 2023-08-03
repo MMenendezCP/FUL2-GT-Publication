@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "zCCLTW",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "IMI - Request per quarter Total",
+    "qDef": "Sum([Professional qualifications]) + Sum([Services]) + Sum([Other areas]) + Sum([Posting of workers])\r\n\n\n/*\n\nSum([IMI All info])",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'Total'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#,##0",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#b95545",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "IMI - Request per quarter Total",
+    "description": "IMI - Request per quarter",
+    "tags": []
+  }
+}

@@ -1,0 +1,484 @@
+{
+  "qProperty": {
+    "qInfo": {
+      "qId": "5b51645f-6ee1-4d2f-94ba-c4eae349c511",
+      "qType": "sheet"
+    },
+    "qMetaDef": {
+      "title": "Ingringements - Changes in number of cases",
+      "description": ""
+    },
+    "rank": 16,
+    "thumbnail": {
+      "qStaticContentUrlDef": {}
+    },
+    "columns": 24,
+    "rows": 12,
+    "cells": [
+      {
+        "name": "RMDRCx",
+        "type": "linechart",
+        "col": 0,
+        "row": 0,
+        "colspan": 22,
+        "rowspan": 6,
+        "bounds": {
+          "y": 0,
+          "x": 0,
+          "width": 91.66666666666666,
+          "height": 50
+        }
+      }
+    ],
+    "qChildListDef": {
+      "qData": {
+        "title": "/title"
+      }
+    },
+    "gridResolution": "small",
+    "layoutOptions": {
+      "mobileLayout": "LIST"
+    },
+    "gridMode": "edit"
+  },
+  "qChildren": [
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "RMDRCx",
+          "qType": "linechart"
+        },
+        "qMetaDef": {},
+        "qHyperCubeDef": {
+          "qDimensions": [
+            {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=if (not IsNull([Changes in the average infringements deficit percentage]), [Year])"
+                ],
+                "qFieldLabels": [
+                  ""
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "WCvVyUy",
+                "othersLabel": "Others"
+              },
+              "qNullSuppression": true,
+              "qOtherTotalSpec": {
+                "qOtherMode": "OTHER_OFF",
+                "qOtherCounted": {
+                  "qv": "10"
+                },
+                "qOtherLimit": {
+                  "qv": "0"
+                },
+                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                "qForceBadValueKeeping": true,
+                "qApplyEvenWhenPossiblyWrongResult": true,
+                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                "qTotalMode": "TOTAL_OFF",
+                "qReferencedExpression": {}
+              },
+              "qOtherLabel": {
+                "qv": "Others"
+              },
+              "qTotalLabel": {},
+              "qCalcCond": {},
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              }
+            }
+          ],
+          "qMeasures": [
+            {
+              "qDef": {
+                "qLabel": "Number of pending cases",
+                "qTags": [],
+                "qGrouping": "N",
+                "qDef": "[Changes in the average infringements deficit percentage]",
+                "qNumFormat": {
+                  "qType": "F",
+                  "qnDec": 2,
+                  "qUseThou": 0,
+                  "qFmt": "# ##0",
+                  "qDec": ".",
+                  "qThou": " "
+                },
+                "qAccumulate": 0,
+                "qActiveExpression": 0,
+                "qExpressions": [],
+                "autoSort": true,
+                "cId": "cVqpfXh",
+                "numFormatFromTemplate": true,
+                "isCustomFormatted": false
+              },
+              "qSortBy": {
+                "qSortByNumeric": -1,
+                "qSortByLoadOrder": 1,
+                "qExpression": {}
+              },
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCond": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qTrendLines": [],
+              "qMiniChartDef": {
+                "qSortBy": {
+                  "qExpression": {}
+                },
+                "qOtherTotalSpec": {
+                  "qOtherMode": "OTHER_OFF",
+                  "qOtherCounted": {},
+                  "qOtherLimit": {},
+                  "qOtherLimitMode": "OTHER_GT_LIMIT",
+                  "qForceBadValueKeeping": true,
+                  "qApplyEvenWhenPossiblyWrongResult": true,
+                  "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                  "qTotalMode": "TOTAL_OFF",
+                  "qReferencedExpression": {}
+                },
+                "qMaxNumberPoints": -1,
+                "qAttributeExpressions": []
+              }
+            }
+          ],
+          "qInterColumnSortOrder": [
+            0,
+            1
+          ],
+          "qSuppressMissing": true,
+          "qInitialDataFetch": [
+            {
+              "qLeft": 0,
+              "qTop": 0,
+              "qWidth": 17,
+              "qHeight": 500
+            }
+          ],
+          "qReductionMode": "N",
+          "qMode": "S",
+          "qPseudoDimPos": -1,
+          "qNoOfLeftDims": -1,
+          "qAlwaysFullyExpanded": true,
+          "qMaxStackedCells": 5000,
+          "qCalcCond": {},
+          "qTitle": {},
+          "qCalcCondition": {
+            "qCond": {},
+            "qMsg": {}
+          },
+          "qColumnOrder": [],
+          "qExpansionState": [],
+          "qDynamicScript": [],
+          "qLayoutExclude": {
+            "qHyperCubeDef": {
+              "qDimensions": [],
+              "qMeasures": [],
+              "qInterColumnSortOrder": [],
+              "qInitialDataFetch": [],
+              "qReductionMode": "N",
+              "qMode": "S",
+              "qPseudoDimPos": -1,
+              "qNoOfLeftDims": -1,
+              "qMaxStackedCells": 5000,
+              "qCalcCond": {},
+              "qTitle": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qColumnOrder": [],
+              "qExpansionState": [],
+              "qDynamicScript": []
+            }
+          }
+        },
+        "script": "",
+        "refLine": {
+          "refLines": [],
+          "dimRefLines": [
+            {
+              "show": "",
+              "label": "EU-25",
+              "showLabel": true,
+              "refLineExpr": {
+                "value": 2003,
+                "label": "2003",
+                "stringValue": "2003"
+              },
+              "showValue": false,
+              "align": "end",
+              "paletteColor": {
+                "index": -1,
+                "color": "#ff9189"
+              },
+              "style": {
+                "lineThickness": 2,
+                "lineType": "8 4"
+              },
+              "coloredBackground": false,
+              "cId": "YrAjbBt"
+            },
+            {
+              "show": "",
+              "label": "EU-27",
+              "showLabel": true,
+              "refLineExpr": {
+                "value": 2006,
+                "label": "2006",
+                "stringValue": "2006"
+              },
+              "showValue": false,
+              "align": "end",
+              "paletteColor": {
+                "index": -1,
+                "color": "#ff9189"
+              },
+              "style": {
+                "lineThickness": 2,
+                "lineType": "8 4"
+              },
+              "coloredBackground": false,
+              "cId": "pZsX"
+            },
+            {
+              "show": "",
+              "label": "EU Pilot 15",
+              "showLabel": true,
+              "refLineExpr": {
+                "value": 2007,
+                "label": "2007",
+                "stringValue": "2007"
+              },
+              "showValue": false,
+              "align": "end",
+              "paletteColor": {
+                "index": -1,
+                "color": "#ff9189"
+              },
+              "style": {
+                "lineThickness": 2,
+                "lineType": "8 4"
+              },
+              "coloredBackground": false,
+              "cId": "eWcETP"
+            },
+            {
+              "show": "",
+              "label": "EU Pilot 25",
+              "showLabel": true,
+              "refLineExpr": {
+                "value": 2009,
+                "label": "2009",
+                "stringValue": "2009"
+              },
+              "showValue": false,
+              "align": "end",
+              "paletteColor": {
+                "index": -1,
+                "color": "#ff9189"
+              },
+              "style": {
+                "lineThickness": 2,
+                "lineType": "8 4"
+              },
+              "coloredBackground": false,
+              "cId": "JYdhhvH"
+            },
+            {
+              "show": "",
+              "label": "EU Pilot 27",
+              "showLabel": true,
+              "refLineExpr": {
+                "value": 2011,
+                "label": "2011",
+                "stringValue": "2011"
+              },
+              "showValue": false,
+              "align": "end",
+              "paletteColor": {
+                "index": -1,
+                "color": "#ff9189"
+              },
+              "style": {
+                "lineThickness": 2,
+                "lineType": "8 4"
+              },
+              "coloredBackground": false,
+              "cId": "jJjrh"
+            },
+            {
+              "show": "",
+              "label": "EU-28",
+              "showLabel": true,
+              "refLineExpr": {
+                "value": 2012,
+                "label": "2012",
+                "stringValue": "2012"
+              },
+              "showValue": false,
+              "align": "end",
+              "paletteColor": {
+                "index": -1,
+                "color": "#ff9189"
+              },
+              "style": {
+                "lineThickness": 2,
+                "lineType": "8 4"
+              },
+              "coloredBackground": false,
+              "cId": "yWRpg"
+            },
+            {
+              "show": "",
+              "label": "New Communication",
+              "showLabel": true,
+              "refLineExpr": {
+                "value": 2016,
+                "label": "2016",
+                "stringValue": "2016"
+              },
+              "showValue": false,
+              "align": "end",
+              "paletteColor": {
+                "index": -1,
+                "color": "#ff9189"
+              },
+              "style": {
+                "lineThickness": 2,
+                "lineType": "8 4"
+              },
+              "coloredBackground": false,
+              "cId": "PkAs"
+            },
+            {
+              "show": "",
+              "label": "EU-27 / Covid-19 crisis",
+              "showLabel": true,
+              "refLineExpr": {
+                "value": 2020,
+                "label": "2020",
+                "stringValue": "2020"
+              },
+              "showValue": false,
+              "align": "end",
+              "paletteColor": {
+                "index": -1,
+                "color": "#ff9189"
+              },
+              "style": {
+                "lineThickness": 2,
+                "lineType": "8 4"
+              },
+              "coloredBackground": false,
+              "cId": "QsqPPF"
+            }
+          ]
+        },
+        "showTitles": true,
+        "title": "Changes in numbers of infringement cases",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": true,
+        "showDetailsExpression": false,
+        "showDisclaimer": true,
+        "components": [],
+        "lineType": "line",
+        "stackedArea": false,
+        "separateStacking": true,
+        "orientation": "horizontal",
+        "scrollbar": "bar",
+        "scrollStartPos": 1,
+        "nullMode": "connect",
+        "dataPoint": {
+          "show": true,
+          "showLabels": true
+        },
+        "gridLine": {
+          "auto": false,
+          "spacing": 3
+        },
+        "color": {
+          "auto": false,
+          "mode": "primary",
+          "formatting": {
+            "numFormatFromTemplate": true
+          },
+          "useBaseColors": "off",
+          "paletteColor": {
+            "index": 7,
+            "color": "#8e477d"
+          },
+          "useDimColVal": true,
+          "useMeasureGradient": true,
+          "persistent": true,
+          "expressionIsColor": true,
+          "expressionLabel": "",
+          "measureScheme": "sg",
+          "reverseScheme": false,
+          "dimensionScheme": "12",
+          "autoMinMax": true,
+          "measureMin": 0,
+          "measureMax": 10
+        },
+        "legend": {
+          "show": true,
+          "dock": "auto",
+          "showTitle": true
+        },
+        "dimensionAxis": {
+          "continuousAuto": true,
+          "show": "labels",
+          "label": "horizontal",
+          "dock": "near",
+          "axisDisplayMode": "max",
+          "maxVisibleItems": 7
+        },
+        "preferContinuousAxis": true,
+        "measureAxis": {
+          "show": "all",
+          "dock": "near",
+          "spacing": 0.5,
+          "autoMinMax": true,
+          "minMax": "minMax",
+          "min": 0,
+          "max": 7,
+          "logarithmic": true
+        },
+        "tooltip": {
+          "auto": true,
+          "hideBasic": false,
+          "chart": {
+            "style": {
+              "size": "medium"
+            }
+          },
+          "title": "",
+          "description": ""
+        },
+        "visualization": "linechart",
+        "version": "1.15.12",
+        "showMiniChartForContinuousAxis": true
+      },
+      "qChildren": []
+    }
+  ]
+}

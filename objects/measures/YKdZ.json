@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "YKdZ",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "IMI - Request per quarter Other areas*",
+    "qDef": "\r\n[Other areas]\n\n\n/*\n\nSum(if([GT_IMI_REQ_QUA-1.GT_IMI_REQ_QUA_Label] =  'Other areas', [IMI Requests]))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'Other areas*'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#,##0",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#75507B",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "IMI - Request per quarter Other areas*",
+    "description": "IMI - Request per quarter",
+    "tags": []
+  }
+}

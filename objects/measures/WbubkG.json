@@ -1,0 +1,31 @@
+{
+  "qInfo": {
+    "qId": "WbubkG",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "SOLVIT Cases submited 2",
+    "qDef": "[Solvit_Cases_submited_2019]",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "=SysTwoYearsAgo/*Date(AddYears(SysLastYear, 2),'YYYY')",
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#8064A2",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "SOLVIT Cases submited 2",
+    "description": "",
+    "tags": []
+  }
+}

@@ -1,0 +1,484 @@
+///$tab 6.- SOLVIT
+[indicator 1 solvit]:
+LOAD
+	[x1val] 							AS [ISO_code],
+	[y1val] 							AS [Indicator 1 solvit]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '' ;
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_SOL_HOM_FIR_RES_1.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+
+[indicator 2 solvit]:
+LOAD
+	[x1val] 							AS [ISO_code],
+	[y1val] 							AS [Indicator 2 solvit]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_SOL_HOM_PREP_TIME_2.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[indicator 3 solvit]:
+LOAD
+	[x1val] 							AS [ISO_code],
+	[y1val] 							AS [Indicator 3 solvit]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_SOL_HOM_TIM_TO_ACC_3.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+
+[indicator 4 solvit]:
+LOAD
+	[x1val] 							AS [ISO_code],
+	[y1val] 							AS [Indicator 4 solvit]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_SOL_HOM_TIM_TO_NOT_ACC_4.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+
+[indicator 5 solvit]:
+LOAD
+	[x1val] 							AS [ISO_code],
+	[y1val] 							AS [Indicator 5 solvit]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_SOL_LEA_TIM_TO_ACC_5.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+[indicator 6 solvit]:
+LOAD
+	[x1val] 							AS [ISO_code],
+	[y1val] 							AS [Indicator 6 solvit]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_SOL_LEA_RES_TIM_6.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[indicator 7 solvit]:
+LOAD
+	[x1val] 							AS [ISO_code],
+	[y1val] 							AS [Indicator 7 solvit]
+    
+where [x1val] <> 'Edition' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_SOL_RES_RAT_COU_7.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[Overall caseload]:
+LOAD
+	Text([x1val]) 						AS [Year_cases],
+	[x2val] 							AS [CasesofCas]
+    
+where [x1val] <> 'Year';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_SOL_OVE_CAS.csv';
+
+SQL SELECT 
+	"x1val",
+	"x2val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[Cases distribution 1]:
+LOAD
+	[x1val] 							AS [ISO_code],
+	[y1val] 							AS [Distribution HOM]
+    
+where [x1val] <> 'Country' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_SOL_DIS_CAS_HOM.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[Cases distribution 2]:
+LOAD
+	[x1val] 							AS [ISO_code],
+	[y1val] 							AS [Distribution LEA]
+    
+where [x1val] <> 'Country' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_SOL_DIS_CAS_LEA.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[Cases submited by countries]:
+LOAD
+	[x1val] 							AS [ISO_code],
+    [y1val] 							AS [Solvit_Cases_submited_2020],
+	[y2val] 							AS [Solvit_Cases_submited_2019],
+	[y3val] 							AS [Solvit_Cases_submited_2018]
+    
+where [x1val] <> 'Country' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_SOL_CAS_SUB_MS.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val",
+	"y2val",
+	"y3val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+[Cases received by country]:
+LOAD
+	[x1val] 							AS [ISO_code],
+	[y1val] 							AS [Solvit_Cases_received_2020],
+	[y2val] 							AS [Solvit_Cases_received_2019],
+	[y3val] 							AS [Solvit_Cases_received_2018]
+    
+where [x1val] <> 'Country' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_SOL_CAS_REC_MS.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val",
+	"y2val",
+	"y3val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[Problem areas]:
+LOAD
+	[x1val] 							AS [Problem areas],
+	[y1val] 							AS [GT_SOL_PRP_ARE.2021]
+    
+where [x1val] <> 'Area';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_SOL_PRP_ARE.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[Legal areas]:
+LOAD
+	[x1val] 							AS [Legal areas],
+	[y1val] 							AS [GT_SOL_LEG_ARE.2021]
+    
+where [x1val] <> 'Area';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_SOL_LEG_ARE.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[Business cases vs. citizens cases]:
+LOAD
+	[x1val] 							AS [Year_BUS_CIT],
+	[x2val] 							AS [Citizens cases],
+	[x3val] 							AS [Business cases]
+    
+where [x1val] <> 'Year';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_SOL_BUS_CIT.csv';
+
+SQL SELECT 
+	"x1val",
+	"x2val",
+	"x3val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+[Business cases by country]:
+LOAD
+	[x1val] 							AS [ISO_code],
+	[y1val] 							AS [Solvit_Cases_ByCountry_2020],
+	[y2val] 							AS [Solvit_Cases_ByCountry_2019],
+	[y3val] 							AS [Solvit_Cases_ByCountry_2018]
+    
+where [x1val] <> 'Country' and [x1val] <> 'UK' and [x1val] <> '';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_SOL_BIS_MS.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val",
+	"y2val",
+	"y3val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+
+
+
+
+
+
+
+[ALLMETRICS_TRANS_INF_IMI_TRIS_SOLVIT]:
+// --------------------------------------------------------------
+NoConcatenate
+LOAD
+    [ISO_code],
+    [Year],
+    [Transposition gen data],
+    [Infringements gen data],
+    [IMI gen data],
+    [SOLVIT gen data],
+	[Indicator 1trans],
+	[Indicator 2trans],
+	[Indicator 3trans],
+	[Indicator 4trans],
+	[Indicator 4.2trans],
+	[Indicator 4.2Btrans],
+	[Indicator 5trans],
+	[Transposition Deficit],
+	[No EU Trans Directives],
+	[EU Transposition Deficit],
+	[No EU Transposition Deficit],
+    [Directives completeness],
+	[Changes in the average transposition deficit percentage],
+	[Value_incompleteness],
+// --------------------------------------------------------------
+    [Indicator 1infg],				
+	[Indicator 1.2infg],
+	[Indicator 2infg],
+	[Indicator 3infg],
+    [Indicator 3.2infg],
+	[Indicator 4infg],
+    [Indicator 4.2infg],
+	[Pending_cases_inf],
+	[EU Infringements Deficit],
+	[No EU Infringements Deficit],
+	[Changes in the average infringements deficit percentage],
+// --------------------------------------------------------------
+	[Indicator 1imi],
+    [Indicator 1Aimi],
+    [Indicator 1Bimi],
+	[Indicator 2imi],
+	[Indicator 2imi req],
+	[Indicator 2imi C req],
+	[Indicator 2imi spe],
+	[Indicator 2imi E req],
+	[Indicator 2imi F spe],
+	[Indicator 2imi G req],
+	[Indicator 2imi H spe],
+	[Indicator 2imi I req],
+	[Indicator 2imi K spe],
+	[Indicator 3imi],
+    [Indicator 3Aimi],
+    [Indicator 3Bimi],
+	[Indicator 4imi],
+	[Indicator 4imi tim Very dissatisfied],
+    [Indicator 4imi tim Dissatisfied],
+    [Indicator 4imi tim Neutral/Notsure],
+    [Indicator 4imi tim Satisfied],			
+    [Indicator 4imi tim Very satisfied],
+	[Indicator 5imi],
+	[Indicator 5imi tim Very dissatisfied],
+    [Indicator 5imi tim Dissatisfied],
+    [Indicator 5imi tim Neutral/Notsure],
+    [Indicator 5imi tim Satisfied],			
+    [Indicator 5imi tim Very satisfied],
+	[Professional qualifications],
+	[Services],
+	[Posting of workers],
+	[Other areas],
+	[GT_IMI_REQ_MS_Policy Area],
+    [Request sent],
+	[GT_IMI_REQ_REC_MS_Policy Area],
+	[Request recieved],
+    [IMI Requests],
+	[IMI Repository entries],
+	[IMI SOLVIT cases],
+	[IMI Notifications],
+	[IMI Alerts],
+	[IMI EPC applications],
+	[IMI GDPR Cases],
+	[IMI NRMM type approvals],
+   	[IMI Firearms refusals],
+// --------------------------------------------------------------
+	[Number of drafts],
+	[Number of reactions sent 1],
+	[Number of reactions sent 2],
+	[Number of reactions sent 3],
+	[Draft technical regulation 1],
+	[Draft technical regulation 2],
+	[Total notifications],
+	[Number of reactions received by Member 1],
+	[Number of reactions received by Member 2],
+	[Contributions received from stakeholders]
+Resident [ALLMETRICS_TRANS_INF_IMI_TRIS];
+// --------------------------------------------------------------
+left Join
+LOAD 
+	[ISO_code],
+	[Indicator 1 solvit],
+    'Current'							AS Year
+RESIDENT [indicator 1 solvit];
+left join 
+LOAD 
+	[ISO_code],
+	[Indicator 2 solvit],
+    'Current'							AS Year
+RESIDENT [indicator 2 solvit];
+left Join
+LOAD 
+	[ISO_code],
+	[Indicator 3 solvit],
+    'Current'							AS Year
+RESIDENT [indicator 3 solvit];
+left Join
+LOAD 
+	[ISO_code],
+	[Indicator 4 solvit],
+    'Current'							AS Year
+RESIDENT [indicator 4 solvit];
+left Join
+LOAD 
+	[ISO_code],
+	[Indicator 5 solvit],
+    'Current'							AS Year
+RESIDENT [indicator 5 solvit];
+left Join
+LOAD 
+	[ISO_code],
+	[Indicator 6 solvit],
+    'Current'							AS Year
+RESIDENT [indicator 6 solvit];
+left Join
+LOAD 
+	[ISO_code],
+	[Indicator 7 solvit],
+    'Current'							AS Year
+RESIDENT [indicator 7 solvit];
+outer Join
+LOAD
+	[Year_cases] 						AS [Year],
+    '-' 								AS [ISO_code],
+	[CasesofCas]
+Resident [Overall caseload];
+left Join
+LOAD 
+	[ISO_code],
+	[Distribution HOM],
+    'Current'							AS Year
+RESIDENT [Cases distribution 1];
+left Join
+LOAD 
+	[ISO_code],
+	[Distribution LEA],
+    'Current'							AS Year
+RESIDENT [Cases distribution 2];
+left Join
+LOAD 
+	[ISO_code],
+	[Solvit_Cases_submited_2020],
+	[Solvit_Cases_submited_2019],
+	[Solvit_Cases_submited_2018],
+    'Current'							AS Year
+Resident [Cases submited by countries];
+left Join
+LOAD
+	[ISO_code],
+	[Solvit_Cases_received_2020],
+	[Solvit_Cases_received_2019],
+	[Solvit_Cases_received_2018],
+    'Current'							AS Year
+Resident [Cases received by country];
+left Join
+LOAD
+	[ISO_code],
+	[Solvit_Cases_ByCountry_2020],
+	[Solvit_Cases_ByCountry_2019],
+	[Solvit_Cases_ByCountry_2018],
+    'Current'							AS Year
+Resident [Business cases by country];
+outer Join
+LOAD 
+	'-' 								AS [ISO_code],
+	Text([Year_BUS_CIT])				AS Year,
+	[Citizens cases],
+	[Business cases]
+Resident [Business cases vs. citizens cases];
+
+
+Drop Table ALLMETRICS_TRANS_INF_IMI_TRIS;
+
+Drop Table [indicator 1 solvit], [indicator 2 solvit], [indicator 3 solvit], [indicator 4 solvit], [indicator 5 solvit], [indicator 6 solvit], [indicator 7 solvit], [Overall caseload], [Business cases vs. citizens cases], [Cases distribution 1], [Cases distribution 2], [Cases submited by countries], [Cases received by country], [Business cases by country];
+
+
+
+
+[Cases linked to general difficulties]:
+LOAD
+	[x1val] 							AS [Cases linked to general difficulties],
+	[y1val] 							AS [Cases linked to more general difficulties]
+    
+where [x1val] <> 'Area';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_SOL_CAS_LIN_ARE.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";

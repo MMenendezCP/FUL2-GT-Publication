@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "JuqBH",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "IMI - Request per sending Professional Qualificaitons",
+    "qDef": "only(if([GT_IMI_REQ_MS_Policy Area] =  'Professional Qualifications', [Request sent]))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'Professional Qualificaitons'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#,##0",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#3465A4",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "IMI - Request per sending Professional Qualificaitons",
+    "description": "IMI - Request per sending",
+    "tags": []
+  }
+}

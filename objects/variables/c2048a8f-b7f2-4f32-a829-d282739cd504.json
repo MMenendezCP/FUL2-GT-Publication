@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "c2048a8f-b7f2-4f32-a829-d282739cd504",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "SysTwoYearsAgo",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "2021",
+  "qIsScriptCreated": true
+}

@@ -1,0 +1,14 @@
+///$tab 3.- EU Pilot
+[EU Pilot Cases]:
+LOAD
+	[x1val] 							AS [Main policy areas],
+    [y1val] 							AS [EU Pilot Cases]
+    
+where [x1val] <> 'Edition';
+    
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_EUP_MAI_POL_ARE.csv';
+
+SQL SELECT 
+	"x1val",
+	"y1val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";

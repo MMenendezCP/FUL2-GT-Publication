@@ -1,0 +1,991 @@
+{
+  "qProperty": {
+    "qInfo": {
+      "qId": "f7a85421-073c-46e1-8478-c2c294031077",
+      "qType": "sheet"
+    },
+    "qMetaDef": {
+      "title": "SOLVIT - Map",
+      "description": ""
+    },
+    "rank": 62,
+    "thumbnail": {
+      "qStaticContentUrlDef": {}
+    },
+    "columns": 24,
+    "rows": 12,
+    "cells": [
+      {
+        "name": "JhmKp",
+        "type": "map",
+        "col": 0,
+        "row": 0,
+        "colspan": 12,
+        "rowspan": 6,
+        "bounds": {
+          "y": 0,
+          "x": 0,
+          "width": 50,
+          "height": 50
+        }
+      },
+      {
+        "name": "xJEaW",
+        "type": "dpi-simple-table",
+        "col": 12,
+        "row": 0,
+        "colspan": 12,
+        "rowspan": 6,
+        "bounds": {
+          "y": 0,
+          "x": 50,
+          "width": 50,
+          "height": 50
+        }
+      }
+    ],
+    "qChildListDef": {
+      "qData": {
+        "title": "/title"
+      }
+    },
+    "gridResolution": "small",
+    "layoutOptions": {
+      "mobileLayout": "LIST"
+    },
+    "gridMode": "edit"
+  },
+  "qChildren": [
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "JhmKp",
+          "qType": "map"
+        },
+        "qMetaDef": {},
+        "gaLayers": [
+          {
+            "type": "AreaLayer",
+            "locationOrLatitude": {
+              "label": "Country",
+              "key": "",
+              "type": "expression"
+            },
+            "locationDefault": "[Country]",
+            "locationNamesAuto": true,
+            "locationType": "",
+            "locationCountry": {
+              "key": "",
+              "label": "",
+              "type": ""
+            },
+            "locationAdmin1": {
+              "key": "",
+              "label": "",
+              "type": ""
+            },
+            "locationAdmin2": {
+              "key": "",
+              "label": "",
+              "type": ""
+            },
+            "maxObjects": 1000,
+            "showLayer": true,
+            "hideCalcCond": false,
+            "exclFromAutozoom": false,
+            "layerSelectionsDisabled": false,
+            "color": {
+              "outline": {
+                "index": -1,
+                "color": "#7b7a78"
+              },
+              "outlineOpacity": 1,
+              "opacity": 1,
+              "auto": false,
+              "mode": "byExpression",
+              "paletteColor": {
+                "index": 6,
+                "color": "#ffffff"
+              },
+              "measureScheme": "sg",
+              "dimensionScheme": "12",
+              "colorExpression": "if(SOLVITMAP_COLOR = 'red', '#D53B2A', \r\n\tif(SOLVITMAP_COLOR = 'green', '#71ab7c', \n\t\tif(SOLVITMAP_COLOR = 'yellow', '#DBC42E')))\n\n/*\nif(PO='AT',\t'#D53B2A',\nif(PO='BE',\t'#71ab7c',\nif(PO='BG',\t'#71ab7c',\nif(PO='HR',\t'#D53B2A',\nif(PO='CY',\t'#DBC42E',\nif(PO='CZ',\t'#71ab7c',\nif(PO='DK',\t'#71ab7c',\nif(PO='EE',\t'#DBC42E',\nif(PO='FI',\t'#DBC42E',\nif(PO='FR',\t'#71ab7c',\nif(PO='DE',\t'#D53B2A',\nif(PO='EL',\t'#D53B2A',\nif(PO='HU',\t'#71ab7c',\nif(PO='IS',\t'#71ab7c',\nif(PO='IE',\t'#71ab7c',\nif(PO='IT',\t'#DBC42E',\nif(PO='LV',\t'#71ab7c',\nif(PO='LI',\t'#DBC42E',\nif(PO='LT',\t'#71ab7c',\nif(PO='LU',\t'#71ab7c',\nif(PO='MT',\t'#71ab7c',\nif(PO='NL',\t'#DBC42E',\nif(PO='NO',\t'#D53B2A',\nif(PO='PL',\t'#71ab7c',\nif(PO='PT',\t'#71ab7c',\nif(PO='RO',\t'#DBC42E',\nif(PO='SK',\t'#71ab7c',\nif(PO='SI',\t'#71ab7c',\nif(PO='ES',\t'#71ab7c',\nif(PO='SE',\t'#71ab7c',\nif(PO='SE',\t'#D53B2A')))))))))))))))))))))))))))))))\n\nif(PO='FR' or PO='DE' or PO='HE' or PO='EL' or PO='NE' or PO='NO' or PO='HR' or PO='NL','#D53B2A',\nif(PO='BE' or  PO='BG' or  PO='ES' or  PO='DK' or  PO='CY' or  PO='CZ' or  PO='DE' or  PO='FI' or  PO='HU' or  PO='IE' or  PO='IS' or  PO='LV' or  PO='LI' or  PO='LU' or  PO='MT' \nor  PO='PL' or  PO='PT' or  PO='SE' or  PO='SI' or  PO='SK','#71ab7c','#DBC42E'))\n\n\n=if (PO='EL','GR',if(PO='CH','',PO))\n\n\n",
+              "expressionIsColor": true,
+              "measureMin": 0,
+              "measureMax": 10,
+              "useDimColVal": false,
+              "useMeasureGradient": false
+            },
+            "displayLegend": "auto",
+            "showSizeLegend": true,
+            "showToolTip": true,
+            "showInAllLevels": true,
+            "zoomRange": [
+              0,
+              20
+            ],
+            "showPopUp": "custom",
+            "displayUnselected": false,
+            "label": {
+              "show": false,
+              "expression": {
+                "key": "[Country]",
+                "label": "dimension.qDef.qFieldDefs[0]",
+                "type": "expression"
+              },
+              "position": "TOP",
+              "showInAllLevels": true,
+              "visibleRange": [
+                0,
+                20
+              ]
+            },
+            "drillDown": {
+              "auto": true,
+              "showLevel0": true,
+              "showLevel1": true,
+              "showLevel2": true,
+              "showLevel3": true,
+              "showLevel4": true,
+              "showLevel5": true,
+              "showLevel6": true,
+              "showLevel7": true
+            },
+            "qHyperCubeDef": {
+              "qDimensions": [
+                {
+                  "qDef": {
+                    "qGrouping": "N",
+                    "qFieldDefs": [
+                      "=if ([ISO_code] = 'EL', 'GR', if( [ISO_code] = 'CH', '', if([ISO_code]<> 'EU' and [ISO_code]<> 'EU AVG' and [ISO_code]<> 'Avg' and [ISO_code]<> '-' and [ISO_code]<> 'TR' and [ISO_code]<> 'EEA EFTA', [ISO_code])))"
+                    ],
+                    "qFieldLabels": [
+                      "Country"
+                    ],
+                    "qSortCriterias": [
+                      {
+                        "qSortByNumeric": 1,
+                        "qSortByAscii": 1,
+                        "qSortByLoadOrder": 1,
+                        "qExpression": {}
+                      }
+                    ],
+                    "qNumberPresentations": [],
+                    "qActiveField": 0,
+                    "autoSort": true,
+                    "cId": "jLjJy"
+                  },
+                  "qOtherTotalSpec": {
+                    "qOtherMode": "OTHER_OFF",
+                    "qOtherCounted": {},
+                    "qOtherLimit": {},
+                    "qOtherLimitMode": "OTHER_GT_LIMIT",
+                    "qForceBadValueKeeping": true,
+                    "qApplyEvenWhenPossiblyWrongResult": true,
+                    "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                    "qTotalMode": "TOTAL_OFF",
+                    "qReferencedExpression": {}
+                  },
+                  "qOtherLabel": {},
+                  "qTotalLabel": {},
+                  "qCalcCond": {},
+                  "qAttributeExpressions": [
+                    {
+                      "qNumFormat": {
+                        "qType": "U",
+                        "qnDec": 10,
+                        "qUseThou": 0
+                      },
+                      "cId": "RXbycsM",
+                      "autoSort": true,
+                      "id": "customTooltipTitle"
+                    },
+                    {
+                      "qExpression": "=if(PO='AT','Austria',if(PO='BE','Belgium',if(PO='BG','Bulgaria',if(PO='CY','cyprus',if(PO='CZ','Czechia',if(PO='DK','Denmark',if(PO='DE','Germany',if(PO='EE','Estonia',if(PO='EL','Greece',if(PO='ES','Spain',if(PO='FI','Finland',if(PO='FR','France',if(PO='HR','Croatia',if(PO='HU','Hungary',if(PO='IE','Ireland',if(PO='IS','Iceland',if(PO='IT','Italy',if(PO='LT','Lithuania',if(PO='LI','Liechtenstein',if(PO='LU','Luxembourg',if(PO='LV','Latvia',if(PO='MT','Malta',if(PO='NL','Netherlands',if(PO='NO','Norway',if(PO='PL','Poland',if(PO='PT','Portugal',if(PO='RO','Romania',if(PO='SE','Sweden',if(PO='SI','Slovenia',if(PO='SK','Slovakia',if(PO='UK','United-Kingdom')))))))))))))))))))))))))))))))\r\n",
+                      "qNumFormat": {
+                        "qType": "U",
+                        "qnDec": 10,
+                        "qUseThou": 0
+                      },
+                      "cId": "PKHAK",
+                      "autoSort": true,
+                      "id": "customTooltipDescription"
+                    },
+                    {
+                      "qExpression": "if(SOLVITMAP_COLOR = 'red', '#D53B2A', \r\n\tif(SOLVITMAP_COLOR = 'green', '#71ab7c', \n\t\tif(SOLVITMAP_COLOR = 'yellow', '#DBC42E')))\n\n/*\nif(PO='AT',\t'#D53B2A',\nif(PO='BE',\t'#71ab7c',\nif(PO='BG',\t'#71ab7c',\nif(PO='HR',\t'#D53B2A',\nif(PO='CY',\t'#DBC42E',\nif(PO='CZ',\t'#71ab7c',\nif(PO='DK',\t'#71ab7c',\nif(PO='EE',\t'#DBC42E',\nif(PO='FI',\t'#DBC42E',\nif(PO='FR',\t'#71ab7c',\nif(PO='DE',\t'#D53B2A',\nif(PO='EL',\t'#D53B2A',\nif(PO='HU',\t'#71ab7c',\nif(PO='IS',\t'#71ab7c',\nif(PO='IE',\t'#71ab7c',\nif(PO='IT',\t'#DBC42E',\nif(PO='LV',\t'#71ab7c',\nif(PO='LI',\t'#DBC42E',\nif(PO='LT',\t'#71ab7c',\nif(PO='LU',\t'#71ab7c',\nif(PO='MT',\t'#71ab7c',\nif(PO='NL',\t'#DBC42E',\nif(PO='NO',\t'#D53B2A',\nif(PO='PL',\t'#71ab7c',\nif(PO='PT',\t'#71ab7c',\nif(PO='RO',\t'#DBC42E',\nif(PO='SK',\t'#71ab7c',\nif(PO='SI',\t'#71ab7c',\nif(PO='ES',\t'#71ab7c',\nif(PO='SE',\t'#71ab7c',\nif(PO='SE',\t'#D53B2A')))))))))))))))))))))))))))))))\n\nif(PO='FR' or PO='DE' or PO='HE' or PO='EL' or PO='NE' or PO='NO' or PO='HR' or PO='NL','#D53B2A',\nif(PO='BE' or  PO='BG' or  PO='ES' or  PO='DK' or  PO='CY' or  PO='CZ' or  PO='DE' or  PO='FI' or  PO='HU' or  PO='IE' or  PO='IS' or  PO='LV' or  PO='LI' or  PO='LU' or  PO='MT' \nor  PO='PL' or  PO='PT' or  PO='SE' or  PO='SI' or  PO='SK','#71ab7c','#DBC42E'))\n\n\n=if (PO='EL','GR',if(PO='CH','',PO))\n\n\n",
+                      "id": "colorByExpression"
+                    }
+                  ],
+                  "qAttributeDimensions": [],
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  }
+                }
+              ],
+              "qMeasures": [],
+              "qInterColumnSortOrder": [
+                0
+              ],
+              "qInitialDataFetch": [
+                {
+                  "qLeft": 0,
+                  "qTop": 0,
+                  "qWidth": 1,
+                  "qHeight": 0
+                }
+              ],
+              "qReductionMode": "N",
+              "qMode": "S",
+              "qPseudoDimPos": -1,
+              "qNoOfLeftDims": -1,
+              "qMaxStackedCells": 5000,
+              "qCalcCond": {},
+              "qTitle": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qColumnOrder": [],
+              "qExpansionState": [],
+              "qDynamicScript": [],
+              "qLayoutExclude": {
+                "qHyperCubeDef": {
+                  "qDimensions": [],
+                  "qMeasures": [],
+                  "qInterColumnSortOrder": [],
+                  "qInitialDataFetch": [],
+                  "qReductionMode": "N",
+                  "qMode": "S",
+                  "qPseudoDimPos": -1,
+                  "qNoOfLeftDims": -1,
+                  "qMaxStackedCells": 5000,
+                  "qCalcCond": {},
+                  "qTitle": {},
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  },
+                  "qColumnOrder": [],
+                  "qExpansionState": [],
+                  "qDynamicScript": []
+                }
+              }
+            },
+            "tooltip": {
+              "auto": true,
+              "title": "",
+              "description": {
+                "qStringExpression": {
+                  "qExpr": "=if(PO='AT','Austria',if(PO='BE','Belgium',if(PO='BG','Bulgaria',if(PO='CY','cyprus',if(PO='CZ','Czechia',if(PO='DK','Denmark',if(PO='DE','Germany',if(PO='EE','Estonia',if(PO='EL','Greece',if(PO='ES','Spain',if(PO='FI','Finland',if(PO='FR','France',if(PO='HR','Croatia',if(PO='HU','Hungary',if(PO='IE','Ireland',if(PO='IS','Iceland',if(PO='IT','Italy',if(PO='LT','Lithuania',if(PO='LI','Liechtenstein',if(PO='LU','Luxembourg',if(PO='LV','Latvia',if(PO='MT','Malta',if(PO='NL','Netherlands',if(PO='NO','Norway',if(PO='PL','Poland',if(PO='PT','Portugal',if(PO='RO','Romania',if(PO='SE','Sweden',if(PO='SI','Slovenia',if(PO='SK','Slovakia',if(PO='UK','United-Kingdom')))))))))))))))))))))))))))))))\r\n"
+                }
+              },
+              "hideBasic": true
+            },
+            "cId": "fLbXdZ",
+            "id": "fLbXdZ"
+          },
+          {
+            "type": "GeodataLayer",
+            "locationOrLatitude": {
+              "key": "",
+              "label": "",
+              "type": ""
+            },
+            "locationDefault": "",
+            "locationNamesAuto": true,
+            "locationType": "",
+            "locationCountry": {
+              "key": "",
+              "label": "",
+              "type": ""
+            },
+            "locationAdmin1": {
+              "key": "",
+              "label": "",
+              "type": ""
+            },
+            "locationAdmin2": {
+              "key": "",
+              "label": "",
+              "type": ""
+            },
+            "maxObjects": 1000,
+            "showLayer": true,
+            "hideCalcCond": false,
+            "exclFromAutozoom": false,
+            "layerSelectionsDisabled": false,
+            "color": {
+              "outline": {
+                "index": -1,
+                "color": "#7b7a78"
+              },
+              "outlineOpacity": 1,
+              "opacity": 1,
+              "auto": true,
+              "mode": "primary",
+              "paletteColor": {
+                "index": 6,
+                "color": "#4477aa"
+              },
+              "measureScheme": "sg",
+              "dimensionScheme": "12",
+              "colorExpression": "",
+              "expressionIsColor": true,
+              "measureMin": 0,
+              "measureMax": 10
+            },
+            "displayLegend": "auto",
+            "showSizeLegend": true,
+            "showToolTip": true,
+            "showInAllLevels": true,
+            "zoomRange": [
+              0,
+              20
+            ],
+            "showPopUp": true,
+            "displayUnselected": false,
+            "label": {
+              "show": false,
+              "expression": {
+                "key": "",
+                "label": "",
+                "type": ""
+              },
+              "position": "TOP",
+              "showInAllLevels": true,
+              "visibleRange": [
+                0,
+                20
+              ]
+            },
+            "drillDown": {
+              "auto": true,
+              "showLevel0": true,
+              "showLevel1": true,
+              "showLevel2": true,
+              "showLevel3": true,
+              "showLevel4": true,
+              "showLevel5": true,
+              "showLevel6": true,
+              "showLevel7": true
+            },
+            "qHyperCubeDef": {
+              "qDimensions": [],
+              "qMeasures": [],
+              "qInterColumnSortOrder": [],
+              "qInitialDataFetch": [
+                {
+                  "qLeft": 0,
+                  "qTop": 0,
+                  "qWidth": 1,
+                  "qHeight": 0
+                }
+              ],
+              "qReductionMode": "N",
+              "qMode": "S",
+              "qPseudoDimPos": -1,
+              "qNoOfLeftDims": -1,
+              "qMaxStackedCells": 5000,
+              "qCalcCond": {},
+              "qTitle": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qColumnOrder": [],
+              "qExpansionState": [],
+              "qDynamicScript": [],
+              "qLayoutExclude": {
+                "qHyperCubeDef": {
+                  "qDimensions": [],
+                  "qMeasures": [],
+                  "qInterColumnSortOrder": [],
+                  "qInitialDataFetch": [],
+                  "qReductionMode": "N",
+                  "qMode": "S",
+                  "qPseudoDimPos": -1,
+                  "qNoOfLeftDims": -1,
+                  "qMaxStackedCells": 5000,
+                  "qCalcCond": {},
+                  "qTitle": {},
+                  "qCalcCondition": {
+                    "qCond": {},
+                    "qMsg": {}
+                  },
+                  "qColumnOrder": [],
+                  "qExpansionState": [],
+                  "qDynamicScript": []
+                }
+              }
+            },
+            "tooltip": {
+              "auto": true
+            },
+            "title": "gisco-services.ec.europa.eu",
+            "dataType": "tms",
+            "tms": {
+              "url": "https://gisco-services.ec.europa.eu/maps/tiles/OSMBrightComposite/EPSG3857/{z}/{x}/{y}.png",
+              "attribution": "",
+              "auto": true,
+              "tileSize": 256,
+              "tileWidth": 40075016,
+              "tileHeight": 40075016,
+              "originLeft": -20037508,
+              "originTop": 20037508
+            },
+            "wms": {
+              "url": "https://",
+              "attribution": "",
+              "version": "1.1.0",
+              "selectedCrs": "EPSG:3857",
+              "selectedFormat": "PNG",
+              "hasWmsLoaded": false,
+              "viaServer": false,
+              "capabilities": {
+                "layers": [],
+                "transparent": true,
+                "crs": [
+                  "EPSG:3857"
+                ],
+                "formats": [
+                  "PNG"
+                ]
+              }
+            },
+            "image": {
+              "url": "",
+              "minX": 0,
+              "minY": 0,
+              "maxX": 5,
+              "maxY": 5,
+              "attribution": ""
+            },
+            "cId": "aCbhPu",
+            "id": "aCbhPu"
+          }
+        ],
+        "mapSettings": {
+          "_layerType": "",
+          "baseMap": "default",
+          "projection": "default",
+          "mapLanguage": "auto",
+          "useImperialUnits": false,
+          "selectionType": "lasso",
+          "initialView": null,
+          "showLegend": false,
+          "sidebarAlignment": "auto",
+          "showFindLocationButton": true,
+          "showScaleBar": true,
+          "zoomLimitSwitch": false,
+          "zoomLimit": {
+            "range": [
+              0,
+              20
+            ]
+          },
+          "panLimitSwitch": false,
+          "panLimits": null,
+          "showDebugInfo": false,
+          "labelColoring": "auto"
+        },
+        "autoZoomOnSelection": true,
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": true,
+        "showDetails": false,
+        "showDetailsExpression": false,
+        "navigation": false,
+        "visualization": "map",
+        "gaVersion": 2,
+        "layers": [],
+        "qUndoExclude": {
+          "hashCode": 748467854,
+          "gaLayers": [
+            {
+              "qHyperCubeDef": {
+                "qDimensions": [
+                  {
+                    "qDef": {
+                      "qGrouping": "N",
+                      "qFieldDefs": [
+                        "=if ([ISO_code] = 'EL', 'GR', if( [ISO_code] = 'CH', '', if([ISO_code]<> 'EU' and [ISO_code]<> 'EU AVG' and [ISO_code]<> 'Avg' and [ISO_code]<> '-' and [ISO_code]<> 'TR' and [ISO_code]<> 'EEA EFTA', [ISO_code])))"
+                      ],
+                      "qFieldLabels": [
+                        "Country"
+                      ],
+                      "qSortCriterias": [
+                        {
+                          "qSortByNumeric": 1,
+                          "qSortByAscii": 1,
+                          "qSortByLoadOrder": 1,
+                          "qExpression": {}
+                        }
+                      ],
+                      "qNumberPresentations": [],
+                      "qActiveField": 0,
+                      "autoSort": true,
+                      "cId": "jLjJy"
+                    },
+                    "qOtherTotalSpec": {
+                      "qOtherMode": "OTHER_OFF",
+                      "qOtherCounted": {},
+                      "qOtherLimit": {},
+                      "qOtherLimitMode": "OTHER_GT_LIMIT",
+                      "qForceBadValueKeeping": true,
+                      "qApplyEvenWhenPossiblyWrongResult": true,
+                      "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                      "qTotalMode": "TOTAL_OFF",
+                      "qReferencedExpression": {}
+                    },
+                    "qOtherLabel": {},
+                    "qTotalLabel": {},
+                    "qCalcCond": {},
+                    "qAttributeExpressions": [
+                      {
+                        "qNumFormat": {
+                          "qType": "U",
+                          "qnDec": 10,
+                          "qUseThou": 0
+                        },
+                        "cId": "RXbycsM",
+                        "autoSort": true,
+                        "id": "customTooltipTitle"
+                      },
+                      {
+                        "qExpression": "=if(PO='AT','Austria',if(PO='BE','Belgium',if(PO='BG','Bulgaria',if(PO='CY','cyprus',if(PO='CZ','Czechia',if(PO='DK','Denmark',if(PO='DE','Germany',if(PO='EE','Estonia',if(PO='EL','Greece',if(PO='ES','Spain',if(PO='FI','Finland',if(PO='FR','France',if(PO='HR','Croatia',if(PO='HU','Hungary',if(PO='IE','Ireland',if(PO='IS','Iceland',if(PO='IT','Italy',if(PO='LT','Lithuania',if(PO='LI','Liechtenstein',if(PO='LU','Luxembourg',if(PO='LV','Latvia',if(PO='MT','Malta',if(PO='NL','Netherlands',if(PO='NO','Norway',if(PO='PL','Poland',if(PO='PT','Portugal',if(PO='RO','Romania',if(PO='SE','Sweden',if(PO='SI','Slovenia',if(PO='SK','Slovakia',if(PO='UK','United-Kingdom')))))))))))))))))))))))))))))))\r\n",
+                        "qNumFormat": {
+                          "qType": "U",
+                          "qnDec": 10,
+                          "qUseThou": 0
+                        },
+                        "cId": "PKHAK",
+                        "autoSort": true,
+                        "id": "customTooltipDescription"
+                      },
+                      {
+                        "qExpression": "if(SOLVITMAP_COLOR = 'red', '#D53B2A', \r\n\tif(SOLVITMAP_COLOR = 'green', '#71ab7c', \n\t\tif(SOLVITMAP_COLOR = 'yellow', '#DBC42E')))\n\n/*\nif(PO='AT',\t'#D53B2A',\nif(PO='BE',\t'#71ab7c',\nif(PO='BG',\t'#71ab7c',\nif(PO='HR',\t'#D53B2A',\nif(PO='CY',\t'#DBC42E',\nif(PO='CZ',\t'#71ab7c',\nif(PO='DK',\t'#71ab7c',\nif(PO='EE',\t'#DBC42E',\nif(PO='FI',\t'#DBC42E',\nif(PO='FR',\t'#71ab7c',\nif(PO='DE',\t'#D53B2A',\nif(PO='EL',\t'#D53B2A',\nif(PO='HU',\t'#71ab7c',\nif(PO='IS',\t'#71ab7c',\nif(PO='IE',\t'#71ab7c',\nif(PO='IT',\t'#DBC42E',\nif(PO='LV',\t'#71ab7c',\nif(PO='LI',\t'#DBC42E',\nif(PO='LT',\t'#71ab7c',\nif(PO='LU',\t'#71ab7c',\nif(PO='MT',\t'#71ab7c',\nif(PO='NL',\t'#DBC42E',\nif(PO='NO',\t'#D53B2A',\nif(PO='PL',\t'#71ab7c',\nif(PO='PT',\t'#71ab7c',\nif(PO='RO',\t'#DBC42E',\nif(PO='SK',\t'#71ab7c',\nif(PO='SI',\t'#71ab7c',\nif(PO='ES',\t'#71ab7c',\nif(PO='SE',\t'#71ab7c',\nif(PO='SE',\t'#D53B2A')))))))))))))))))))))))))))))))\n\nif(PO='FR' or PO='DE' or PO='HE' or PO='EL' or PO='NE' or PO='NO' or PO='HR' or PO='NL','#D53B2A',\nif(PO='BE' or  PO='BG' or  PO='ES' or  PO='DK' or  PO='CY' or  PO='CZ' or  PO='DE' or  PO='FI' or  PO='HU' or  PO='IE' or  PO='IS' or  PO='LV' or  PO='LI' or  PO='LU' or  PO='MT' \nor  PO='PL' or  PO='PT' or  PO='SE' or  PO='SI' or  PO='SK','#71ab7c','#DBC42E'))\n\n\n=if (PO='EL','GR',if(PO='CH','',PO))\n\n\n",
+                        "id": "colorByExpression"
+                      }
+                    ],
+                    "qAttributeDimensions": [],
+                    "qCalcCondition": {
+                      "qCond": {},
+                      "qMsg": {}
+                    }
+                  }
+                ],
+                "qMeasures": [],
+                "qInterColumnSortOrder": [
+                  0
+                ],
+                "qInitialDataFetch": [
+                  {
+                    "qLeft": 0,
+                    "qTop": 0,
+                    "qWidth": 1,
+                    "qHeight": 1000
+                  }
+                ],
+                "qReductionMode": "N",
+                "qMode": "S",
+                "qPseudoDimPos": -1,
+                "qNoOfLeftDims": -1,
+                "qMaxStackedCells": 5000,
+                "qCalcCond": {},
+                "qTitle": {},
+                "qCalcCondition": {
+                  "qCond": {},
+                  "qMsg": {}
+                },
+                "qColumnOrder": [],
+                "qExpansionState": [],
+                "qDynamicScript": [],
+                "qLayoutExclude": {
+                  "qHyperCubeDef": {
+                    "qDimensions": [],
+                    "qMeasures": [],
+                    "qInterColumnSortOrder": [],
+                    "qInitialDataFetch": [],
+                    "qReductionMode": "N",
+                    "qMode": "S",
+                    "qPseudoDimPos": -1,
+                    "qNoOfLeftDims": -1,
+                    "qMaxStackedCells": 5000,
+                    "qCalcCond": {},
+                    "qTitle": {},
+                    "qCalcCondition": {
+                      "qCond": {},
+                      "qMsg": {}
+                    },
+                    "qColumnOrder": [],
+                    "qExpansionState": [],
+                    "qDynamicScript": []
+                  }
+                }
+              },
+              "color": {
+                "outline": {
+                  "index": -1,
+                  "color": "#7b7a78"
+                },
+                "outlineOpacity": 1,
+                "opacity": 1,
+                "auto": false,
+                "mode": "byExpression",
+                "paletteColor": {
+                  "index": 6,
+                  "color": "#ffffff"
+                },
+                "measureScheme": "sg",
+                "dimensionScheme": "12",
+                "colorExpression": "if(SOLVITMAP_COLOR = 'red', '#D53B2A', \r\n\tif(SOLVITMAP_COLOR = 'green', '#71ab7c', \n\t\tif(SOLVITMAP_COLOR = 'yellow', '#DBC42E')))\n\n/*\nif(PO='AT',\t'#D53B2A',\nif(PO='BE',\t'#71ab7c',\nif(PO='BG',\t'#71ab7c',\nif(PO='HR',\t'#D53B2A',\nif(PO='CY',\t'#DBC42E',\nif(PO='CZ',\t'#71ab7c',\nif(PO='DK',\t'#71ab7c',\nif(PO='EE',\t'#DBC42E',\nif(PO='FI',\t'#DBC42E',\nif(PO='FR',\t'#71ab7c',\nif(PO='DE',\t'#D53B2A',\nif(PO='EL',\t'#D53B2A',\nif(PO='HU',\t'#71ab7c',\nif(PO='IS',\t'#71ab7c',\nif(PO='IE',\t'#71ab7c',\nif(PO='IT',\t'#DBC42E',\nif(PO='LV',\t'#71ab7c',\nif(PO='LI',\t'#DBC42E',\nif(PO='LT',\t'#71ab7c',\nif(PO='LU',\t'#71ab7c',\nif(PO='MT',\t'#71ab7c',\nif(PO='NL',\t'#DBC42E',\nif(PO='NO',\t'#D53B2A',\nif(PO='PL',\t'#71ab7c',\nif(PO='PT',\t'#71ab7c',\nif(PO='RO',\t'#DBC42E',\nif(PO='SK',\t'#71ab7c',\nif(PO='SI',\t'#71ab7c',\nif(PO='ES',\t'#71ab7c',\nif(PO='SE',\t'#71ab7c',\nif(PO='SE',\t'#D53B2A')))))))))))))))))))))))))))))))\n\nif(PO='FR' or PO='DE' or PO='HE' or PO='EL' or PO='NE' or PO='NO' or PO='HR' or PO='NL','#D53B2A',\nif(PO='BE' or  PO='BG' or  PO='ES' or  PO='DK' or  PO='CY' or  PO='CZ' or  PO='DE' or  PO='FI' or  PO='HU' or  PO='IE' or  PO='IS' or  PO='LV' or  PO='LI' or  PO='LU' or  PO='MT' \nor  PO='PL' or  PO='PT' or  PO='SE' or  PO='SI' or  PO='SK','#71ab7c','#DBC42E'))\n\n\n=if (PO='EL','GR',if(PO='CH','',PO))\n\n\n",
+                "expressionIsColor": true,
+                "measureMin": 0,
+                "measureMax": 10,
+                "useDimColVal": false,
+                "useMeasureGradient": false
+              }
+            },
+            {}
+          ]
+        },
+        "masterVersion": 0.96
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "xJEaW",
+          "qType": "dpi-simple-table"
+        },
+        "qMetaDef": {},
+        "qHyperCubeDef": {
+          "qDimensions": [
+            {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=//if(Flags='IS'OR Flags='LI'OR Flags='NO' OR RealName='Norway' OR URLPages='https://single-market-scoreboard.ec.europa.eu/countries/Norway' OR RealName='Liechtenstein' OR URLPages='https://single-market-scoreboard.ec.europa.eu/countries/Liechtenstein' OR RealName='IS' OR URLPages='https://single-market-scoreboard.ec.europa.eu/countries/Iceland',null(),\r\n\t\n    if (ISO_code <> 'EU' and ISO_code <> 'EU AVG' and ISO_code <> 'Avg' and ISO_code <> '-' and [ISO_code]<> 'TR' and [ISO_code]<> 'EEA EFTA',\n    \n    '<div style=\"text-align:left\"><img src=\"'\n\t&\n\tCountry_Flag\n\t&'\"> <a href=\"'&\n\tReal_name\n\t&'\" target=\"_blank\">'&RealName_aux&'</a></div>'\n)\n\n\n\n/*\n\n\n='<div style=\"text-align:left\"><img src=\"'\n&\nFlags\n&'\"> <a href=\"'&\nURLPages\n&'\" target=\"_blank\">'&RealName&'</a></div>'"
+                ],
+                "qFieldLabels": [
+                  "Country"
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByLoadOrder": 1,
+                    "qSortByExpression": 1,
+                    "qExpression": {
+                      "qv": "Match(RealName,'Austria'\r\n,'Belgium'\n,'Bulgaria'\n,'Cyprus'\n,'Czechia'\n,'Denmark'\n,'Germany'\n,'Estonia'\n,'Greece'\n,'Spain'\n,'Finland'\n,'France'\n,'Croatia'\n,'Hungary'\n,'Ireland'\n,'Italy'\n,'Lithuania'\n,'Luxembourg'\n,'Latvia'\n,'Malta'\n,'Netherlands'\n,'Poland'\n,'Portugal'\n,'Romania'\n,'Sweden'\n,'Slovenia'\n,'Slovakia'\n,'Iceland'\n,'Liechtenstein'\n,'Norway'\n,'United-Kingdom')"
+                    }
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": false,
+                "cId": "XDxjkhx",
+                "othersLabel": "Autres",
+                "textAlign": {
+                  "auto": false,
+                  "align": "left"
+                }
+              },
+              "qNullSuppression": true,
+              "qOtherTotalSpec": {
+                "qOtherMode": "OTHER_OFF",
+                "qOtherCounted": {
+                  "qv": "10"
+                },
+                "qOtherLimit": {
+                  "qv": "0"
+                },
+                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                "qForceBadValueKeeping": true,
+                "qApplyEvenWhenPossiblyWrongResult": true,
+                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                "qTotalMode": "TOTAL_OFF",
+                "qReferencedExpression": {}
+              },
+              "qOtherLabel": {
+                "qv": "Autres"
+              },
+              "qTotalLabel": {},
+              "qCalcCond": {},
+              "qAttributeExpressions": [
+                {
+                  "qExpression": "=if(PO='AT','Austria',if(PO='BE','Belgium',if(PO='BG','Bulgaria',if(PO='CY','cyprus',if(PO='CZ','Czechia',if(PO='DK','Denmark',if(PO='DE','Germany',if(PO='EE','Estonia',if(PO='EL','Greece',if(PO='ES','Spain',if(PO='FI','Finland',if(PO='FR','France',if(PO='HR','Croatia',if(PO='HU','Hungary',if(PO='IE','Ireland',if(PO='IS','Iceland',if(PO='IT','Italy',if(PO='LT','Lithuania',if(PO='LI','Liechtenstein',if(PO='LU','Luxembourg',if(PO='LV','Latvia',if(PO='MT','Malta',if(PO='NL','Netherlands',if(PO='NO','Norway',if(PO='PL','Poland',if(PO='PT','Portugal',if(PO='RO','Romania',if(PO='SE','Sweden',if(PO='SI','Slovenia',if(PO='SK','Slovakia',if(PO='UK','United-Kingdom')))))))))))))))))))))))))))))))\r\n",
+                  "qAttribute": true,
+                  "qNumFormat": {
+                    "qType": "U",
+                    "qnDec": 10,
+                    "qUseThou": 0
+                  },
+                  "id": "urlLabel"
+                }
+              ],
+              "qAttributeDimensions": [],
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "othersLabel": "Others"
+            }
+          ],
+          "qMeasures": [
+            {
+              "qDef": {
+                "qLabel": "Color",
+                "qTags": [],
+                "qGrouping": "N",
+                "qDef": "='<p style=width:50px;text-align:center;color:'&\r\nif(SOLVITMAP_COLOR = 'red', white(), black())\n&';background-color:'&\nif(SOLVITMAP_COLOR = 'red', '#D53B2A', \n\tif(SOLVITMAP_COLOR = 'green', '#71ab7c', \n\t\tif(SOLVITMAP_COLOR = 'yellow', '#DBC42E')))\n&';width:auto;>'&\nSOLVITMAP_COLOR&'</p>'\n\n\n\n/*\n='<p style=width:50px;text-align:center;color:'&\nif(PO='AT',\twhite(),\nif(PO='BE',\tblack(),\nif(PO='BG',\tblack(),\nif(PO='HR',\twhite(),\nif(PO='CY',\tblack(),\nif(PO='CZ',\tblack(),\nif(PO='DK',\tblack(),\nif(PO='EE',\tblack(),\nif(PO='FI',\tblack(),\nif(PO='FR',\tblack(),\nif(PO='DE',\twhite(),\nif(PO='EL',\twhite(),\nif(PO='HU',\tblack(),\nif(PO='IS',\tblack(),\nif(PO='IE',\tblack(),\nif(PO='IT',\tblack(),\nif(PO='LV',\tblack(),\nif(PO='LI',\tblack(),\nif(PO='LT',\tblack(),\nif(PO='LU',\tblack(),\nif(PO='MT',\tblack(),\nif(PO='NL',\tblack(),\nif(PO='NO',\twhite(),\nif(PO='PL',\tblack(),\nif(PO='PT',\tblack(),\nif(PO='RO',\tblack(),\nif(PO='SK',\tblack(),\nif(PO='SI',\tblack(),\nif(PO='ES',\tblack(),\nif(PO='SE',\tblack(),\nif(PO='HR',\twhite())))))))))))))))))))))))))))))))\n&';background-color:'&\nif(PO='AT',\t'#D53B2A',\nif(PO='BE',\t'#71ab7c',\nif(PO='BG',\t'#71ab7c',\nif(PO='HR',\t'#D53B2A',\nif(PO='CY',\t'#DBC42E',\nif(PO='CZ',\t'#71ab7c',\nif(PO='DK',\t'#71ab7c',\nif(PO='EE',\t'#DBC42E',\nif(PO='FI',\t'#DBC42E',\nif(PO='FR',\t'#71ab7c',\nif(PO='DE',\t'#D53B2A',\nif(PO='EL',\t'#D53B2A',\nif(PO='HU',\t'#71ab7c',\nif(PO='IS',\t'#71ab7c',\nif(PO='IE',\t'#71ab7c',\nif(PO='IT',\t'#DBC42E',\nif(PO='LV',\t'#71ab7c',\nif(PO='LI',\t'#DBC42E',\nif(PO='LT',\t'#71ab7c',\nif(PO='LU',\t'#71ab7c',\nif(PO='MT',\t'#71ab7c',\nif(PO='NL',\t'#DBC42E',\nif(PO='NO',\t'#D53B2A',\nif(PO='PL',\t'#71ab7c',\nif(PO='PT',\t'#71ab7c',\nif(PO='RO',\t'#DBC42E',\nif(PO='SK',\t'#71ab7c',\nif(PO='SI',\t'#71ab7c',\nif(PO='ES',\t'#71ab7c',\nif(PO='SE',\t'#71ab7c',\nif(PO='HR',\t'#D53B2A')))))))))))))))))))))))))))))))\n&';width:auto;>'&\n\nif(PO='AT',\t'red',\nif(PO='BE',\t'green',\nif(PO='BG',\t'green',\nif(PO='HR',\t'red',\nif(PO='CY',\t'yellow',\nif(PO='CZ',\t'green',\nif(PO='DK',\t'green',\nif(PO='EE',\t'yellow',\nif(PO='FI',\t'yellow',\nif(PO='FR',\t'green',\nif(PO='DE',\t'red',\nif(PO='EL',\t'red',\nif(PO='HU',\t'green',\nif(PO='IS',\t'green',\nif(PO='IE',\t'green',\nif(PO='IT',\t'yellow',\nif(PO='LV',\t'green',\nif(PO='LI',\t'yellow',\nif(PO='LT',\t'green',\nif(PO='LU',\t'green',\nif(PO='MT',\t'green',\nif(PO='NL',\t'yellow',\nif(PO='NO',\t'red',\nif(PO='PL',\t'green',\nif(PO='PT',\t'green',\nif(PO='RO',\t'yellow',\nif(PO='SK',\t'green',\nif(PO='SI',\t'green',\nif(PO='ES',\t'green',\nif(PO='SE',\t'green',\nif(PO='HR',\t'red')))))))))))))))))))))))))))))))&'</p>'\n\n",
+                "qNumFormat": {
+                  "qType": "U",
+                  "qnDec": 10,
+                  "qUseThou": 0
+                },
+                "qAccumulate": 0,
+                "qActiveExpression": 0,
+                "qExpressions": [],
+                "autoSort": true,
+                "cId": "paJVy",
+                "numFormatFromTemplate": true
+              },
+              "qSortBy": {
+                "qSortByNumeric": -1,
+                "qSortByLoadOrder": 1,
+                "qExpression": {}
+              },
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCond": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qTrendLines": [],
+              "qMiniChartDef": {
+                "qSortBy": {
+                  "qExpression": {}
+                },
+                "qOtherTotalSpec": {
+                  "qOtherMode": "OTHER_OFF",
+                  "qOtherCounted": {},
+                  "qOtherLimit": {},
+                  "qOtherLimitMode": "OTHER_GT_LIMIT",
+                  "qForceBadValueKeeping": true,
+                  "qApplyEvenWhenPossiblyWrongResult": true,
+                  "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                  "qTotalMode": "TOTAL_OFF",
+                  "qReferencedExpression": {}
+                },
+                "qMaxNumberPoints": -1,
+                "qAttributeExpressions": []
+              }
+            }
+          ],
+          "qInterColumnSortOrder": [
+            0,
+            1
+          ],
+          "qSuppressMissing": true,
+          "qInitialDataFetch": [
+            {
+              "qLeft": 0,
+              "qTop": 0,
+              "qWidth": 15,
+              "qHeight": 500
+            }
+          ],
+          "qReductionMode": "N",
+          "qMode": "S",
+          "qPseudoDimPos": -1,
+          "qNoOfLeftDims": -1,
+          "qMaxStackedCells": 5000,
+          "qCalcCond": {},
+          "qTitle": {},
+          "qCalcCondition": {
+            "qCond": {},
+            "qMsg": {}
+          },
+          "qColumnOrder": [
+            0,
+            1
+          ],
+          "qExpansionState": [],
+          "qDynamicScript": [],
+          "columnOrder": [
+            0,
+            1
+          ],
+          "columnWidths": [
+            77,
+            59
+          ],
+          "qLayoutExclude": {
+            "qHyperCubeDef": {
+              "qDimensions": [],
+              "qMeasures": [],
+              "qInterColumnSortOrder": [],
+              "qInitialDataFetch": [],
+              "qReductionMode": "N",
+              "qMode": "S",
+              "qPseudoDimPos": -1,
+              "qNoOfLeftDims": -1,
+              "qMaxStackedCells": 5000,
+              "qCalcCond": {},
+              "qTitle": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qColumnOrder": [],
+              "qExpansionState": [],
+              "qDynamicScript": []
+            }
+          }
+        },
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": true,
+        "showDetails": false,
+        "showDetailsExpression": false,
+        "htmlInput": true,
+        "linkColumns": true,
+        "selectableLinks": true,
+        "linkLabel": true,
+        "delimiterSwitch": false,
+        "delimiter": "|",
+        "labelSwitch": false,
+        "customLabel": "",
+        "imageColumns": false,
+        "imageHeight": "0",
+        "visualization": "dpi-simple-table",
+        "version": 1,
+        "extensionMeta": {
+          "translationKey": "",
+          "icon": "puzzle",
+          "iconChar": "puzzle",
+          "isLibraryItem": true,
+          "visible": true,
+          "name": "Simple Table (w/ Links)",
+          "description": "Simple Table (w/ Links)",
+          "template": "dpi-simple-table",
+          "iconPath": "M14.5,9 L13,9 L13,3.3 C13,3.1 12.9,3 12.7,3 L8,3 L8,1.5 C8,0.7 7.3,0 6.5,0 C5.7,0 5,0.7 5,1.5 L5,3 L0.3,3 C0.1,3 0,3.1 0,3.3 L0,9 L1.5,9 C2.3,9 3,9.7 3,10.5 C3,11.3 2.3,12 1.5,12 L0,12 L0,15.7 C0,15.9 0.1,16 0.3,16 L5,16 L5,14.5 C5,13.7 5.7,13 6.5,13 C7.3,13 8,13.7 8,14.5 L8,16 L12.7,16 C12.9,16 13,15.9 13,15.7 L13,12 L14.5,12 C15.3,12 16,11.3 16,10.5 C16,9.7 15.3,9 14.5,9 Z",
+          "isThirdParty": true,
+          "type": "visualization",
+          "version": 1,
+          "author": "Daniel Pilla"
+        },
+        "qLayoutExclude": {
+          "disabled": {
+            "qExtendsId": "",
+            "search": {
+              "sorting": "auto"
+            },
+            "components": [
+              {
+                "key": "theme",
+                "content": {
+                  "fontSize": null,
+                  "fontColor": {
+                    "index": 14,
+                    "color": "#545352"
+                  },
+                  "hoverEffect": false,
+                  "hoverColor": {
+                    "index": -1,
+                    "color": null
+                  },
+                  "hoverFontColor": {
+                    "index": -1,
+                    "color": null
+                  }
+                },
+                "header": {
+                  "fontSize": null,
+                  "fontColor": {
+                    "index": 15,
+                    "color": "#000000"
+                  }
+                }
+              }
+            ],
+            "totals": {
+              "show": false,
+              "position": "noTotals",
+              "label": "Totaux"
+            },
+            "scrolling": {
+              "horizontal": false,
+              "keepFirstColumnInView": false,
+              "keepFirstColumnInViewTouch": false
+            },
+            "multiline": {
+              "wrapTextInHeaders": true,
+              "wrapTextInCells": true
+            },
+            "masterVersion": 0.96
+          },
+          "quarantine": {
+            "straightTableColumnWidths": {
+              "qHyperCubeDef.columnWidths": [
+                77,
+                59
+              ]
+            },
+            "conditionalShowHide": {
+              "dimensions": {
+                "XDxjkhx": {
+                  "qCond": {
+                    "qv": ""
+                  },
+                  "qMsg": {
+                    "qv": ""
+                  }
+                },
+                "JjERhk": {
+                  "qCond": {
+                    "qv": ""
+                  },
+                  "qMsg": {
+                    "qv": ""
+                  }
+                }
+              }
+            },
+            "tableRepresentation": {
+              "dimensions": {
+                "XDxjkhx": {
+                  "type": "url",
+                  "urlPosition": "dimension",
+                  "urlLabel": {
+                    "qStringExpression": {
+                      "qExpr": "=if(PO='AT','Austria',if(PO='BE','Belgium',if(PO='BG','Bulgaria',if(PO='CY','cyprus',if(PO='CZ','Czechia',if(PO='DK','Denmark',if(PO='DE','Germany',if(PO='EE','Estonia',if(PO='EL','Greece',if(PO='ES','Spain',if(PO='FI','Finland',if(PO='FR','France',if(PO='HR','Croatia',if(PO='HU','Hungary',if(PO='IE','Ireland',if(PO='IS','Iceland',if(PO='IT','Italy',if(PO='LT','Lithuania',if(PO='LI','Liechtenstein',if(PO='LU','Luxembourg',if(PO='LV','Latvia',if(PO='MT','Malta',if(PO='NL','Netherlands',if(PO='NO','Norway',if(PO='PL','Poland',if(PO='PT','Portugal',if(PO='RO','Romania',if(PO='SE','Sweden',if(PO='SI','Slovenia',if(PO='SK','Slovakia',if(PO='UK','United-Kingdom')))))))))))))))))))))))))))))))\r\n"
+                    }
+                  },
+                  "linkUrl": ""
+                },
+                "JjERhk": {
+                  "type": "url",
+                  "urlPosition": "dimension",
+                  "urlLabel": {
+                    "qStringExpression": {
+                      "qExpr": "=if(sum({<indicator_PO={'Transposition'}>} val_po)>=2 ,'green',if(sum({<indicator_PO={'Transposition'}>} val_po)<=-2,'red','yellow'))"
+                    }
+                  },
+                  "linkUrl": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "qChildren": []
+    }
+  ]
+}

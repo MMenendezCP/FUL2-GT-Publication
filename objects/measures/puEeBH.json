@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "puEeBH",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "IMI - Indicator 5 Neutral",
+    "qDef": "[Indicator 5imi tim Neutral/Notsure]",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'Neutral/Notsure'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#FDD45A",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "IMI - Indicator 5 Neutral",
+    "description": "IMI - Indicator 5 Neutral",
+    "tags": []
+  }
+}

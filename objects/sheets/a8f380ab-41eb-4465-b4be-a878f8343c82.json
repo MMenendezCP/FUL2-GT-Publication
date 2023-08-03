@@ -1,0 +1,361 @@
+{
+  "qProperty": {
+    "qInfo": {
+      "qId": "a8f380ab-41eb-4465-b4be-a878f8343c82",
+      "qType": "sheet"
+    },
+    "qMetaDef": {
+      "title": "Infringements - Performance indicators",
+      "description": ""
+    },
+    "rank": 8,
+    "thumbnail": {
+      "qStaticContentUrlDef": {}
+    },
+    "columns": 24,
+    "rows": 12,
+    "cells": [
+      {
+        "name": "vPPRvW",
+        "type": "sms_heatmap",
+        "col": 0,
+        "row": 0,
+        "colspan": 24,
+        "rowspan": 5,
+        "bounds": {
+          "y": 0,
+          "x": 0,
+          "width": 100,
+          "height": 41.66666666666667
+        }
+      }
+    ],
+    "qChildListDef": {
+      "qData": {
+        "title": "/title"
+      }
+    },
+    "gridResolution": "small",
+    "layoutOptions": {
+      "mobileLayout": "LIST"
+    },
+    "gridMode": "edit"
+  },
+  "qChildren": [
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "vPPRvW",
+          "qType": "sms_heatmap"
+        },
+        "qMetaDef": {},
+        "qHyperCubeDef": {
+          "qDimensions": [
+            {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=if ([EU_Flag] = 1 and [ISO_code] <> 'EU' and [ISO_code] <> 'TR' and Year = 'Current', if([ISO_code] = 'Avg', 'EU Avg', [ISO_code]))\r\n\n/*\n\n = if ([EU_Flag] = 1 and [ISO_code] <> 'EU' and [ISO_code] <> 'EFF EFETA', if([ISO_code] = 'Avg', 'EU Avg', [ISO_code]))"
+                ],
+                "qFieldLabels": [
+                  ""
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qSortByExpression": 1,
+                    "qExpression": {
+                      "qv": "Match([ISO_code],'AT','BE','BG','CY','CZ','DK','DE','EE','EL','ES','FI','FR','HR','HU','IE','IT','LT','LU','LV','MT','NL','PL','PT','RO','SE','SI','SK','CH','IS','LI','NO','Avg')"
+                    }
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": false,
+                "cId": "Dqqj",
+                "othersLabel": "Others"
+              },
+              "qNullSuppression": true,
+              "qOtherTotalSpec": {
+                "qOtherMode": "OTHER_OFF",
+                "qOtherCounted": {
+                  "qv": "10"
+                },
+                "qOtherLimit": {
+                  "qv": "0"
+                },
+                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                "qForceBadValueKeeping": true,
+                "qApplyEvenWhenPossiblyWrongResult": true,
+                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                "qTotalMode": "TOTAL_OFF",
+                "qReferencedExpression": {}
+              },
+              "qOtherLabel": {
+                "qv": "Others"
+              },
+              "qTotalLabel": {},
+              "qCalcCond": {},
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "othersLabel": "Others"
+            },
+            {
+              "qDef": {
+                "qGrouping": "N",
+                "qFieldDefs": [
+                  "=if (Year = 'Current' and infringements_flag = 1, indicator_print)"
+                ],
+                "qFieldLabels": [
+                  ""
+                ],
+                "qSortCriterias": [
+                  {
+                    "qSortByNumeric": 1,
+                    "qSortByAscii": 1,
+                    "qSortByLoadOrder": 1,
+                    "qExpression": {}
+                  }
+                ],
+                "qNumberPresentations": [],
+                "qActiveField": 0,
+                "autoSort": true,
+                "cId": "YvuwEt",
+                "othersLabel": "Others"
+              },
+              "qNullSuppression": true,
+              "qOtherTotalSpec": {
+                "qOtherMode": "OTHER_OFF",
+                "qOtherCounted": {
+                  "qv": "10"
+                },
+                "qOtherLimit": {
+                  "qv": "0"
+                },
+                "qOtherLimitMode": "OTHER_GE_LIMIT",
+                "qForceBadValueKeeping": true,
+                "qApplyEvenWhenPossiblyWrongResult": true,
+                "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                "qTotalMode": "TOTAL_OFF",
+                "qReferencedExpression": {}
+              },
+              "qOtherLabel": {
+                "qv": "Others"
+              },
+              "qTotalLabel": {},
+              "qCalcCond": {},
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "othersLabel": "Others"
+            }
+          ],
+          "qMeasures": [
+            {
+              "qDef": {
+                "qTags": [],
+                "qGrouping": "N",
+                "qDef": "if (\r\n\tindicator = 'Indicator 1infg' and [Indicator 1infg] <> 'null', [Indicator 1infg], if (\n    indicator = 'Indicator 2infg' and [Indicator 2infg] <> 'null', [Indicator 2infg], if (\n    indicator = 'Indicator 3infg' and [Indicator 3infg] <> 'null',  num([Indicator 3infg], '#0.0', '.', ','), if (\n    indicator = 'Indicator 4infg' and [Indicator 4infg] <> 'null', num([Indicator 4infg], '#0.0', '.', ','), if (\n    [Indicator 1infg] = 'null' or [Indicator 2infg] = 'null' or [Indicator 3infg] = 'null' or [Indicator 4infg] = 'null', 'N/A'\n    )\n    )\n    )\n    )\n)\n",
+                "qNumFormat": {
+                  "qType": "U",
+                  "qnDec": 2,
+                  "qUseThou": 0,
+                  "qDec": ".",
+                  "qThou": " "
+                },
+                "qAccumulate": 0,
+                "qActiveExpression": 0,
+                "qExpressions": [],
+                "autoSort": true,
+                "cId": "QdJNJGM",
+                "numFormatFromTemplate": true,
+                "isCustomFormatted": false
+              },
+              "qSortBy": {
+                "qSortByNumeric": -1,
+                "qSortByLoadOrder": 1,
+                "qExpression": {}
+              },
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCond": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qTrendLines": [],
+              "qMiniChartDef": {
+                "qSortBy": {
+                  "qExpression": {}
+                },
+                "qOtherTotalSpec": {
+                  "qOtherMode": "OTHER_OFF",
+                  "qOtherCounted": {},
+                  "qOtherLimit": {},
+                  "qOtherLimitMode": "OTHER_GT_LIMIT",
+                  "qForceBadValueKeeping": true,
+                  "qApplyEvenWhenPossiblyWrongResult": true,
+                  "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                  "qTotalMode": "TOTAL_OFF",
+                  "qReferencedExpression": {}
+                },
+                "qMaxNumberPoints": -1,
+                "qAttributeExpressions": []
+              }
+            },
+            {
+              "qDef": {
+                "qTags": [],
+                "qGrouping": "N",
+                "qDef": "\r\nif([ISO_code] <> 'Avg' and indicator = 'Indicator 1infg' and [Infg Val1] = 1, '#71ab7c', if([ISO_code] <> 'Avg' and indicator = 'Indicator 1infg' and [Infg Val1] = -1,'#DA5546',\nif([ISO_code] <> 'Avg' and indicator = 'Indicator 2infg' and [Infg Val2] = 1, '#71ab7c', if([ISO_code] <> 'Avg' and indicator = 'Indicator 2infg' and [Infg Val2] = -1, '#DA5546',\nif([ISO_code] <> 'Avg' and indicator = 'Indicator 3infg' and [Infg Val3] = 1, '#71ab7c', if([ISO_code] <> 'Avg' and indicator = 'Indicator 3infg' and [Infg Val3] = -1,'#DA5546',\nif([ISO_code] <> 'Avg' and indicator = 'Indicator 4infg' and [Infg Val4] = 1 and [Indicator 4infg] <> 'null', '#71ab7c', if([ISO_code] <> 'Avg' and indicator = 'Indicator 4infg' and [Infg Val4] = -1 and [Indicator 4infg] <> 'null', '#DA5546',\nif([ISO_code] = 'Avg' or ([Indicator 1infg] = 'null'and indicator = 'Indicator 1infg') or ([Indicator 2infg] = 'null'and indicator = 'Indicator 2infg') or ([Indicator 3infg] = 'null' and indicator = 'Indicator 3infg') or ([Indicator 4infg] = 'null' and indicator = 'Indicator 4infg'), '#C0C0C0', '#DBC42E'\n\n\n)))))))))\n\n\n\n/*\n\n\n\nif([ISO_code] <> 'Avg' and indicator = 'Indicator 1infg' and [Indicator 1infg] < Round($(resAvgInf1)*0.9), '#71ab7c', if([ISO_code] <> 'Avg' and indicator = 'Indicator 1infg' and [Indicator 1infg] > Round($(resAvgInf1)*1.1),'#DA5546',\nif([ISO_code] <> 'Avg' and indicator = 'Indicator 2infg' and [Indicator 2infg] < 0, '#71ab7c', if([ISO_code] <> 'Avg' and indicator = 'Indicator 2infg' and [Indicator 2infg] > 0, '#DA5546',\nif([ISO_code] <> 'Avg' and indicator = 'Indicator 3infg' and [Indicator 3infg] < Round($(resAvgInf3)*0.9), '#71ab7c', if([ISO_code] <> 'Avg' and indicator = 'Indicator 3infg' and [Indicator 3infg] > Round($(resAvgInf3)*1.1),'#DA5546',\nif([ISO_code] <> 'Avg' and indicator = 'Indicator 4infg' and [Indicator 4infg] < 8 and [Indicator 4infg] <> 'null', '#71ab7c', if([ISO_code] <> 'Avg' and indicator = 'Indicator 4infg' and [Indicator 4infg] > 8 and [Indicator 4infg] <> 'null', '#DA5546',\nif([ISO_code] = 'Avg' or ([Indicator 1infg] = 'null'and indicator = 'Indicator 1infg') or ([Indicator 2infg] = 'null'and indicator = 'Indicator 2infg') or ([Indicator 3infg] = 'null' and indicator = 'Indicator 3infg') or ([Indicator 4infg] = 'null' and indicator = 'Indicator 4infg'), '#C0C0C0', '#DBC42E'\n\n\n)))))))))",
+                "qNumFormat": {
+                  "qType": "F",
+                  "qnDec": 2,
+                  "qUseThou": 0,
+                  "qFmt": "# ##0.00",
+                  "qDec": ".",
+                  "qThou": " "
+                },
+                "qAccumulate": 0,
+                "qActiveExpression": 0,
+                "qExpressions": [],
+                "autoSort": true,
+                "cId": "JujgeX",
+                "numFormatFromTemplate": true,
+                "isCustomFormatted": false
+              },
+              "qSortBy": {
+                "qSortByNumeric": -1,
+                "qSortByLoadOrder": 1,
+                "qExpression": {}
+              },
+              "qAttributeExpressions": [],
+              "qAttributeDimensions": [],
+              "qCalcCond": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qTrendLines": [],
+              "qMiniChartDef": {
+                "qSortBy": {
+                  "qExpression": {}
+                },
+                "qOtherTotalSpec": {
+                  "qOtherMode": "OTHER_OFF",
+                  "qOtherCounted": {},
+                  "qOtherLimit": {},
+                  "qOtherLimitMode": "OTHER_GT_LIMIT",
+                  "qForceBadValueKeeping": true,
+                  "qApplyEvenWhenPossiblyWrongResult": true,
+                  "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                  "qTotalMode": "TOTAL_OFF",
+                  "qReferencedExpression": {}
+                },
+                "qMaxNumberPoints": -1,
+                "qAttributeExpressions": []
+              }
+            }
+          ],
+          "qInterColumnSortOrder": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "qInitialDataFetch": [
+            {
+              "qLeft": 0,
+              "qTop": 0,
+              "qWidth": 4,
+              "qHeight": 2500
+            }
+          ],
+          "qReductionMode": "N",
+          "qMode": "S",
+          "qPseudoDimPos": -1,
+          "qNoOfLeftDims": -1,
+          "qMaxStackedCells": 5000,
+          "qCalcCond": {},
+          "qTitle": {},
+          "qCalcCondition": {
+            "qCond": {},
+            "qMsg": {}
+          },
+          "qColumnOrder": [],
+          "qExpansionState": [],
+          "qDynamicScript": [],
+          "qLayoutExclude": {
+            "qHyperCubeDef": {
+              "qDimensions": [],
+              "qMeasures": [],
+              "qInterColumnSortOrder": [],
+              "qInitialDataFetch": [],
+              "qReductionMode": "N",
+              "qMode": "S",
+              "qPseudoDimPos": -1,
+              "qNoOfLeftDims": -1,
+              "qMaxStackedCells": 5000,
+              "qCalcCond": {},
+              "qTitle": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qColumnOrder": [],
+              "qExpansionState": [],
+              "qDynamicScript": []
+            }
+          }
+        },
+        "showTitles": true,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "disableNavMenu": false,
+        "showDetails": false,
+        "showDetailsExpression": false,
+        "visualization": "sms_heatmap",
+        "version": "1.0.0",
+        "extensionMeta": {
+          "translationKey": "",
+          "icon": "table",
+          "iconChar": "puzzle",
+          "isLibraryItem": true,
+          "visible": true,
+          "name": "sms_heatmap",
+          "description": "Table visualization template",
+          "template": "sms_heatmap",
+          "iconPath": "M14.5,9 L13,9 L13,3.3 C13,3.1 12.9,3 12.7,3 L8,3 L8,1.5 C8,0.7 7.3,0 6.5,0 C5.7,0 5,0.7 5,1.5 L5,3 L0.3,3 C0.1,3 0,3.1 0,3.3 L0,9 L1.5,9 C2.3,9 3,9.7 3,10.5 C3,11.3 2.3,12 1.5,12 L0,12 L0,15.7 C0,15.9 0.1,16 0.3,16 L5,16 L5,14.5 C5,13.7 5.7,13 6.5,13 C7.3,13 8,13.7 8,14.5 L8,16 L12.7,16 C12.9,16 13,15.9 13,15.7 L13,12 L14.5,12 C15.3,12 16,11.3 16,10.5 C16,9.7 15.3,9 14.5,9 Z",
+          "isThirdParty": true,
+          "type": "visualization",
+          "version": "1.0.0",
+          "author": "",
+          "homepage": "",
+          "keywords": "qlik-sense, visualization",
+          "license": "",
+          "repository": "",
+          "dependencies": {
+            "qlik-sense": ">=3.0.x"
+          }
+        },
+        "qLayoutExclude": {
+          "disabled": {
+            "qExtendsId": ""
+          },
+          "quarantine": {}
+        }
+      },
+      "qChildren": []
+    }
+  ]
+}

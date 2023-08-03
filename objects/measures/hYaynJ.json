@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "hYaynJ",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "IMI - Indicator 5 Dissatisfied",
+    "qDef": "[Indicator 5imi tim Dissatisfied]",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'Dissatisfied'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#FE860D",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "IMI - Indicator 5 Dissatisfied",
+    "description": "IMI - Indicator 5 Dissatisfied",
+    "tags": []
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "cpzJGCM",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "SOLVIT - Indicator 4 not accepted within 30 days",
+    "qDef": "[Indicator 4 solvit] / ((100 - [Indicator 4 solvit]) + [Indicator 4 solvit])",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'not accepted within 30 days'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#87aa7d",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "SOLVIT - Indicator 4 not accepted within 30 days",
+    "description": "SOLVIT - Indicator 4",
+    "tags": []
+  }
+}

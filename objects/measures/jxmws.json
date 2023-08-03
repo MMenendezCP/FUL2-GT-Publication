@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "jxmws",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "IMI - Info exchange Notifications",
+    "qDef": "sum([IMI Notifications])",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'Notifications'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#,##0",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#4E9A06",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "IMI - Info exchange Notifications",
+    "description": "IMI - Info exchange",
+    "tags": []
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "HKC",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "IMI - Info exchange Requests",
+    "qDef": "sum([IMI Requests])",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'Requests'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#,##0",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#3465a4",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "IMI - Info exchange Requests",
+    "description": "IMI - Info exchange",
+    "tags": []
+  }
+}

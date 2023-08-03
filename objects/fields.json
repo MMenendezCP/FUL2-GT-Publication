@@ -1,0 +1,1463 @@
+[
+  {
+    "qName": "Average duration by sector",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Average duration by sector"
+    ]
+  },
+  {
+    "qName": "Average infg duration",
+    "qTags": [],
+    "qSrcTables": [
+      "Average duration by sector"
+    ]
+  },
+  {
+    "qName": "Business cases",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Cases linked to general difficulties",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Cases linked to general difficulties"
+    ]
+  },
+  {
+    "qName": "Cases linked to more general difficulties",
+    "qTags": [],
+    "qSrcTables": [
+      "Cases linked to general difficulties"
+    ]
+  },
+  {
+    "qName": "CasesofCas",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Changes in the average infringements deficit percentage",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Changes in the average transposition deficit percentage",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Citizens cases",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Contributions received from stakeholders",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Country_Flag",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Country_DIM"
+    ]
+  },
+  {
+    "qName": "Country_ID",
+    "qTags": [
+      "$key",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Country_DIM",
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Directives completeness",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Distribution HOM",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Distribution LEA",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Draft technical regulation 1",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Draft technical regulation 2",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "EU Infringements Deficit",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "EU Pilot Cases",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "EU Pilot Cases"
+    ]
+  },
+  {
+    "qName": "EU Transposition Deficit",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "EU_Flag",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Country_DIM"
+    ]
+  },
+  {
+    "qName": "GT_IMI_REQ_MS_Policy Area",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "GT_IMI_REQ_REC_MS_Policy Area",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "GT_SOL_LEG_ARE.2021",
+    "qTags": [],
+    "qSrcTables": [
+      "Legal areas"
+    ]
+  },
+  {
+    "qName": "GT_SOL_PRP_ARE.2021",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Problem areas"
+    ]
+  },
+  {
+    "qName": "GT_TRI_NOT_SEC_Edition",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Drafts notified by sector"
+    ]
+  },
+  {
+    "qName": "General_flag",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Indicators_DIM"
+    ]
+  },
+  {
+    "qName": "IMI Alerts",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "IMI EPC applications",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "IMI Firearms refusals",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "IMI GDPR Cases",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "IMI NRMM type approvals",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "IMI Notifications",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "IMI Repository entries",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "IMI Requests",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "IMI SOLVIT cases",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "IMI Val1",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "IMI Val2",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "IMI Val3",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "IMI Val4",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "IMI Val5",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "IMI gen data",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "ISO_code",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Country_DIM"
+    ]
+  },
+  {
+    "qName": "Indicator 1 solvit",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 1.2infg",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 1Aimi",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 1Bimi",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 1imi",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 1infg",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 1trans",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 2 solvit",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 2imi",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 2imi C req",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 2imi E req",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 2imi F spe",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 2imi G req",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 2imi H spe",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 2imi I req",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 2imi K spe",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 2imi req",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 2imi spe",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 2infg",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 2trans",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 3 solvit",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 3.2infg",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 3Aimi",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 3Bimi",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 3imi",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 3infg",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 3trans",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 4 solvit",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 4.2Btrans",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 4.2infg",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 4.2trans",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 4imi",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 4imi tim Dissatisfied",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 4imi tim Neutral/Notsure",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 4imi tim Satisfied",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 4imi tim Very dissatisfied",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 4imi tim Very satisfied",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 4infg",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 4trans",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 5 solvit",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 5imi",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 5imi tim Dissatisfied",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 5imi tim Neutral/Notsure",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 5imi tim Satisfied",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 5imi tim Very dissatisfied",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 5imi tim Very satisfied",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 5trans",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 6 solvit",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator 7 solvit",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Indicator_ID",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Indicators_DIM"
+    ]
+  },
+  {
+    "qName": "Infg Val1",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Infg Val2",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Infg Val3",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Infg Val4",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Infringements gen data",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "LEG_BAS",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Legal basis"
+    ]
+  },
+  {
+    "qName": "LEG_BAS_LastYear",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Legal basis"
+    ]
+  },
+  {
+    "qName": "Legal areas",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Legal areas"
+    ]
+  },
+  {
+    "qName": "Main policy areas",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "EU Pilot Cases"
+    ]
+  },
+  {
+    "qName": "Months",
+    "qTags": [],
+    "qSrcTables": [
+      "Average duration by sector"
+    ]
+  },
+  {
+    "qName": "NEW_Sector",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Sectorial breakdown"
+    ]
+  },
+  {
+    "qName": "No EU Infringements Deficit",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "No EU Trans Directives",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "No EU Transposition Deficit",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Number of drafts",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Number of drafts by sector",
+    "qTags": [],
+    "qSrcTables": [
+      "Drafts notified by sector"
+    ]
+  },
+  {
+    "qName": "Number of pending infringement cases",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Types of case"
+    ]
+  },
+  {
+    "qName": "Number of reactions received by Member 1",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Number of reactions received by Member 2",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Number of reactions sent 1",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Number of reactions sent 2",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Number of reactions sent 3",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Other areas",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Pending_cases_inf",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Posting of workers",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Problem areas",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Problem areas"
+    ]
+  },
+  {
+    "qName": "Professional qualifications",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Reactions issued Author",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Reactions issued"
+    ]
+  },
+  {
+    "qName": "Reactions issued Number",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Reactions issued"
+    ]
+  },
+  {
+    "qName": "RealName_aux",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Country_DIM"
+    ]
+  },
+  {
+    "qName": "Real_name",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Country_DIM"
+    ]
+  },
+  {
+    "qName": "Request recieved",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Request sent",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "SOLVIT gen data",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "SOLVITMAP_COLOR",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Sectorial breakdown",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Sectorial breakdown"
+    ]
+  },
+  {
+    "qName": "Services",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Solvit_Cases_ByCountry_2018",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Solvit_Cases_ByCountry_2019",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Solvit_Cases_ByCountry_2020",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Solvit_Cases_received_2018",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Solvit_Cases_received_2019",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Solvit_Cases_received_2020",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Solvit_Cases_submited_2018",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Solvit_Cases_submited_2019",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Solvit_Cases_submited_2020",
+    "qTags": [],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "SumValueIMIMap",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "SumValueInfgMap",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "SumValueTransMap",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Total notifications",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Trans Val1",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Trans Val2",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Trans Val3",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Trans Val4",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Trans Val5",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Transposition Deficit",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Transposition gen data",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Type of Case",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Types of case"
+    ]
+  },
+  {
+    "qName": "Value_incompleteness",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "Year",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ALLMETRICS_maps"
+    ]
+  },
+  {
+    "qName": "imi_flag",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Indicators_DIM"
+    ]
+  },
+  {
+    "qName": "indicator",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Indicators_DIM"
+    ]
+  },
+  {
+    "qName": "indicator_print",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Indicators_DIM"
+    ]
+  },
+  {
+    "qName": "infringements_flag",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Indicators_DIM"
+    ]
+  },
+  {
+    "qName": "transposition_flag",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Indicators_DIM"
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "GXXJb",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "SOLVIT - Indicator 5 accepted within 7 days",
+    "qDef": "[Indicator 5 solvit] / ((100 - [Indicator 5 solvit]) + [Indicator 5 solvit])",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'accepted within 7 days'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#87aa7d",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "SOLVIT - Indicator 5 accepted within 7 days",
+    "description": "SOLVIT - Indicator 5",
+    "tags": []
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "qInfo": {
+    "qId": "63c4d310-1202-4227-bcf8-92baf4558198",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "resAvgTra2",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "-5.0",
+  "qIsScriptCreated": true
+}

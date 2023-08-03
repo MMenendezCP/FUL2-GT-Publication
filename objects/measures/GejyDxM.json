@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "GejyDxM",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "IMI - Request per recipient Services",
+    "qDef": "only(if([GT_IMI_REQ_REC_MS_Policy Area] =  'Services', [Request recieved]))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'Services'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#,##0",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#4E9A06",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "IMI - Request per recipient Services",
+    "description": "IMI - Request per recipient",
+    "tags": []
+  }
+}

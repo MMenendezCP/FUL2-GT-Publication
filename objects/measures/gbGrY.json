@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "gbGrY",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "IMI - Info exchange Repository entries",
+    "qDef": "sum([IMI Repository entries])",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'Repository entries'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#,##0",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#f57900",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "IMI - Info exchange Repository entries",
+    "description": "IMI - Info exchange",
+    "tags": []
+  }
+}

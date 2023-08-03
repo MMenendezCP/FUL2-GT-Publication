@@ -1,0 +1,31 @@
+{
+  "qInfo": {
+    "qId": "VSWrzq",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "SOLVIT Cases submited 3",
+    "qDef": "[Solvit_Cases_submited_2020]",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "=SysLastYear/*=Date(AddYears($(SysLastYearReal),1),'YYYY')",
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#b95545",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "SOLVIT Cases submited 3",
+    "description": "",
+    "tags": []
+  }
+}

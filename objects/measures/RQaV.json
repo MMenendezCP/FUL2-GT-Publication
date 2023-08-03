@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "RQaV",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "SOLVIT - Indicator 2 within 30 days",
+    "qDef": "only(\r\nif(\n\t((100 - [Indicator 2 solvit]) + [Indicator 2 solvit])=0,\n    0,\n[Indicator 2 solvit] / ((100 - [Indicator 2 solvit]) + [Indicator 2 solvit])))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'within 30 days'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#4889AB",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "SOLVIT - Indicator 2 within 30 days",
+    "description": "SOLVIT - Indicator 2",
+    "tags": []
+  }
+}

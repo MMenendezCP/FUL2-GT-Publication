@@ -1,0 +1,31 @@
+{
+  "qInfo": {
+    "qId": "mWDtDg",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "SOLVIT - Indicator 5 accepted in 8 days or more",
+    "qDef": "(100 - [Indicator 5 solvit]) / ((100 - [Indicator 5 solvit]) + [Indicator 5 solvit])",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'accepted in 8 days or more'",
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#b95545",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "SOLVIT - Indicator 5 accepted in 8 days or more",
+    "description": "SOLVIT - Indicator 5",
+    "tags": []
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "BVFhPdS",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "IMI - Indicator 5 Very dissatisfied",
+    "qDef": "[Indicator 5imi tim Very dissatisfied]",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'Very dissatisfied'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#FE4824",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "IMI - Indicator 5 Very dissatisfied",
+    "description": "IMI - Indicator 5 Very dissatisfied",
+    "tags": []
+  }
+}

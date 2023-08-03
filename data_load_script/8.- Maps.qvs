@@ -1,0 +1,282 @@
+///$tab 8.- Maps
+[Transposition Map Data AUX]:
+NoConcatenate
+LOAD distinct
+	[Country_ID],
+    [Year],
+	if( [Indicator 1trans] <= 1, 1, if( [Indicator 1trans] > 1, -1, 0))															AS [Trans Val1],
+	if( [Indicator 2trans] > 0, -1, if( [Indicator 2trans] < 0, 1, 0)) 															AS [Trans Val2],
+    if( [Indicator 3trans] > 0, -1, if( [Indicator 3trans] <= 0, 1, 0))															AS [Trans Val3],
+	if( [Indicator 4trans] < $(resAvgTra4)*0.9, 1, if( [Indicator 4trans] > $(resAvgTra4)*1.1, -1, if([Indicator 4trans] >= $(resAvgTra4)*0.9 and [Indicator 4trans] <= $(resAvgTra4)*1.1, 0)))	AS [Trans Val4],
+    if( [Indicator 5trans] < $(resAvgTra5)*0.9, 1, if( [Indicator 5trans] > $(resAvgTra5)*1.1, -1, if([Indicator 5trans] >= $(resAvgTra5)*0.9 and [Indicator 5trans] <= $(resAvgTra5)*1.1, 0)))	AS [Trans Val5]
+    
+Resident ALLMETRICS
+where not IsNull([Indicator 1trans]);
+
+
+[Transposition Map Data]:
+NoConcatenate 
+LOAD 
+	[Country_ID],
+    [Year],
+    [Trans Val1],
+	[Trans Val2],
+	[Trans Val3],
+	[Trans Val4],
+	[Trans Val5],
+	 ([Trans Val1] + [Trans Val2] + [Trans Val3] + [Trans Val4] + [Trans Val5]) 				AS SumValueTransMap
+Resident [Transposition Map Data AUX];
+
+Drop Table [Transposition Map Data AUX];
+
+// --------------------------------------------------------------
+[Ingringements Map Data AUX]:
+NoConcatenate
+LOAD distinct
+	[Country_ID],
+    [Year],
+	if( [Indicator 1infg] < round($(resAvgInf1)*0.9), 1, if( [Indicator 1infg] > round($(resAvgInf1)*1.1), -1, if([Indicator 1infg] >= round($(resAvgInf1)*0.9) and [Indicator 1infg] <= round($(resAvgInf1)*1.1), 0)))	AS [Infg Val1],
+	if( [Indicator 2infg] > 0, -1, if( [Indicator 2infg] < 0, 1, 0)) 															AS [Infg Val2],
+    if( [Indicator 3infg] < round($(resAvgInf3)*0.9), 1, if( [Indicator 3infg] > round($(resAvgInf3)*1.1), -1, if([Indicator 3infg] >= round($(resAvgInf3)*0.9) and [Indicator 3infg] <= round($(resAvgInf3)*1.1), 0)))	AS [Infg Val3],   
+	if( [Indicator 4infg] < 8 and [Indicator 4infg] <> 'null', 1, if( [Indicator 4infg] > 18 and [Indicator 4infg] <> 'null', -1, if ([Indicator 4infg] >= 8 and [Indicator 4infg] <= 18 or IsNull([Indicator 4infg]) or [Indicator 4infg] = 'null', 0)))  AS [Infg Val4]   
+Resident ALLMETRICS
+where not IsNull([Indicator 1infg]);
+
+
+[Ingringements Map Data]:
+NoConcatenate
+LOAD 
+	[Country_ID],
+    [Year],
+    [Infg Val1],
+	[Infg Val2],
+	[Infg Val3], 
+	[Infg Val4],
+	 ([Infg Val1] + [Infg Val2] + [Infg Val3] + [Infg Val4]) 									AS SumValueInfgMap
+Resident [Ingringements Map Data AUX];
+
+Drop Table [Ingringements Map Data AUX];
+
+
+// --------------------------------------------------------------
+[IMI Map Data AUX]:
+NoConcatenate
+LOAD distinct
+	[Country_ID],
+    [Year],
+	if( [Indicator 1imi] >= 80 	and not isnull([Indicator 1imi]),  1, if( [Indicator 1imi] < 60  and not isnull([Indicator 1imi]), -1, if ( [Indicator 1imi] = 0 or isnull([Indicator 1imi]), 0, 0)))		AS [IMI Val1],
+	if( [Indicator 2imi] < 16   and not isnull([Indicator 2imi]),  1, if( [Indicator 2imi] > 25  and not isnull([Indicator 2imi]), -1, if ( [Indicator 2imi] = 0 or isnull([Indicator 2imi]), 0, 0))) 		AS [IMI Val2],
+    if( [Indicator 3imi] >= 80 	and not isnull([Indicator 3imi]),  1, if( [Indicator 3imi] < 60  and not isnull([Indicator 3imi]), -1, if ( [Indicator 3imi] = 0 or isnull([Indicator 3imi]), 0, 0)))		AS [IMI Val3],
+	if( [Indicator 4imi] < 4.5 	and not isnull([Indicator 4imi]),  1, if( [Indicator 4imi] >= 15 and not isnull([Indicator 4imi]), -1, if ( [Indicator 4imi] = 0 or isnull([Indicator 4imi]), 0, 0)))		AS [IMI Val4],
+    if( [Indicator 5imi] < 4.5 	and not isnull([Indicator 5imi]),  1, if( [Indicator 5imi] >= 15 and not isnull([Indicator 5imi]), -1, if ( [Indicator 5imi] = 0 or isnull([Indicator 5imi]), 0, 0)))		AS [IMI Val5]
+    , 0
+Resident ALLMETRICS
+where not IsNull([Indicator 1imi]);
+
+
+[IMI Map Data]:
+NoConcatenate 
+LOAD 
+	[Country_ID],
+    [Year],
+    [IMI Val1],
+	[IMI Val2],
+	[IMI Val3],
+	[IMI Val4],
+	[IMI Val5],
+	 ([IMI Val1] + [IMI Val2] + [IMI Val3] + [IMI Val4] + [IMI Val5]) 				AS SumValueIMIMap
+Resident [IMI Map Data AUX];
+
+Drop Table [IMI Map Data AUX];
+
+// --------------------------------------------------------------
+
+
+SOLVIT_MAP:
+LOAD 
+	[x1val] 				AS ISO_code,
+	[x2val] 				AS SOLVITMAP_COLOR,
+    'Current'				AS [Year]
+    
+where [x1val] <> 'Country';
+
+LIB CONNECT TO '$(text_connection)REST_PUB-GT_SOL_MAP.csv (ec2amaz-t6hn9ho_commdes_user1)';
+
+SQL SELECT 
+	"x1val",
+	"x2val"
+FROM CSV (header on, delimiter ",", quote """") "CSV_source";
+left Join
+LOAD 
+	[ISO_code],
+	Country_ID
+Resident Country_DIM;
+
+
+
+
+
+
+
+
+
+
+
+
+ALLMETRICS_maps:
+// --------------------------------------------------------------
+NoConcatenate
+LOAD
+    [Country_ID],
+    [Year],
+    [Transposition gen data],
+    [Infringements gen data],
+    [IMI gen data],
+    [SOLVIT gen data],
+	[Indicator 1trans],
+	[Indicator 2trans],
+	[Indicator 3trans],
+	[Indicator 4trans],
+	[Indicator 4.2trans],
+	[Indicator 4.2Btrans],
+	[Indicator 5trans],
+	[Transposition Deficit],
+	[No EU Trans Directives],
+	[EU Transposition Deficit],
+	[No EU Transposition Deficit],
+    [Directives completeness],
+	[Changes in the average transposition deficit percentage],
+	[Value_incompleteness],
+// --------------------------------------------------------------
+    [Indicator 1infg],				
+	[Indicator 1.2infg],
+	[Indicator 2infg],
+	[Indicator 3infg],
+    [Indicator 3.2infg],
+	[Indicator 4infg],
+    [Indicator 4.2infg],
+	[Pending_cases_inf],
+	[EU Infringements Deficit],
+	[No EU Infringements Deficit],
+	[Changes in the average infringements deficit percentage],
+// --------------------------------------------------------------
+	[Indicator 1imi],
+    [Indicator 1Aimi],
+    [Indicator 1Bimi],
+	[Indicator 2imi],
+	[Indicator 2imi req],
+	[Indicator 2imi C req],
+	[Indicator 2imi spe],
+	[Indicator 2imi E req],
+	[Indicator 2imi F spe],
+	[Indicator 2imi G req],
+	[Indicator 2imi H spe],
+	[Indicator 2imi I req],
+	[Indicator 2imi K spe],
+	[Indicator 3imi],
+    [Indicator 3Aimi],
+    [Indicator 3Bimi],
+	[Indicator 4imi],
+	[Indicator 4imi tim Very dissatisfied],
+    [Indicator 4imi tim Dissatisfied],
+    [Indicator 4imi tim Neutral/Notsure],
+    [Indicator 4imi tim Satisfied],			
+    [Indicator 4imi tim Very satisfied],
+	[Indicator 5imi],
+	[Indicator 5imi tim Very dissatisfied],
+    [Indicator 5imi tim Dissatisfied],
+    [Indicator 5imi tim Neutral/Notsure],
+    [Indicator 5imi tim Satisfied],			
+    [Indicator 5imi tim Very satisfied],
+	[Professional qualifications],
+	[Services],
+	[Posting of workers],
+	[Other areas],
+	[GT_IMI_REQ_MS_Policy Area],
+    [Request sent],
+	[GT_IMI_REQ_REC_MS_Policy Area],
+	[Request recieved],
+    [IMI Requests],
+	[IMI Repository entries],
+	[IMI SOLVIT cases],
+	[IMI Notifications],
+	[IMI Alerts],
+	[IMI EPC applications],
+	[IMI GDPR Cases],
+	[IMI NRMM type approvals],
+   	[IMI Firearms refusals],
+// --------------------------------------------------------------
+	[Number of drafts],
+	[Number of reactions sent 1],
+	[Number of reactions sent 2],
+	[Number of reactions sent 3],
+	[Draft technical regulation 1],
+	[Draft technical regulation 2],
+	[Total notifications],
+	[Number of reactions received by Member 1],
+	[Number of reactions received by Member 2],
+	[Contributions received from stakeholders],
+// --------------------------------------------------------------
+	[Indicator 1 solvit],
+	[Indicator 2 solvit],
+	[Indicator 3 solvit],
+	[Indicator 4 solvit],
+	[Indicator 5 solvit],
+	[Indicator 6 solvit],
+	[Indicator 7 solvit],
+	[CasesofCas],
+	[Distribution HOM],
+	[Distribution LEA],
+	[Solvit_Cases_submited_2020],
+	[Solvit_Cases_submited_2019],
+	[Solvit_Cases_submited_2018],
+	[Solvit_Cases_received_2020],
+	[Solvit_Cases_received_2019],
+	[Solvit_Cases_received_2018],
+	[Solvit_Cases_ByCountry_2020],
+	[Solvit_Cases_ByCountry_2019],
+	[Solvit_Cases_ByCountry_2018],
+	[Citizens cases],
+	[Business cases]
+Resident [ALLMETRICS];
+// --------------------------------------------------------------
+left join //(ALLMETRICS)
+LOAD
+	[Country_ID],
+	[Year],
+    [Trans Val1],		
+	[Trans Val2],		
+	[Trans Val3],		
+	[Trans Val4],		
+	[Trans Val5],		
+	SumValueTransMap	
+Resident [Transposition Map Data];
+left join
+LOAD
+	[Country_ID],
+	[Year],
+    [Infg Val1],
+	[Infg Val2],
+	[Infg Val3], 
+	[Infg Val4],
+	SumValueInfgMap	
+Resident [Ingringements Map Data];
+left Join
+LOAD 
+	[Country_ID],
+    [Year],
+    [IMI Val1],
+	[IMI Val2],
+	[IMI Val3],
+	[IMI Val4],
+	[IMI Val5],
+	SumValueIMIMap
+Resident [IMI Map Data];
+left Join
+LOAD 
+	[Country_ID],
+    [Year],
+	SOLVITMAP_COLOR
+Resident [SOLVIT_MAP];
+
+Drop Table ALLMETRICS, [Transposition Map Data], [Ingringements Map Data], [IMI Map Data], [SOLVIT_MAP];

@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "UYuu",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "SOLVIT - Indicator 7 Solved",
+    "qDef": "[Indicator 7 solvit] / ((100 - [Indicator 7 solvit]) +[Indicator 7 solvit])",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'Solved'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#4870ab",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "SOLVIT - Indicator 7 Solved",
+    "description": "SOLVIT - Indicator 7",
+    "tags": []
+  }
+}

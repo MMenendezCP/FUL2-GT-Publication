@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "dgTuU",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "IMI - Info exchange Alerts",
+    "qDef": "sum([IMI Alerts])",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'Alerts'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#,##0",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#555753",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "IMI - Info exchange Alerts",
+    "description": "IMI - Info exchange",
+    "tags": []
+  }
+}

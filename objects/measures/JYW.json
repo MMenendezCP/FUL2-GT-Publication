@@ -1,0 +1,31 @@
+{
+  "qInfo": {
+    "qId": "JYW",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "SOLVIT - Indicator 2 more than 30 days",
+    "qDef": "only(\r\nif(\n\t((100 - [Indicator 2 solvit]) + [Indicator 2 solvit])=0,\n    0,\n(100 - [Indicator 2 solvit]) / ((100 - [Indicator 2 solvit]) + [Indicator 2 solvit])))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'more than 30 days'",
+    "qNumFormat": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#b95545",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "SOLVIT - Indicator 2 more than 30 days",
+    "description": "SOLVIT - Indicator 2",
+    "tags": []
+  }
+}

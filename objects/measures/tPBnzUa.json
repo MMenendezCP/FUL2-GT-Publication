@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "tPBnzUa",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "IMI - Indicator 4 Satisfied",
+    "qDef": "[Indicator 4imi tim Satisfied]",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'Satisfied'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "0%",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#A4D564",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "IMI - Indicator 4 Satisfied",
+    "description": "IMI - Indicator 4 Satisfied",
+    "tags": []
+  }
+}

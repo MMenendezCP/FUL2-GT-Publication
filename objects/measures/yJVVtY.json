@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "yJVVtY",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "IMI - Info exchange EPC applications",
+    "qDef": "sum([IMI EPC applications])",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'EPC applications'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#,##0",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#cebf14",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "IMI - Info exchange EPC applications",
+    "description": "IMI - Info exchange",
+    "tags": []
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "SYtRr",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "IMI - Info exchange All",
+    "qDef": "Sum([IMI Requests]) + Sum([IMI Repository entries]) + Sum([IMI SOLVIT cases]) + Sum([IMI Notifications]) + Sum([IMI Alerts]) + Sum([IMI EPC applications]) + Sum([IMI GDPR Cases]) + Sum([IMI NRMM type approvals]) + Sum([IMI Firearms refusals])\r\n\n\n\n/*\nSum([IMI Requests]) + Sum([IMI Repository entries]) + Sum([IMI SOLVIT cases]) + Sum([IMI Notifications]) + Sum([IMI Alerts]) + Sum([IMI EPC applications]) + Sum([IMI GDPR Cases]) + Sum([IMI NRMM type approvals]) + Sum([IMI Firearms refusals])\n\n\n//  [IMI All info]\n\n\n\n/*\n\nSum([IMI Requests]) + Sum([IMI Repository entries]) + Sum([IMI SOLVIT cases]) + Sum([IMI Notifications]) + Sum([IMI Alerts]) + Sum([IMI EPC applications]) + Sum([IMI GDPR Cases]) + Sum([IMI NRMM type approvals]) + Sum([IMI Firearms refusals])\n\nSum([IMI Requests] + [IMI Repository entries] + [IMI SOLVIT cases] + [IMI Notifications] + [IMI Alerts] + [IMI EPC applications] + [IMI GDPR Cases] + [IMI NRMM type approvals] + [IMI Firearms refusals])\n\n/* \n\n\n[IMI Requests] + [IMI Repository entries] + [IMI SOLVIT cases] + [IMI Notifications] + [IMI Alerts] + [IMI EPC applications] + [IMI GDPR Cases] + [IMI NRMM type approvals] + [IMI Firearms refusals]\n\nSum({<[ISO_code] = {'-'}>}[IMI Requests]) + Sum({<[ISO_code] = {'-'}>}[IMI Repository entries]) + Sum({<[ISO_code] = {'-'}>}[IMI SOLVIT cases]) + Sum({<[ISO_code] = {'-'}>}[IMI Notifications]) + Sum({<[ISO_code] = {'-'}>}[IMI Alerts]) + Sum({<[ISO_code] = {'-'}>}[IMI EPC applications]) + Sum({<[ISO_code] = {'-'}>}[IMI GDPR Cases]) + Sum({<[ISO_code] = {'-'}>}[IMI NRMM type approvals]) + Sum({<[ISO_code] = {'-'}>}[IMI Firearms refusals])\n\n\n\n\n/*\n\nSum([IMI Requests]) + Sum([IMI Repository entries]) + Sum([IMI SOLVIT cases]) + Sum([IMI Notifications]) + Sum([IMI Alerts]) + Sum([IMI EPC applications]) + Sum([IMI GDPR Cases]) + Sum([IMI NRMM type approvals]) + Sum([IMI Firearms refusals])",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'All'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#,##0",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#f93f17",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "IMI - Info exchange All",
+    "description": "IMI - Info exchange",
+    "tags": []
+  }
+}

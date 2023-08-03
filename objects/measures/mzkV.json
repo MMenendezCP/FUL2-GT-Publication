@@ -1,0 +1,35 @@
+{
+  "qInfo": {
+    "qId": "mzkV",
+    "qType": "measure"
+  },
+  "qMeasure": {
+    "qLabel": "IMI - Request per quarter Professional qualifications",
+    "qDef": "[Professional qualifications]\r\n\n\n/*\n\nSum(if([GT_IMI_REQ_QUA-1.GT_IMI_REQ_QUA_Label] =  'Professional qualifications', [IMI Requests]))",
+    "qGrouping": "N",
+    "qExpressions": [],
+    "qActiveExpression": 0,
+    "qLabelExpression": "'Professional qualifications'",
+    "qNumFormat": {
+      "qType": "F",
+      "qnDec": 2,
+      "qUseThou": 0,
+      "qFmt": "#,##0",
+      "qDec": ".",
+      "qThou": ","
+    },
+    "isCustomFormatted": false,
+    "numFormatFromTemplate": true,
+    "coloring": {
+      "baseColor": {
+        "color": "#3465a4",
+        "index": -1
+      }
+    }
+  },
+  "qMetaDef": {
+    "title": "IMI - Request per quarter Professional qualifications",
+    "description": "IMI - Request per quarter",
+    "tags": []
+  }
+}
